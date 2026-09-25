@@ -1,0 +1,14 @@
+material cursorMat
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				env_map spherical
+				texture cursorTex.jpg
+			}
+		}
+	}
+}

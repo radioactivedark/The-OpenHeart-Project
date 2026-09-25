@@ -1,0 +1,210 @@
+Fader
+{
+	zorder 501
+	container Panel(Fader)
+	{
+		left 0
+		top 0
+		width 1
+		height 1
+		material GuiMat/Fader
+	}
+}
+UnderwaterFader
+{
+	zorder 300
+	container Panel(UnderwaterFader)
+	{
+		left 0
+		top 0
+		width 1
+		height 1
+		material GuiMat/Fader
+	}
+}
+Cursor
+{
+	zorder 500
+	container Panel(Cursor)
+	{
+		metrics_mode pixels
+		left 0
+		top 0
+		width 30
+		height 30
+		material GuiMat/Cursor
+	}
+}
+Caret
+{
+	zorder 498
+	container Panel(Caret)
+	{
+		element TextArea(Caret/Text) : GuiTemplate/TextFieldText
+		{
+			//char_height 0.04
+			char_height 19
+			caption |
+		}
+	}
+}
+AlertBox
+{
+	zorder 499
+	container BorderPanel(AlertBox/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.35
+		top 0.4
+		width 0.3
+		height 0.2
+		container Panel(AlertBox/AlertTextComponent)
+		{
+			left 0
+			top 0
+			width 0.32
+			height 0.13
+		}
+		container Panel(AlertBox/OKButton) : GuiTemplate/Button
+		{
+			left 0.02
+			top 0.13
+			width 0.12
+			height 0.05
+
+			element TextArea(AlertBox/OKLabel) : GuiTemplate/CenteredText
+			{
+				caption OK
+			}
+        	}
+		container Panel(AlertBox/CancelButton) : GuiTemplate/Button
+		{
+			left 0.16
+			top 0.13
+			width 0.12
+			height 0.05
+
+			element TextArea(AlertBox/CancelLabel) : GuiTemplate/CenteredText
+			{
+				caption Cancel
+			}
+        	}
+	}
+}
+ComboBox
+{
+	zorder 499
+	container BorderPanel(ComboBox/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0
+		top 0
+		width 0.1
+		height 0.25
+		container Panel(ComboBox/ComboHighlightList) : GuiTemplate/TextArea
+		{
+			left 0
+			top 0
+			width 0.1
+			height 0.25
+        	}
+	}
+}
+MapPeek
+{
+	zorder 499
+	container BorderPanel(MapPeek) : GuiTemplate/NameTag
+	{
+		left 0.375
+		top 0
+		width 0.25
+		height 0.03
+		material GuiMat/NameTag
+		element TextArea(MapPeek/Text) : GuiTemplate/CenteredText
+		{
+			char_height 0.03
+			colour_top 0.6 0.8 1
+			colour_bottom 1 1 1
+        	}
+	}
+}
+MapTitle
+{
+	zorder 499
+	container Panel(MapTitle)
+	{
+		left 0.25
+		top 0.1
+		width 0.5
+		height 0.5
+		element TextArea(MapTitle/Text)
+		{
+			horz_align center
+			vert_align center
+			alignment center
+			font_name FadeFont
+			char_height 0.08
+			colour_top 1.0 1.0 0.75
+			colour_bottom 1.0 0.85 0.4
+		}
+	}
+}
+DebugScreen
+{
+	container BorderPanel(DebugScreen/Panel)
+	{
+		left 0.5
+		top 0.96
+		//top 0.78
+		width 0.5
+		height 0.22
+		material GuiMat/PanelCenter
+		container Panel(DebugScreen/DebugTextField) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.01
+			width 0.48
+			height 0.03
+        	}
+		container Panel(DebugScreen/AvgFPSTextField) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.04
+			width 0.48
+			height 0.03
+        	}
+		container Panel(DebugScreen/CurFPSTextField) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.07
+			width 0.48
+			height 0.03
+        	}
+		container Panel(DebugScreen/BestFPSTextField) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.1
+			width 0.48
+			height 0.03
+        	}
+		container Panel(DebugScreen/WorstFPSTextField) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.13
+			width 0.48
+			height 0.03
+        	}
+		container Panel(DebugScreen/TriCountTextField) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.16
+			width 0.48
+			height 0.03
+        	}
+		container Panel(DebugScreen/BatchCountTextField) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.19
+			width 0.48
+			height 0.03
+        	}
+	}
+}

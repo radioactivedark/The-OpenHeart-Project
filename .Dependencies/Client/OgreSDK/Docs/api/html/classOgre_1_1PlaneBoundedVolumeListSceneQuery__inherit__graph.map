@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node11" href="$classOgre_1_1DefaultPlaneBoundedVolumeListSceneQuery.html" title="Default implementation of PlaneBoundedVolumeListSceneQuery." alt="" coords="5,315,323,344"/>
+<area shape="rect" id="node2" href="$classOgre_1_1RegionSceneQuery.html" title="Abstract class defining a query which returns single results from a region." alt="" coords="79,160,249,189"/>
+<area shape="rect" id="node4" href="$classOgre_1_1SceneQuery.html" title="A class for performing queries on a scene." alt="" coords="11,83,141,112"/>
+<area shape="rect" id="node6" href="$classOgre_1_1AllocatedObject.html" title="Superclass for all objects that wish to use custom memory allocators when their new / delete operator..." alt="" coords="21,5,131,35"/>
+<area shape="rect" id="node8" href="$classOgre_1_1SceneQueryListener.html" title="This optional class allows you to receive per&#45;result callbacks from SceneQuery executions instead of ..." alt="" coords="165,83,341,112"/>
+</map>

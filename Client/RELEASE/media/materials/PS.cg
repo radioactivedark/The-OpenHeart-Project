@@ -1,0 +1,189 @@
+void flatShader_main(
+			float2 uv		: TEXCOORD0,
+			out float4 color	: COLOR,
+			uniform float4 colorMod)
+{
+	color = colorMod;
+}
+void maneShader_1(
+			float2 uv		: TEXCOORD0,
+			out float4 color	: COLOR,
+			uniform float4 colorMod1,
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D shadeMask : register(s1),
+			uniform sampler2D lightMask : register(s2))
+{
+	color = float4(colorMod1.rgb,tex2D(alpha1, uv).a);
+	color.rgb = color.rgb * tex2D(shadeMask, uv).rgb;
+	color.rgb = clamp(color.rgb + tex2D(lightMask, uv).rgb,0.0,1.0);
+}
+void maneShader_2(
+			float2 uv		: TEXCOORD0,
+			out float4 color	: COLOR,
+			uniform float4 colorMod1,
+			uniform sampler2D alpha1 : register(s0))
+{
+	color = float4(colorMod1.rgb,tex2D(alpha1, uv).a);
+}
+void bodyShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D alpha2 : register(s1),
+			uniform sampler2D shade : register(s2))
+{
+	float3 blendValue = lerp(colorMod1.rgb, tex2D(alpha1,uv).rgb, tex2D(alpha1,uv).a );
+	blendValue = lerp(colorMod2.rgb, blendValue, tex2D(alpha2,uv).a );
+	blendValue = blendValue * tex2D(shade,uv).rgb;
+	color = float4(blendValue,1);
+}
+void headShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+			uniform float4 colorMod3,
+			uniform float4 colorMod4,
+			uniform float4 colorMod5,
+
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D alpha2 : register(s1),
+			uniform sampler2D alpha3 : register(s2),
+			uniform sampler2D alpha4 : register(s3),
+			uniform sampler2D alpha5 : register(s4),
+			uniform sampler2D shade : register(s5))
+{
+	float3 blendValue = lerp(colorMod1.rgb, tex2D(alpha1,uv).rgb, tex2D(alpha1,uv).a );
+	blendValue = lerp(colorMod2.rgb, blendValue, tex2D(alpha2,uv).a );
+	blendValue = lerp(colorMod3.rgb, blendValue, tex2D(alpha3,uv).a );
+	blendValue = lerp(colorMod4.rgb, blendValue, tex2D(alpha4,uv).a );
+	blendValue = lerp(colorMod5.rgb, blendValue, tex2D(alpha5,uv).a );
+	blendValue = blendValue * tex2D(shade,uv).rgb;
+	color = float4(blendValue,1);
+}
+void eyeShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D alpha2 : register(s1),
+			uniform sampler2D shade : register(s2))
+{
+	float3 blendValue = lerp(colorMod1.rgb, tex2D(alpha1,uv).rgb, tex2D(alpha1,uv).a );
+	blendValue = lerp(colorMod2.rgb, blendValue, tex2D(alpha2,uv).a );
+	blendValue = blendValue * tex2D(shade,uv).rgb;
+	color = float4(blendValue,1);
+}
+void tailShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D shade : register(s1))
+{
+	float3 blendValue = lerp(colorMod2.rgb, colorMod1.rgb, tex2D(alpha1,uv).a );
+	blendValue = blendValue * tex2D(shade,uv).rgb;
+	color = float4(blendValue,1);
+}
+void maneMarkShader_main(
+			float2 uv		: TEXCOORD0,
+			out float4 color	: COLOR,
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D alpha2 : register(s1))
+{
+	float3 blendValue = lerp(colorMod2.rgb, colorMod1.rgb, tex2D(alpha2,uv).a );
+	color = float4(blendValue,tex2D(alpha1, uv).a);
+}
+void bodyMarkShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+			uniform float4 colorMod3,
+
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D alpha2 : register(s1),
+			uniform sampler2D alpha3 : register(s2),
+			uniform sampler2D shade : register(s3))
+{
+	float3 blendValue = lerp(colorMod1.rgb, tex2D(alpha1,uv).rgb, tex2D(alpha1,uv).a );
+	blendValue = lerp(colorMod2.rgb, blendValue, tex2D(alpha2,uv).a );
+	blendValue = lerp(colorMod3.rgb, blendValue, tex2D(alpha3,uv).a );
+	blendValue = blendValue * tex2D(shade,uv).rgb;
+	color = float4(blendValue,1);
+}
+void headMarkShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+			uniform float4 colorMod3,
+			uniform float4 colorMod4,
+			uniform float4 colorMod5,
+			uniform float4 colorMod6,
+
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D alpha2 : register(s1),
+			uniform sampler2D alpha3 : register(s2),
+			uniform sampler2D alpha4 : register(s3),
+			uniform sampler2D alpha5 : register(s4),
+			uniform sampler2D alpha6 : register(s5),
+			uniform sampler2D shade : register(s6))
+{
+	float3 blendValue = lerp(colorMod1.rgb, tex2D(alpha1,uv).rgb, tex2D(alpha1,uv).a );
+	blendValue = lerp(colorMod2.rgb, blendValue, tex2D(alpha2,uv).a );
+	blendValue = lerp(colorMod3.rgb, blendValue, tex2D(alpha3,uv).a );
+	blendValue = lerp(colorMod4.rgb, blendValue, tex2D(alpha4,uv).a );
+	blendValue = lerp(colorMod5.rgb, blendValue, tex2D(alpha5,uv).a );
+	blendValue = lerp(colorMod6.rgb, blendValue, tex2D(alpha6,uv).a );
+	blendValue = blendValue * tex2D(shade,uv).rgb;
+	color = float4(blendValue,1);
+}
+void tailMarkShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+			uniform float4 colorMod2,
+			uniform float4 colorMod3,
+
+			uniform sampler2D alpha1 : register(s0),
+			uniform sampler2D alpha2 : register(s1),
+			uniform sampler2D shade : register(s2))
+{
+	float3 blendValue = lerp(colorMod2.rgb, colorMod1.rgb, tex2D(alpha1,uv).a );
+	blendValue = lerp(colorMod3.rgb, blendValue, tex2D(alpha2,uv).a );
+	blendValue = blendValue * tex2D(shade,uv).rgb;
+	color = float4(blendValue,1);
+}
+void wingShader(
+			float2 uv		: TEXCOORD0,
+			out float4 color	: COLOR,
+			uniform float4 colorMod1,
+			uniform sampler2D shadeMask : register(s0))
+{
+	color = colorMod1;
+	color.rgb = color.rgb * tex2D(shadeMask, uv).rgb;
+}

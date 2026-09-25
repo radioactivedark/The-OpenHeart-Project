@@ -1,0 +1,152 @@
+// Bloom compositor materials
+
+vertex_program Blur_VS hlsl
+{
+	source Blur_VS.hlsl
+	target vs_1_1
+	entry_point main
+}
+
+fragment_program Blur_H_PS hlsl
+{
+	source Blur_PS.hlsl
+	target ps_2_0
+	entry_point main
+	preprocessor_defines HORIZONTAL
+}
+
+fragment_program Blur_V_PS hlsl
+{
+	source Blur_PS.hlsl
+	target ps_2_0
+	entry_point main
+}
+
+fragment_program Blend_PS hlsl
+{
+	source Blend_PS.hlsl
+	target ps_2_0
+	entry_point main
+}
+
+fragment_program BrightBloom_PS hlsl
+{
+	source BrightBloom_PS.hlsl
+	target ps_2_0
+	entry_point main
+}
+
+material BloomCompositor/BlurH
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			
+			depth_check off
+			
+			vertex_program_ref Blur_VS
+			{
+			}
+
+			fragment_program_ref Blur_H_PS
+			{
+			}
+
+			texture_unit
+			{
+				tex_coord_set 0
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+
+material BloomCompositor/BlurV
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			
+			depth_check off
+			
+			vertex_program_ref Blur_VS
+			{
+			}
+
+			fragment_program_ref Blur_V_PS
+			{
+			}
+
+			texture_unit
+			{
+				tex_coord_set 0
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+
+material BloomCompositor/Blend
+{
+    technique
+    {
+        pass
+        {
+			cull_hardware none
+			cull_software none
+			
+			depth_check off
+
+			fragment_program_ref Blend_PS
+			{
+				param_named uBloomStrength float 1.25
+			}
+		
+			texture_unit
+			{
+				tex_coord_set 0
+				tex_address_mode clamp
+				filtering none
+			}
+	        
+			texture_unit
+			{
+				tex_coord_set 0
+				tex_address_mode clamp
+				filtering trilinear
+			}
+        }
+    }
+}
+
+material BloomCompositor/BrightBloom
+{
+    technique
+    {
+        pass
+        {
+			cull_hardware none
+			cull_software none
+			
+			depth_check off
+
+			fragment_program_ref BrightBloom_PS
+			{
+			}
+			
+			texture_unit
+			{
+				tex_address_mode clamp
+  				filtering none
+			}
+        }
+    }
+}

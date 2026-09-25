@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classOgre_1_1OverlayManager.html" title="Manages Overlay objects, parsing them from .overlay files and storing a lookup library of them..." alt="" coords="208,85,357,115"/>
+<area shape="rect" id="node5" href="$classOgre_1_1ParticleSystemManager.html" title="Manages particle systems, particle system scripts (templates) and the available emitter &amp; affecto..." alt="" coords="184,139,381,168"/>
+<area shape="rect" id="node7" href="$classOgre_1_1ResourceManager.html" title="Defines a generic resource handler." alt="" coords="201,192,364,221"/>
+<area shape="rect" id="node25" href="$classOgre_1_1ScriptCompilerManager.html" title="Manages threaded compilation of scripts." alt="" coords="187,245,379,275"/>
+<area shape="rect" id="node9" href="$classOgre_1_1CompositorManager.html" title="Class for managing Compositor settings for Ogre." alt="" coords="461,5,635,35"/>
+<area shape="rect" id="node11" href="$classOgre_1_1FontManager.html" title="Manages Font resources, parsing .fontdef files and generally organising them." alt="" coords="481,59,615,88"/>
+<area shape="rect" id="node13" href="$classOgre_1_1GpuProgramManager.html" title="Ogre::GpuProgramManager" alt="" coords="457,112,639,141"/>
+<area shape="rect" id="node15" href="$classOgre_1_1HighLevelGpuProgramManager.html" title="This ResourceManager manages high&#45;level vertex and fragment programs." alt="" coords="431,165,665,195"/>
+<area shape="rect" id="node17" href="$classOgre_1_1MaterialManager.html" title="Class for managing Material settings for Ogre." alt="" coords="471,219,625,248"/>
+<area shape="rect" id="node19" href="$classOgre_1_1MeshManager.html" title="Handles the management of mesh resources." alt="" coords="479,272,617,301"/>
+<area shape="rect" id="node21" href="$classOgre_1_1SkeletonManager.html" title="Handles the management of skeleton resources." alt="" coords="469,325,627,355"/>
+<area shape="rect" id="node23" href="$classOgre_1_1TextureManager.html" title="Class for loading &amp; managing textures." alt="" coords="473,379,623,408"/>
+</map>

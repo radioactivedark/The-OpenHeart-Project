@@ -1,0 +1,1864 @@
+fragment_program flatShader_PS cg
+{
+	source PS.cg
+	
+	entry_point flatShader_main
+	
+	profiles ps_2_0 arbfp1
+
+	default_params
+	{
+		param_named colorMod float4 0 0 0 1
+	}
+}
+material GuiMat/ColourBox
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+
+			fragment_program_ref flatShader_PS
+			{
+				param_named_auto colorMod custom 1
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 0 0 0 1
+			}
+		}
+	}
+}
+material GuiMat/Fader
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_check off
+			scene_blend alpha_blend
+
+			fragment_program_ref flatShader_PS
+			{
+				param_named_auto colorMod custom 1
+			}
+			texture_unit
+			{
+				texture blank.png
+				tex_coord_set 0
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_check off
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture blank.png
+				colour_op_ex source1 src_manual src_manual 0 0 0 1
+				alpha_op_ex add src_texture src_manual 1
+			}
+		}
+	}
+}
+material GuiMat/Blank
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_check off
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture blank.png
+			}
+		}
+	}
+}
+material GuiMat/Cursor
+{
+	technique
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture cursor.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/PanelCenter
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture panelCenter.png
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/PanelBorder
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture panelBorder.png
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonHighlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonHighlight.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/TextField
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture textField.png
+			}
+		}
+	}
+}
+material GuiMat/TextArea
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture textArea.png
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/Slider
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture slider.png
+			}
+		}
+	}
+}
+material GuiMat/SliderMarkerUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture sliderMarkerUp.png
+			}
+		}
+	}
+}
+material GuiMat/SliderMarkerDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture sliderMarkerDown.png
+			}
+		}
+	}
+}
+material GuiMat/SliderMarkerOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture sliderMarkerOver.png
+			}
+		}
+	}
+}
+material GuiMat/Sizer
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture sizer.png
+			}
+		}
+	}
+}
+material GuiMat/Mover
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture mover.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+material GuiMat/CheckBoxDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture checkBoxDown.png
+			}
+		}
+	}
+}
+material GuiMat/CheckBoxUpFalse
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture checkBoxFalse.png
+			}
+		}
+	}
+}
+material GuiMat/CheckBoxUpTrue
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture checkBoxTrue.png
+			}
+		}
+	}
+}
+material GuiMat/Highlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture highlight.png
+			}
+		}
+	}
+}
+material GuiMat/TabUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture tabUp.png
+			}
+		}
+	}
+}
+material GuiMat/TabDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture tabDown.png
+			}
+		}
+	}
+}
+material GuiMat/TabOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture tabOver.png
+			}
+		}
+	}
+}
+material GuiMat/Partition
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture partition.png
+			}
+		}
+	}
+}
+material Collision/Highlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlight.png
+			}
+		}
+	}
+}
+material Collision/HighlightTwoSide
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture highlight.png
+			}
+		}
+	}
+}
+material Collision/HighlightBlue
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlue.png
+			}
+		}
+	}
+}
+material GuiMat/Button2LUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture button2Up.png
+				tex_address_mode clamp
+				filtering trilinear
+				rotate 180
+			}
+		}
+	}
+}
+material GuiMat/Button2LOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture button2Over.png
+				tex_address_mode clamp
+				filtering trilinear
+				rotate 180
+			}
+		}
+	}
+}
+material GuiMat/Button2RUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture button2Up.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/Button2ROver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture button2Over.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleIndicator
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlue.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleIndicatorIn
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlueTriangle.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleIndicatorOut
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlueTriangle.png
+				tex_address_mode clamp
+				filtering trilinear
+				scale -1 1
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleIndicatorInL
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlueTriangleL.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleIndicatorInR
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlueTriangleR.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleIndicatorOutL
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlueTriangleR.png
+				tex_address_mode clamp
+				filtering trilinear
+				scale -1 1
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleIndicatorOutR
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightBlueTriangleL.png
+				tex_address_mode clamp
+				filtering trilinear
+				scale -1 1
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleHighlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlight.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleHighlightIn
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightTriangle.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleHighlightOut
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightTriangle.png
+				tex_address_mode clamp
+				filtering trilinear
+				scale -1 1
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleHighlightInL
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightTriangleL.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleHighlightInR
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightTriangleR.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleHighlightOutL
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightTriangleR.png
+				tex_address_mode clamp
+				filtering trilinear
+				scale -1 1
+			}
+		}
+	}
+}
+material GuiMat/WeatherCycleHighlightOutR
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture highlightTriangleL.png
+				tex_address_mode clamp
+				filtering trilinear
+				scale -1 1
+			}
+		}
+	}
+}
+material GuiMat/Logo
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture logo.jpg
+			}
+		}
+	}
+}
+material GuiMat/Logo2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture logo2.jpg
+			}
+		}
+	}
+}
+material GuiMat/Title
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			texture_unit
+			{
+				texture title.png
+			}
+		}
+	}
+}
+material GuiMat/NameTag
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture nametag.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+material GuiMat/ButtonCloseUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonCloseUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonCloseDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonCloseDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonCloseOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonCloseOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/MiniMapMarker
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture minimapMarker.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/MiniMapMarker2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture minimapMarker2.png
+				scale 0.75 0.75
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/MiniMapMarker3
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture minimapMarker3.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/MiniMap
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture blank.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/MiniMap2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+
+			texture_unit
+			{
+				texture blank.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonMiniMapUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonMiniMap.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonMiniMapDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonMiniMap.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonMiniMapOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonMiniMap.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonMiniMapHighlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture white.jpg
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonMiniMap.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonActionUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture sliderMarkerUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonAction.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonActionDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture sliderMarkerDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonAction.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonActionOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture sliderMarkerOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonAction.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonMovieUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonMovie.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonMovieDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonMovie.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonMovieOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonMovie.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonInfoUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonInfo.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonInfoDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonInfo.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonInfoOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonInfo.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonFriendsUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonFriends.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonFriendsDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonFriends.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonFriendsOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonFriends.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonFriendsHighlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture white.jpg
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonFriends.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonPartyUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonParty.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonPartyDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonParty.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonPartyOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonParty.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonPartyHighlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture white.jpg
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonParty.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonGroupUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonGroup.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonGroupDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonGroup.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonGroupOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonGroup.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonGroupHighlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture white.jpg
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonGroup.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonChatUp
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonUp.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonChat.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonChatDown
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDown.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonChat.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonChatOver
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonOver.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonChat.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/ButtonChatHighlight
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture white.jpg
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture buttonChat.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/SelectPointer
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_check off
+			scene_blend add
+			fog_override true
+
+			texture_unit
+			{
+				texture targetIndicator.PNG
+				tex_address_mode clamp
+				rotate_anim -0.1
+				wave_xform scale_x sine 0.5 1 0 0.5
+				wave_xform scale_y sine 0.5 1 0 0.5
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+material FXMat/WaterSplash
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true
+			texture_unit
+			{
+				texture splash.png
+			}
+		}
+	}
+}
+material FXMat/WaterfallSmoke
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture watersmoke.png
+			}
+		}
+	}
+}

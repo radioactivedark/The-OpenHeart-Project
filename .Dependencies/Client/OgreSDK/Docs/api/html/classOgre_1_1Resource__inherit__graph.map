@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node7" href="$classOgre_1_1Compositor.html" title="Class representing a Compositor object." alt="" coords="361,5,484,35"/>
+<area shape="rect" id="node9" href="$classOgre_1_1Font.html" title="Class representing a font in the system." alt="" coords="381,59,464,88"/>
+<area shape="rect" id="node11" href="$classOgre_1_1GpuProgram.html" title="Defines a program which runs on the GPU such as a vertex or fragment program." alt="" coords="357,112,488,141"/>
+<area shape="rect" id="node17" href="$classOgre_1_1Material.html" title="Class encapsulates rendering properties of an object." alt="" coords="371,165,475,195"/>
+<area shape="rect" id="node19" href="$classOgre_1_1Mesh.html" title="Ogre::Mesh" alt="" coords="377,219,468,248"/>
+<area shape="rect" id="node23" href="$classOgre_1_1Skeleton.html" title="A collection of Bone objects used to animate a skinned mesh." alt="" coords="368,272,477,301"/>
+<area shape="rect" id="node27" href="$classOgre_1_1Texture.html" title="Abstract class representing a Texture resource." alt="" coords="372,325,473,355"/>
+<area shape="rect" id="node2" href="$classOgre_1_1StringInterface.html" title="Class defining the common interface which classes can use to present a reflection&#45;style, self&#45;defining parameter set to callers." alt="" coords="5,139,147,168"/>
+<area shape="rect" id="node4" href="$classOgre_1_1AllocatedObject.html" title="Superclass for all objects that wish to use custom memory allocators when their new / delete operator..." alt="" coords="23,192,129,221"/>
+<area shape="rect" id="node13" href="$classOgre_1_1HighLevelGpuProgram.html" title="Abstract base class representing a high&#45;level program (a vertex or fragment program)." alt="" coords="536,112,723,141"/>
+<area shape="rect" id="node15" href="$classOgre_1_1UnifiedHighLevelGpuProgram.html" title="Specialisation of HighLevelGpuProgram which just delegates its implementation to one other high level..." alt="" coords="772,112,996,141"/>
+<area shape="rect" id="node21" href="$classOgre_1_1PatchMesh.html" title="Patch specialisation of Mesh." alt="" coords="568,219,691,248"/>
+<area shape="rect" id="node25" href="$classOgre_1_1SkeletonInstance.html" title="A SkeletonInstance is a single instance of a Skeleton used by a world object." alt="" coords="551,272,708,301"/>
+</map>

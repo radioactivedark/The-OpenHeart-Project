@@ -1,0 +1,30 @@
+material snowRockMat1
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture ice.jpg
+			}
+		}
+	}
+}
+material snowRockMat2
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture snowtex.jpg
+			}
+		}
+	}
+}

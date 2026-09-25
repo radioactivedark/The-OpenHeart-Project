@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$classOgre_1_1DefaultHardwareBufferManagerBase.html" title="Specialisation of HardwareBufferManagerBase to emulate hardware buffers." alt="" coords="5,160,269,189"/>
+<area shape="rect" id="node7" href="$classOgre_1_1HardwareBufferManager.html" title="Singleton wrapper for hardware buffer manager." alt="" coords="293,160,488,189"/>
+<area shape="rect" id="node2" href="$classOgre_1_1AllocatedObject.html" title="Superclass for all objects that wish to use custom memory allocators when their new / delete operator..." alt="" coords="223,5,305,35"/>
+<area shape="rect" id="node9" href="$classOgre_1_1DefaultHardwareBufferManager.html" title="DefaultHardwareBufferManager as a Singleton." alt="" coords="273,237,508,267"/>
+</map>

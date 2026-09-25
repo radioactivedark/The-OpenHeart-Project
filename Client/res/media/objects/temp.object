@@ -1,0 +1,4 @@
+[temp]
+sound=wind1.wav
+mesh0=palm1.mesh;0 0 0;1 1 1;1 0 0 0;
+coll0=b;0 0 0;9.39999 57.2 11.15;

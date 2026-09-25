@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/captaincat/Downloads/Client/build/cmake_install.cmake",
+		"C:/Users/captaincat/Downloads/Client/build/RakNet4/cmake_install.cmake",
+		"C:/Users/captaincat/Downloads/Client/build/RakNet4/Source/cmake_install.cmake",
+		"C:/Users/captaincat/Downloads/Client/build/RakNet4/Lib/cmake_install.cmake",
+		"C:/Users/captaincat/Downloads/Client/build/RakNet4/Lib/LibStatic/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,24 @@
+void skyShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 skyTop,
+			uniform float4 skyBot,
+
+			uniform sampler2D alpha1 : register(s0))
+{
+	float3 blendValue = lerp(skyBot.rgb, skyTop.rgb, tex2D(alpha1,uv).a );
+	color = float4(blendValue,1);
+}
+void cloudShader_main(
+			float2 uv		: TEXCOORD0,
+			 
+			out float4 color	: COLOR,
+			 
+			uniform float4 colorMod1,
+
+			uniform sampler2D tex1 : register(s0))
+{
+	color = colorMod1 * tex2D(tex1,uv);
+}

@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node7" href="$classOgre_1_1CompositorManager.html" title="Class for managing Compositor settings for Ogre." alt="" coords="427,5,600,35"/>
+<area shape="rect" id="node9" href="$classOgre_1_1FontManager.html" title="Manages Font resources, parsing .fontdef files and generally organising them." alt="" coords="447,59,580,88"/>
+<area shape="rect" id="node11" href="$classOgre_1_1GpuProgramManager.html" title="Ogre::GpuProgramManager" alt="" coords="423,112,604,141"/>
+<area shape="rect" id="node13" href="$classOgre_1_1HighLevelGpuProgramManager.html" title="This ResourceManager manages high&#45;level vertex and fragment programs." alt="" coords="396,165,631,195"/>
+<area shape="rect" id="node15" href="$classOgre_1_1MaterialManager.html" title="Class for managing Material settings for Ogre." alt="" coords="436,219,591,248"/>
+<area shape="rect" id="node17" href="$classOgre_1_1MeshManager.html" title="Handles the management of mesh resources." alt="" coords="444,272,583,301"/>
+<area shape="rect" id="node19" href="$classOgre_1_1SkeletonManager.html" title="Handles the management of skeleton resources." alt="" coords="435,325,592,355"/>
+<area shape="rect" id="node21" href="$classOgre_1_1TextureManager.html" title="Class for loading &amp; managing textures." alt="" coords="439,379,588,408"/>
+<area shape="rect" id="node2" href="$classOgre_1_1ScriptLoader.html" title="Abstract class defining the interface used by classes which wish to perform script loading to define ..." alt="" coords="5,165,136,195"/>
+<area shape="rect" id="node4" href="$classOgre_1_1AllocatedObject.html" title="Superclass for all objects that wish to use custom memory allocators when their new / delete operator..." alt="" coords="17,219,124,248"/>
+</map>

@@ -1,0 +1,77 @@
+material GuiMat/LoadingBar
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture loadingBar.jpg
+			}
+		}
+	}
+}
+material GuiMat/LoadingBarMax
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture loadingBarMax.jpg
+			}
+		}
+	}
+}
+material GuiMat/Reminder
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture reminder.png
+			}
+		}
+	}
+}
+material GuiMat/ButtonDiscord
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+
+			texture_unit
+			{
+				texture buttonDiscord.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}
+material GuiMat/Title2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			texture_unit
+			{
+				texture title2.png
+			}
+		}
+	}
+}

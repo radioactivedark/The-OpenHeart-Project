@@ -1,0 +1,26 @@
+material rockIsland/TopMat
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture rockIslandTop.jpg
+			}
+		}
+	}
+}
+material rockIsland/BotMat
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture rockIslandBot.jpg
+			}
+		}
+	}
+}

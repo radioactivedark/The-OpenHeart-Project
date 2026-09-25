@@ -1,0 +1,137 @@
+vertex_program WaterVP cg
+{
+	source water.cg
+	entry_point water_VP
+	profiles vs_1_1 arbvp1
+}
+
+fragment_program WaterFP cg
+{
+	source water.cg
+	entry_point water_FP
+	profiles ps_2_0 arbfp1
+}
+
+fragment_program UnderWaterFP cg
+{
+	source water.cg
+	entry_point underwater_FP
+	profiles ps_2_0 arbfp1
+}
+
+material WaterMat
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture waterTex1.png
+				scale 0.4 0.4
+				scroll_anim -0.05 -0.05
+			}
+			texture_unit
+			{
+				texture waterTex2.png
+				scale 0.5 0.5
+				scroll_anim -0.08 0.1
+			}
+		}
+	}
+}
+material OceanMat
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture waterTex1.png
+				scale 0.5 0.5
+				scroll_anim -0.03 -0.05
+				rotate 90
+			}
+			texture_unit
+			{
+				texture waterTex2.png
+				scale 0.4 0.4 
+				scroll_anim -0.05 0.01
+				rotate 90
+			}
+		}
+	}
+}
+material WaterReflectMat
+{
+	technique
+	{
+		pass
+		{
+			//depth_write off
+			scene_blend alpha_blend
+			vertex_program_ref WaterVP
+			{
+				param_named_auto worldViewProjMatrix worldviewproj_matrix
+				param_named_auto timeVal time 0.05
+				param_named scroll float 2
+				param_named scale float 1
+				param_named noise float 1
+			}
+			fragment_program_ref WaterFP
+			{
+				param_named colourTint float3 0.25 0.27 0.28
+				param_named noiseScale float 0.04
+			}
+			texture_unit
+			{
+				texture waves2.dds
+				filtering linear linear none
+			}
+		}
+
+	}
+}
+material UnderWaterMat
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			vertex_program_ref WaterVP
+			{
+				param_named_auto worldViewProjMatrix worldviewproj_matrix
+				param_named_auto timeVal time 0.05
+				param_named scroll float 2
+				param_named scale float 1
+				param_named noise float 1
+			}
+			fragment_program_ref UnderWaterFP
+			{
+				param_named colourTint float3 0.95 0.97 0.98
+				param_named noiseScale float 0.04
+			}
+			texture_unit
+			{
+				texture waves2.dds
+				filtering linear linear none
+			}
+		}
+
+	}
+}

@@ -1,0 +1,23 @@
+vertex_program AlphaSplatTerrain/VP cg
+{
+    source terrain.cg
+    entry_point TerrainVP
+    //target vs_2_0
+    profiles vs_2_0 arbvp1
+}
+ 
+fragment_program AlphaSplatTerrain1/FP cg
+{
+    source terrain.cg
+    entry_point TerrainFP1
+    //target ps_2_0
+    profiles ps_2_0 arbfp1
+}
+
+fragment_program AlphaSplatTerrain2/FP cg
+{
+    source terrain.cg
+    entry_point TerrainFP2
+    //target ps_2_0
+    profiles ps_2_0 arbfp1
+}

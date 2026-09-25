@@ -1,0 +1,162 @@
+material SplashScreenMat/Loading0
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading0.jpg
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading0_f.jpg
+			}
+		}
+	}
+}
+material SplashScreenMat/Loading1
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading1.jpg
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading1_f.jpg
+			}
+		}
+	}
+}
+material SplashScreenMat/Loading2
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading2.jpg
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading2_f.jpg
+			}
+		}
+	}
+}
+material SplashScreenMat/Loading3
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading3.jpg
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading3_f.jpg
+			}
+		}
+	}
+}
+material SplashScreenMat/Loading4
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading4.jpg
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading4_f.jpg
+			}
+		}
+	}
+}
+material SplashScreenMat/Loading5
+{
+	technique 1
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading5.jpg
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture loading5_f.jpg
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+[Rain]
+ps=Weather/Rain
+offset=0 1 0
+skytop=0.7 0.675 0.609375 1
+skybot=0.5 0.475 0.367188 1
+rate=1200
+clouds=0.320313 0.289062 0.21875 1
+

@@ -1,0 +1,155 @@
+material AlphaSplatTerrain1
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			vertex_program_ref AlphaSplatTerrain/VP
+			{
+				param_named_auto worldViewProj      worldviewproj_matrix
+
+				param_named_auto LightDiffuse light_diffuse_colour 0
+				param_named_auto LightPosition light_position_object_space 0
+				param_named_auto LightAttenuation light_attenuation 0
+				param_named_auto lightAmbient ambient_light_colour
+
+				param_named materialAmbient float4 0.8 0.8 0.8 1.0
+ 
+				param_named pageSize float 5000
+				param_named_auto worldMat world_matrix
+				param_named_auto fogParams fog_params
+				param_named_auto camPos camera_position_object_space
+
+				param_named textureTileSize float 10
+			}
+ 
+			fragment_program_ref AlphaSplatTerrain1/FP
+			{
+				param_named alpha0Mask float4 1 1 1 0
+				param_named_auto fogColour fog_colour
+			}
+			texture_unit
+			{
+				texture_alias AlphaMap1
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				texture_alias Splat1
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture_alias Splat2
+				tex_address_mode wrap
+			}
+			texture_unit
+			{    
+				texture_alias Splat3
+				tex_address_mode wrap
+			}
+		}
+	}
+	//Fallback technique
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture african_grass.jpg
+				scale 0.05 0.05
+			}
+		}
+	}
+}
+material AlphaSplatTerrain2
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			vertex_program_ref AlphaSplatTerrain/VP
+			{
+				param_named_auto worldViewProj      worldviewproj_matrix
+
+				param_named_auto LightDiffuse light_diffuse_colour 0
+				param_named_auto LightPosition light_position_object_space 0
+				param_named_auto LightAttenuation light_attenuation 0
+				param_named_auto lightAmbient ambient_light_colour
+
+				param_named materialAmbient float4 0.8 0.8 0.8 1.0
+ 
+				param_named pageSize float 5000
+				param_named_auto worldMat world_matrix
+				param_named_auto fogParams fog_params
+				param_named_auto camPos camera_position_object_space
+
+				param_named textureTileSize float 10
+			}
+ 
+			fragment_program_ref AlphaSplatTerrain2/FP
+			{
+				param_named alpha0Mask float4 1 1 1 0
+				param_named alpha1Mask float4 0 0 0 0
+				param_named_auto fogColour fog_colour
+			}
+			texture_unit
+			{
+				texture_alias AlphaMap1
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				texture_alias AlphaMap2
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				texture_alias Splat1
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture_alias Splat2
+				tex_address_mode wrap
+			}
+			texture_unit
+			{    
+				texture_alias Splat3
+				tex_address_mode wrap
+			}
+			texture_unit
+			{    
+				texture_alias Splat4
+				tex_address_mode wrap
+			}
+			texture_unit
+			{    
+				texture_alias Splat5
+				tex_address_mode wrap
+			}
+			texture_unit
+			{    
+				texture_alias Splat6
+				tex_address_mode wrap
+			}
+		}
+	}
+	//Fallback technique
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture african_grass.jpg
+				scale 0.05 0.05
+			}
+		}
+	}
+}

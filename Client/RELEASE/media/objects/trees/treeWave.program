@@ -1,0 +1,18 @@
+vertex_program TreeWave/VP cg
+{
+	source treeWave.cg
+	entry_point treeWave_VP
+	profiles vs_1_1 arbvp1
+	default_params
+	{
+		param_named_auto uTime time 1.05
+            	param_named_auto uWorldViewProj worldviewproj_matrix
+            	param_named_auto uWorld world_matrix
+	}
+}
+fragment_program TreeWave/FP cg
+{
+	source treeWave.cg
+    	entry_point treeWave_FP
+	profiles ps_2_0 arbfp1
+}

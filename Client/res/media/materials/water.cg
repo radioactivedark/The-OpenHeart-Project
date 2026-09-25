@@ -1,0 +1,72 @@
+void water_VP(
+		float4 pos			: POSITION,
+		float2 tex			: TEXCOORD0,
+		
+		out float4 oPos		: POSITION,
+		out float3 noiseCoord : TEXCOORD0,
+		out float4 projectionCoord : TEXCOORD1,
+
+		uniform float4x4 worldViewProjMatrix,
+		uniform float timeVal,
+		uniform float scale,  // the amount to scale the noise texture by
+		uniform float scroll, // the amount by which to scroll the noise
+		uniform float noise  // the noise perturb as a factor of the  time
+		)
+{
+	pos.y = 0.5*sin( (pos.x+(timeVal*10)) + (pos.z+(timeVal*10)) )-0.5;
+	oPos = mul(worldViewProjMatrix, pos);
+	// Projective texture coordinates, adjust for mapping
+	float4x4 scalemat = float4x4(0.5,   0,   0, 0.5, 
+	                               0,-0.5,   0, 0.5,
+								   0,   0, 0.5, 0.5,
+								   0,   0,   0,   1);
+	projectionCoord = mul(scalemat, oPos);
+	// Noise map coords
+	noiseCoord.xy = (tex + (timeVal * scroll)) * scale;
+	noiseCoord.z = noise * timeVal;
+}
+void water_FP(
+		float3 noiseCoord			: TEXCOORD0,
+		float4 projectionCoord		: TEXCOORD1,
+		
+		out float4 col		: COLOR,
+		
+		uniform float noiseScale,
+		uniform float3 colourTint,
+		uniform sampler2D noiseMap : register(s0),
+		uniform sampler2D reflectMap : register(s1)
+		)
+{
+	// Do the tex projection manually so we can distort _after_
+	float2 final = projectionCoord.xy / projectionCoord.w;
+
+	// Noise
+	float3 noiseNormal = (tex2D(noiseMap, (noiseCoord.xy / 5)).rgb - 0.5).rbg * noiseScale;
+	final += noiseNormal.xz;
+	float3 colour = tex2D(reflectMap, final).rgb;
+	float alpha = saturate(colour.x * colour.y * colour.z + 0.5);
+	//alpha = alpha - saturate(colour.x * colour.y * colour.z - 0.4) * saturate(final.y-0.25);
+	colour = lerp(colour, colourTint, 1-alpha);
+	col = float4(colour,0.6+0.4*alpha);
+}
+void underwater_FP(
+		float3 noiseCoord			: TEXCOORD0,
+		float4 projectionCoord		: TEXCOORD1,
+		
+		out float4 col		: COLOR,
+		
+		uniform float noiseScale,
+		uniform float3 colourTint,
+		uniform sampler2D noiseMap : register(s0),
+		uniform sampler2D reflectMap : register(s1)
+		)
+{
+	// Do the tex projection manually so we can distort _after_
+	float2 final = projectionCoord.xy / projectionCoord.w;
+
+	// Noise
+	float3 noiseNormal = (tex2D(noiseMap, (noiseCoord.xy / 5)).rgb - 0.5).rbg * noiseScale;
+	final += noiseNormal.xz;
+	float3 colour = tex2D(reflectMap, final).rgb*colourTint;
+	col = float4(colour,1);
+}

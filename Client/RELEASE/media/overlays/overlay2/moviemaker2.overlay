@@ -1,0 +1,132 @@
+MovieMakerButtonsScreen
+{
+	container BorderPanel(MovieMakerButtonsScreen/Panel)
+	{
+		left 0.82
+		top 0.92
+		width 0.18
+		height 0.08
+		container Panel(MovieMakerButtonsScreen/MiniMapButton) : GuiTemplate/Button
+		{
+			left 0
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(MovieMakerButtonsScreen/SceneButton) : GuiTemplate/Button
+		{
+			left 0.06
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(MovieMakerButtonsScreen/MovieButton) : GuiTemplate/Button
+		{
+			left 0.12
+			top 0
+			width 0.06
+			height 0.08
+		}
+	}
+}
+MovieMakerMainScreen
+{
+	container BorderPanel(MovieMakerMainScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.35
+		height 0.7
+
+		container Panel(MovieMakerMainScreen/MovieMakerMainScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(MovieMakerMainScreen/MovieMakerMainScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Main Controls
+			}
+		}
+		container BorderPanel(MovieMakerMainScreen/Page1Panel)
+		{
+			caption Scene
+			element TextArea(MovieMakerMainScreen/MapLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.1
+				caption Map:
+			}
+			container Panel(MovieMakerMainScreen/MapSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.14
+				width 0.22
+				height 0.16
+        		}
+			element TextArea(MovieMakerMainScreen/CharactersLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.32
+				caption Characters:
+			}
+			container Panel(MovieMakerMainScreen/CharactersSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.36
+				width 0.22
+				height 0.16
+        		}
+			container Panel(MovieMakerMainScreen/NewCharButton) : GuiTemplate/Button
+			{
+				left 0.09
+				top 0.54
+				width 0.17
+				height 0.05
+
+				element TextArea(MovieMakerMainScreen/NewCharLabel) : GuiTemplate/CenteredText
+				{
+					caption New Character
+				}
+        		}
+			container Panel(MovieMakerMainScreen/EditCharButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.6
+				width 0.1
+				height 0.05
+
+				element TextArea(MovieMakerMainScreen/EditCharLabel) : GuiTemplate/CenteredText
+				{
+					caption Edit
+				}
+        		}
+			container Panel(MovieMakerMainScreen/DeleteCharButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.6
+				width 0.1
+				height 0.05
+
+				element TextArea(MovieMakerMainScreen/DeleteCharLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+		}
+		container BorderPanel(MovieMakerMainScreen/Page2Panel)
+		{
+			caption Timeline
+			element TextArea(MovieMakerMainScreen/ClipLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.1
+				caption Clips:
+			}
+			container Panel(MovieMakerMainScreen/ClipSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.14
+				width 0.22
+				height 0.16
+        		}
+		}
+	}
+}

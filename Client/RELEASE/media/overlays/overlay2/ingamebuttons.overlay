@@ -1,0 +1,87 @@
+InGameButtonsScreen
+{
+	container BorderPanel(InGameButtonsScreen/Panel)
+	{
+		left 0.52
+		top 0.92
+		width 0.48
+		height 0.08
+		container Panel(InGameButtonsScreen/ChatButton) : GuiTemplate/Button
+		{
+			left 0
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(InGameButtonsScreen/MiniMapButton) : GuiTemplate/Button
+		{
+			left 0.06
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(InGameButtonsScreen/InfoButton) : GuiTemplate/Button
+		{
+			left 0.12
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(InGameButtonsScreen/ActionButton) : GuiTemplate/Button
+		{
+			left 0.18
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(InGameButtonsScreen/FriendsButton) : GuiTemplate/Button
+		{
+			left 0.24
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(InGameButtonsScreen/FriendsReminderTextComponent) : GuiTemplate/Reminder
+		{
+			left 0.28
+			top 0
+			width 0.02
+			height 0.03
+       		}
+		container Panel(InGameButtonsScreen/PartyButton) : GuiTemplate/Button
+		{
+			left 0.3
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(InGameButtonsScreen/PartyReminderTextComponent) : GuiTemplate/Reminder
+		{
+			left 0.34
+			top 0
+			width 0.02
+			height 0.03
+       		}
+		container Panel(InGameButtonsScreen/GroupButton) : GuiTemplate/Button
+		{
+			left 0.36
+			top 0
+			width 0.06
+			height 0.08
+		}
+		container Panel(InGameButtonsScreen/GroupReminderTextComponent) : GuiTemplate/Reminder
+		{
+			left 0.4
+			top 0
+			width 0.02
+			height 0.03
+       		}
+		container Panel(InGameButtonsScreen/MovieButton) : GuiTemplate/Button
+		{
+			left 0.42
+			top 0
+			width 0.06
+			height 0.08
+		}
+	}
+}

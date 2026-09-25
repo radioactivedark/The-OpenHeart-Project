@@ -1,0 +1,8 @@
+Name		[string (16)]
+Species		[char]
+Emote		[unsigned char]
+Scale[10]	[char]
+Colour[9]	[unsigned char (3)]
+Preset		[unsigned char]
+Mesh[3]		[unsigned char]
+Mat[4]		[unsigned char]

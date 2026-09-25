@@ -1,0 +1,105 @@
+material rockMat
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture rockTex.jpg
+			}
+		}
+	}
+}
+material rockMat1
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture rockTex1.jpg
+			}
+		}
+	}
+}
+material rockMat2
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture rockTex2.jpg
+			}
+		}
+	}
+}
+material rockMat3
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture rockTex3.jpg
+			}
+		}
+	}
+}
+material rockMat4
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture rockTex4.jpg
+			}
+		}
+	}
+}
+material rockMat5
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture rockTex5.jpg
+			}
+		}
+	}
+}
+material rockMat6
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture rockTex6.jpg
+			}
+		}
+	}
+}

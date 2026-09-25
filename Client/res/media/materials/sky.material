@@ -1,0 +1,862 @@
+fragment_program Sky_PS cg
+{
+	source skyPS.cg
+	
+	entry_point skyShader_main
+	
+	profiles ps_2_0 arbfp1
+
+	default_params
+	{
+		param_named skyTop float4 0.092 0.147 0.533 1
+		param_named skyBot float4 1 0.975 0.766 1
+	}
+}
+fragment_program Cloud_PS cg
+{
+	source skyPS.cg
+	
+	entry_point cloudShader_main
+	
+	profiles ps_2_0 arbfp1
+
+	default_params
+	{
+		param_named colorMod1 float4 1 1 1 1
+	}
+}
+material skyMat
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+			}
+		}
+	}
+}
+material Sky/SkyMat
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			fog_override true
+			fragment_program_ref Sky_PS
+			{
+				param_named_auto skyTop custom 1
+				param_named_auto skyBot custom 2
+			}
+			texture_unit
+			{
+				texture skyMask.png
+				tex_coord_set 0
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			fog_override true
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture skyMask.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+	}
+}
+material Sky/SunMat
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit
+			{
+				texture sun.PNG
+			}
+		}
+	}
+}
+material Sky/SunRadianceMat
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit
+			{
+				texture sunRadiance.PNG
+			}
+		}
+	}
+}
+material Sky/MoonMat
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit
+			{
+				texture moon.PNG
+			}
+		}
+	}
+}
+material Sky/StarMat
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit
+			{
+				texture star.PNG
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+}
+material Sky/CloudMat
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud1.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud1.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat1
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud1.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud1.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat2
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud2.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud2.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat3
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud3.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud3.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat4
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud4.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud4.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat5
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud5.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud5.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat6
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud6.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud6.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat7
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud7.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud7.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat8
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud8.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud8.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat9
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud9.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud9.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat10
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud10.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud10.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat11
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud11.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud11.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat12
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud12.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud12.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat13
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud13.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud13.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat14
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud14.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud14.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material Sky/CloudMat15
+{
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			fragment_program_ref Cloud_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture cloud15.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+			}
+			
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit
+			{
+				texture cloud15.PNG
+				tex_coord_set 0
+				tex_address_mode clamp
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}

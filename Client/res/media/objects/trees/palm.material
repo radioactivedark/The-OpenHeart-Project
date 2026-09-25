@@ -1,0 +1,31 @@
+material PalmMat/Leaf
+{
+	transparency_casts_shadows off
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture palmLeaf.png
+			}
+		}
+	}
+}
+material PalmMat/Bark
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture palmBark.jpg
+			}
+		}
+	}
+}

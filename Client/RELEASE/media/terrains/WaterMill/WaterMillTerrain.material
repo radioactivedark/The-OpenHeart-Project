@@ -1,0 +1,23 @@
+import AlphaSplatTerrain1 from "terrain.material"
+material Terrain/WaterMill : AlphaSplatTerrain1
+{
+technique
+{
+pass
+{
+vertex_program_ref AlphaSplatTerrain/VP
+{
+param_named pageSize float 10000
+param_named textureTileSize float 5
+}
+fragment_program_ref AlphaSplatTerrain1/FP
+{
+param_named alpha0Mask float4 1 1 1 0
+}
+}
+}
+set_texture_alias AlphaMap1 watermillMask.png
+set_texture_alias Splat1 greengrass.jpg
+set_texture_alias Splat2 brokensand.jpg
+set_texture_alias Splat3 seasand.jpg
+}

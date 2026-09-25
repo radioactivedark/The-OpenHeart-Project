@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$classOgre_1_1HardwareIndexBuffer.html" title="Specialisation of HardwareBuffer for vertex index buffers, still abstract." alt="" coords="25,160,201,189"/>
+<area shape="rect" id="node9" href="$classOgre_1_1HardwarePixelBuffer.html" title="Specialisation of HardwareBuffer for a pixel buffer." alt="" coords="225,160,399,189"/>
+<area shape="rect" id="node11" href="$classOgre_1_1HardwareVertexBuffer.html" title="Specialisation of HardwareBuffer for a vertex buffer." alt="" coords="423,160,604,189"/>
+<area shape="rect" id="node2" href="$classOgre_1_1AllocatedObject.html" title="Superclass for all objects that wish to use custom memory allocators when their new / delete operator..." alt="" coords="271,5,353,35"/>
+<area shape="rect" id="node7" href="$classOgre_1_1DefaultHardwareIndexBuffer.html" title="Specialisation of HardwareIndexBuffer for emulation." alt="" coords="5,237,221,267"/>
+<area shape="rect" id="node13" href="$classOgre_1_1DefaultHardwareVertexBuffer.html" title="Specialisation of HardwareVertexBuffer for emulation." alt="" coords="403,237,624,267"/>
+</map>

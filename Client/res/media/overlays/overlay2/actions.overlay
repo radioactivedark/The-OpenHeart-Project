@@ -1,0 +1,86 @@
+ActionScreen
+{
+	container BorderPanel(ActionScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.3
+		height 0.4
+
+		
+		container Panel(ActionScreen/ActionScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(ActionScreen/ActionScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Actions and Emotes
+			}
+		}
+		container BorderPanel(ActionScreen/Page1Panel)
+		{
+			caption Actions
+			container Panel(ActionScreen/ActionHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.1
+				width 0.26
+				height 0.22
+        		}
+			element TextArea(ActionScreen/WalkLabel) : GuiTemplate/BasicText
+			{
+				left 0.02
+				top 0.34
+				caption Walk:
+			}
+			container Panel(ActionScreen/WalkCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.07
+				top 0.335
+			}
+			element TextArea(ActionScreen/CrouchLabel) : GuiTemplate/BasicText
+			{
+				left 0.15
+				top 0.34
+				caption Crouch:
+			}
+			container Panel(ActionScreen/CrouchCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.23
+				top 0.335
+			}
+		}
+		container BorderPanel(ActionScreen/Page2Panel)
+		{
+			caption Emotes
+			container Panel(ActionScreen/EmoteHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.1
+				width 0.26
+				height 0.22
+        		}
+			element TextArea(ActionScreen/LipSyncLabel) : GuiTemplate/BasicText
+			{
+				left 0.02
+				top 0.34
+				caption Lip Sync:
+			}
+			container Panel(ActionScreen/LipSyncCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.12
+				top 0.335
+			}
+			container Panel(ActionScreen/EmoteDefaultButton) : GuiTemplate/Button
+			{
+				left 0.16
+				top 0.33
+				width 0.12
+				height 0.05
+
+				element TextArea(ActionScreen/EmoteDefaultLabel) : GuiTemplate/CenteredText
+				{
+					caption Set Default
+				}
+        		}
+		}
+	}
+}

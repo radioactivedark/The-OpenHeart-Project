@@ -1,0 +1,19 @@
+[Map]
+Name=Water Mill
+Seed=2mD181XYua
+[Terrain]
+Filename=WaterMillTerrain.cfg
+Size=10000 10000
+Boundary=0
+[Sky]
+HasSky=true
+[Objects]
+Filename=WaterMillObjects.cfg
+[Gates]
+Filename=WaterMillGates.cfg
+[Water]
+Filename=WaterMillWater.cfg
+Ocean=5000 20 5000
+OceanSize=12000 12000
+[MapMaker]
+StartPos=5186.32 325.599 5363.69

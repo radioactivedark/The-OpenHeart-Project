@@ -1,0 +1,17 @@
+BulletinScreen
+{
+	container BorderPanel(BulletinScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.58
+		top 0.5
+		width 0.32
+		height 0.47
+		container Panel(BulletinScreen/MessageTextArea) : GuiTemplate/TextArea
+		{
+			left 0
+			top 0
+			width 0.3
+			height 0.47
+		}
+	}
+}

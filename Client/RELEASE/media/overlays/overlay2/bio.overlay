@@ -1,0 +1,316 @@
+InfoScreen
+{
+	container BorderPanel(InfoScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.2
+		top 0.1
+		width 0.5
+		height 0.4
+
+		
+		container Panel(InfoScreen/InfoScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(InfoScreen/InfoScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption My Info
+			}
+		}
+		container BorderPanel(InfoScreen/Page1Panel)
+		{
+			caption Info
+			element TextArea(InfoScreen/UsernameLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.1
+				caption Username:
+			}
+			container Panel(InfoScreen/UsernameTextComponent) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.1
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(InfoScreen/CharnameLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.15
+				caption Character Name:
+			}
+			container Panel(InfoScreen/CharnameTextComponent) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.15
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(InfoScreen/GroupLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.2
+				caption Group:
+			}
+			container Panel(InfoScreen/GroupTextComponent) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.2
+				width 0.28
+				height 0.03
+       		 	}
+			
+		}
+		container BorderPanel(InfoScreen/Page2Panel)
+		{
+			caption Bio
+			container Panel(InfoScreen/BioTextArea) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.1
+				width 0.44
+				height 0.27
+			}
+		}
+		container BorderPanel(InfoScreen/Page3Panel)
+		{
+			caption Home
+			element TextArea(InfoScreen/HomeLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.2
+				caption Home:
+			}
+			container Panel(InfoScreen/HomeTextComponent) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.2
+				width 0.28
+				height 0.03
+       		 	}
+			container Panel(InfoScreen/SetHomeButton) : GuiTemplate/Button
+			{
+				left 0.02
+				top 0.27
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoScreen/SetHomeLabel) : GuiTemplate/CenteredText
+				{
+					caption Set Home
+				}
+        		}
+			container Panel(InfoScreen/GoHomeButton) : GuiTemplate/Button
+			{
+				left 0.19
+				top 0.27
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoScreen/GoHomeLabel) : GuiTemplate/CenteredText
+				{
+					caption Go Home
+				}
+        		}
+			container Panel(InfoScreen/ResetHomeButton) : GuiTemplate/Button
+			{
+				left 0.36
+				top 0.27
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoScreen/ResetHomeLabel) : GuiTemplate/CenteredText
+				{
+					caption Reset Home
+				}
+        		}
+		}
+	}
+}
+
+InfoViewScreen
+{
+	container BorderPanel(InfoViewScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.3
+		top 0.1
+		width 0.5
+		height 0.4
+
+		
+		container Panel(InfoViewScreen/InfoViewScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(InfoViewScreen/InfoViewScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Player Info
+			}
+		}
+		container BorderPanel(InfoViewScreen/Page1Panel)
+		{
+			caption Info
+			element TextArea(InfoViewScreen/UsernameLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.1
+				caption Username:
+			}
+			container Panel(InfoViewScreen/UsernameTextComponent) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.1
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(InfoViewScreen/CharnameLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.15
+				caption Character Name:
+			}
+			container Panel(InfoViewScreen/CharnameTextComponent) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.15
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(InfoViewScreen/GroupLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.2
+				caption Group:
+			}
+			container Panel(InfoViewScreen/GroupTextComponent) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.2
+				width 0.28
+				height 0.03
+       		 	}
+			container Panel(InfoViewScreen/WhisperButton) : GuiTemplate/Button
+			{
+				left 0.02
+				top 0.27
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoViewScreen/WhisperLabel) : GuiTemplate/CenteredText
+				{
+					caption Whisper
+				}
+        		}
+			container Panel(InfoViewScreen/PartyButton) : GuiTemplate/Button
+			{
+				left 0.02
+				top 0.33
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoViewScreen/PartyLabel) : GuiTemplate/CenteredText
+				{
+					caption Party
+				}
+        		}
+			container Panel(InfoViewScreen/BlockButton) : GuiTemplate/Button
+			{
+				left 0.36
+				top 0.33
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoViewScreen/BlockLabel) : GuiTemplate/CenteredText
+				{
+					caption Block
+				}
+        		}
+			container Panel(InfoViewScreen/FriendButton) : GuiTemplate/Button
+			{
+				left 0.19
+				top 0.27
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoViewScreen/FriendLabel) : GuiTemplate/CenteredText
+				{
+					caption Add Friend
+				}
+        		}
+			container Panel(InfoViewScreen/GroupViewButton) : GuiTemplate/Button
+			{
+				left 0.19
+				top 0.33
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoViewScreen/GroupViewLabel) : GuiTemplate/CenteredText
+				{
+					caption Group Bio
+				}
+        		}
+			container Panel(InfoViewScreen/GroupInviteButton) : GuiTemplate/Button
+			{
+				left 0.19
+				top 0.33
+				width 0.12
+				height 0.05
+
+				element TextArea(InfoViewScreen/GroupInviteLabel) : GuiTemplate/CenteredText
+				{
+					caption Group Invite
+				}
+        		}
+		}
+		container BorderPanel(InfoViewScreen/Page2Panel)
+		{
+			caption Bio
+			container Panel(InfoViewScreen/BioTextArea) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.1
+				width 0.44
+				height 0.27
+			}
+		}
+	}
+}
+InfoReportScreen
+{
+	container BorderPanel(InfoReportScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.35
+		top 0.15
+		width 0.5
+		height 0.42
+		container Panel(InfoReportScreen/InfoReportScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(InfoReportScreen/InfoReportScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Report User
+			}
+		}
+		container Panel(InfoReportScreen/UsernameTextComponent) : GuiTemplate/TextField
+		{
+			left 0.03
+			top 0.05
+			width 0.44
+			height 0.03
+       		}
+		container Panel(InfoReportScreen/MessageTextArea) : GuiTemplate/TextArea
+		{
+			left 0.03
+			top 0.1
+			width 0.44
+			height 0.24
+		}
+		container Panel(InfoReportScreen/ReportButton) : GuiTemplate/Button
+		{
+			left 0.19
+			top 0.35
+			width 0.12
+			height 0.05
+
+			element TextArea(InfoReportScreen/ReportLabel) : GuiTemplate/CenteredText
+			{
+				caption Submit
+			}
+        	}
+	}
+}

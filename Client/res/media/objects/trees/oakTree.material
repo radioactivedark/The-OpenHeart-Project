@@ -1,0 +1,40 @@
+material OakMat/Leaf
+{
+	transparency_casts_shadows off
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			ambient 0.75 0.75 0.75 1
+			diffuse 0.05 0.05 0.05 1
+			cull_hardware none
+			cull_software none
+
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture oakLeaf.png
+			}
+		}
+	}
+}
+material OakMat/Bark
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.8 0.8 0.8 1
+			diffuse 0.9 0.9 0.9 1
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture oakBark.jpg
+			}
+		}
+	}
+}

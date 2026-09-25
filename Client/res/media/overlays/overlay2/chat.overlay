@@ -1,0 +1,163 @@
+ChatOutputScreen
+{
+	container BorderPanel(ChatOutputScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.02
+		top 0.6
+		width 0.4
+		height 0.23
+		container Panel(ChatOutputScreen/SSlider) : GuiTemplate/Slider
+		{
+			left 0.37
+			top 0.02
+			height 0.2
+		}
+		container Panel(ChatOutputScreen/Sizer1NorthSizer) : GuiTemplate/Sizer
+		{
+		}
+		container Panel(ChatOutputScreen/Sizer2EastSizer) : GuiTemplate/Sizer
+		{
+		}
+	}
+}
+ChatInputScreen
+{
+	container BorderPanel(ChatInputScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.02
+		top 0.86
+		width 0.4
+		height 0.11
+		container Panel(ChatInputScreen/InputTextArea) : GuiTemplate/TextComponent
+		{
+			left 0.01
+			top 0.01
+			width 0.36
+			height 0.1
+		}
+	}
+}
+ChatMidScreen
+{
+	container Panel(ChatMidScreen/Panel)
+	{
+		left 0.02
+		top 0.83
+		width 0.4
+		height 0.03
+		container Panel(ChatMidScreen/ChannelButton) : GuiTemplate/Button
+		{
+			width 0.1
+			height 0.03
+
+			element TextArea(ChatMidScreen/ChannelLabel) : GuiTemplate/CenteredText
+			{
+				caption Local
+			}
+        	}
+		container Panel(ChatMidScreen/WhisperTextField) : GuiTemplate/TextField
+		{
+			left 0.1
+			width 0.27
+			height 0.03
+       		 }
+		container Panel(ChatMidScreen/FilterButton) : GuiTemplate/Button
+		{
+			left 0.37
+			width 0.03
+			height 0.03
+
+			element TextArea(ChatMidScreen/FilterLabel) : GuiTemplate/CenteredText
+			{
+				caption >
+			}
+        	}
+	}
+}
+ChatFilterScreen
+{
+	container BorderPanel(ChatFilterScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.42
+		top 0.56
+		width 0.12
+		height 0.305
+		container Panel(ChatFilterScreen/C0CheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.01
+			top 0.015
+		}
+		element TextArea(ChatFilterScreen/L0Label) : GuiTemplate/BasicText
+		{
+			left 0.04
+			top 0.02
+			caption Local
+		}
+		container Panel(ChatFilterScreen/C1CheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.01
+			top 0.055
+		}
+		element TextArea(ChatFilterScreen/L1Label) : GuiTemplate/BasicText
+		{
+			left 0.04
+			top 0.06
+			caption General
+		}
+		container Panel(ChatFilterScreen/C2CheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.01
+			top 0.095
+		}
+		element TextArea(ChatFilterScreen/L2Label) : GuiTemplate/BasicText
+		{
+			left 0.04
+			top 0.1
+			caption Group
+		}
+		container Panel(ChatFilterScreen/C3CheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.01
+			top 0.135
+		}
+		element TextArea(ChatFilterScreen/L3Label) : GuiTemplate/BasicText
+		{
+			left 0.04
+			top 0.14
+			caption Party
+		}
+		container Panel(ChatFilterScreen/C4CheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.01
+			top 0.175
+		}
+		element TextArea(ChatFilterScreen/L4Label) : GuiTemplate/BasicText
+		{
+			left 0.04
+			top 0.18
+			caption Whisper
+		}
+		container Panel(ChatFilterScreen/C5CheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.01
+			top 0.215
+		}
+		element TextArea(ChatFilterScreen/L5Label) : GuiTemplate/BasicText
+		{
+			left 0.04
+			top 0.22
+			caption Action
+		}
+		container Panel(ChatFilterScreen/C6CheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.01
+			top 0.255
+		}
+		element TextArea(ChatFilterScreen/L6Label) : GuiTemplate/BasicText
+		{
+			left 0.04
+			top 0.26
+			caption Movie
+		}
+	}
+}

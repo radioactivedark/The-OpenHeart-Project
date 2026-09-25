@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$classOgre_1_1MultiRenderTarget.html" title="This class represents a render target that renders to multiple RenderTextures at once." alt="" coords="5,160,168,189"/>
+<area shape="rect" id="node7" href="$classOgre_1_1RenderTexture.html" title="This class represents a RenderTarget that renders to a Texture." alt="" coords="192,160,333,189"/>
+<area shape="rect" id="node9" href="$classOgre_1_1RenderWindow.html" title="Manages the target rendering window." alt="" coords="357,160,501,189"/>
+<area shape="rect" id="node2" href="$classOgre_1_1AllocatedObject.html" title="Superclass for all objects that wish to use custom memory allocators when their new / delete operator..." alt="" coords="205,5,320,35"/>
+</map>

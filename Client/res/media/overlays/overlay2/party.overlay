@@ -1,0 +1,72 @@
+PartyScreen
+{
+	container BorderPanel(PartyScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.3
+		height 0.5
+
+		
+		container Panel(PartyScreen/PartyScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(PartyScreen/PartyScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Party
+			}
+		}
+		container BorderPanel(PartyScreen/Page1Panel)
+		{
+			caption My Party
+			element TextArea(PartyScreen/NoPartyLabel) : GuiTemplate/BasicText
+			{
+				left 0.15
+				top 0.235
+				alignment center
+				caption You do not have a party
+			}
+			container Panel(PartyScreen/PartyHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.1
+				width 0.26
+				height 0.31
+        		}
+			container Panel(PartyScreen/PartyLeaveButton) : GuiTemplate/Button
+			{
+				left 0.09
+				top 0.42
+				width 0.12
+				height 0.05
+
+				element TextArea(PartyScreen/PartyLeaveLabel) : GuiTemplate/CenteredText
+				{
+					caption Leave
+				}
+        		}
+		}
+		container BorderPanel(PartyScreen/Page2Panel)
+		{
+			caption Requests
+			container Panel(PartyScreen/RequestHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.1
+				width 0.26
+				height 0.31
+        		}
+			container Panel(PartyScreen/IgnoreAllButton) : GuiTemplate/Button
+			{
+				left 0.09
+				top 0.42
+				width 0.12
+				height 0.05
+
+				element TextArea(PartyScreen/IgnoreAllLabel) : GuiTemplate/CenteredText
+				{
+					caption Ignore All
+				}
+        		}
+		}
+	}
+}

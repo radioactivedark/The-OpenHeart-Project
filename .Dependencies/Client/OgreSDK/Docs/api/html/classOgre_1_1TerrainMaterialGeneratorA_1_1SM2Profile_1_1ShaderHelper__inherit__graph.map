@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$classOgre_1_1TerrainMaterialGeneratorA_1_1SM2Profile_1_1ShaderHelperCg.html" title="Utility class to help with generating shaders for Cg / HLSL." alt="" coords="569,5,951,35"/>
+<area shape="rect" id="node9" href="$classOgre_1_1TerrainMaterialGeneratorA_1_1SM2Profile_1_1ShaderHelperGLSL.html" title="Utility class to help with generating shaders for GLSL." alt="" coords="561,59,959,88"/>
+<area shape="rect" id="node2" href="$classOgre_1_1AllocatedObject.html" title="Superclass for all objects that wish to use custom memory allocators when their new / delete operator..." alt="" coords="5,32,96,61"/>
+<area shape="rect" id="node7" href="$classOgre_1_1TerrainMaterialGeneratorA_1_1SM2Profile_1_1ShaderHelperHLSL.html" title="Ogre::TerrainMaterialGeneratorA::SM2Profile::ShaderHelperHLSL" alt="" coords="1009,5,1407,35"/>
+</map>

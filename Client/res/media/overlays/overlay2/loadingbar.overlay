@@ -1,0 +1,35 @@
+LoadingBarScreen
+{
+	zorder 500
+	container BorderPanel(LoadingBarScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.25
+		top 0.4
+		width 0.5
+		height 0.2
+		container Panel(LoadingBarScreen/TitleTextComponent)
+		{
+			left 0
+			top 0
+			width 0.52
+			height 0.12
+		}
+		container Panel(LoadingBarScreen/BarMax)
+		{
+			left 0.04
+			top 0.12
+			width 0.42
+			height 0.04
+			material GuiMat/LoadingBarMax
+
+			element Panel(LoadingBarScreen/Bar)
+			{
+				left 0
+				top 0.005
+				width 0.42
+				height 0.03
+				material GuiMat/LoadingBar
+        		}
+        	}
+	}
+}

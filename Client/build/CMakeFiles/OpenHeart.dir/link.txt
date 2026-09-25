@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\OpenHeart.dir/objects.a
+C:\Users\captaincat\Downloads\.Dependencies\Client\MinGW\bin\ar.exe qc CMakeFiles\OpenHeart.dir/objects.a @CMakeFiles\OpenHeart.dir\objects1.rsp
+C:\Users\captaincat\Downloads\.Dependencies\Client\MinGW\bin\mingw32-g++.exe -Wl,--enable-auto-image-base -Wl,--add-stdcall-alias -s -Wl,--whole-archive CMakeFiles\OpenHeart.dir/objects.a -Wl,--no-whole-archive -o C:\Users\captaincat\Downloads\Client\RELEASE\OpenHeart.exe -Wl,--out-implib,libOpenHeart.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\OpenHeart.dir\linkLibs.rsp

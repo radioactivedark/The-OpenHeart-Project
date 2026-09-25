@@ -1,0 +1,140 @@
+material wingMatL
+{
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			
+			fragment_program_ref Wing_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wingShade.jpg
+				tex_coord_set 0
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture wingShade.jpg
+				colour_op_ex modulate src_texture src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material wingMatR
+{
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			
+			fragment_program_ref Wing_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wingShade.jpg
+				tex_coord_set 0
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture wingShade.jpg
+				colour_op_ex modulate src_texture src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material wing2MatL
+{
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			
+			fragment_program_ref Wing_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wing2Shade.jpg
+				tex_coord_set 0
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture wing2Shade.jpg
+				colour_op_ex modulate src_texture src_manual 1 0 0 1
+			}
+		}
+	}
+}
+material wing2MatR
+{
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			
+			fragment_program_ref Wing_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wing2Shade.jpg
+				tex_coord_set 0
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture wing2Shade.jpg
+				colour_op_ex modulate src_texture src_manual 1 0 0 1
+			}
+		}
+	}
+}

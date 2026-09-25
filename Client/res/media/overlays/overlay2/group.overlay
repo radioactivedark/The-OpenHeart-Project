@@ -1,0 +1,201 @@
+GroupScreen
+{
+	container BorderPanel(GroupScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.25
+		top 0.1
+		width 0.5
+		height 0.44
+
+		
+		container Panel(GroupScreen/GroupScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(GroupScreen/GroupScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Group
+			}
+		}
+		container BorderPanel(GroupScreen/Page1Panel)
+		{
+			caption My Group
+			element TextArea(GroupScreen/NoGroupLabel) : GuiTemplate/BasicText
+			{
+				left 0.25
+				top 0.235
+				alignment center
+				caption You do not have a group
+			}
+			container Panel(GroupScreen/MembersHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.1
+				width 0.46
+				height 0.31
+        		}
+		}
+		container BorderPanel(GroupScreen/Page2Panel)
+		{
+			caption Actions
+			element TextArea(GroupScreen/GroupNameLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.1
+				caption Group Name:
+			}
+			container Panel(GroupScreen/GroupNameTextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.1
+				width 0.28
+				height 0.03
+       		 	}
+			container Panel(GroupScreen/GroupCreateButton) : GuiTemplate/Button
+			{
+				left 0.065
+				top 0.17
+				width 0.12
+				height 0.05
+
+				element TextArea(GroupScreen/GroupCreateLabel) : GuiTemplate/CenteredText
+				{
+					caption Create
+				}
+        		}
+			container Panel(GroupScreen/GroupBioButton) : GuiTemplate/Button
+			{
+				left 0.065
+				top 0.23
+				width 0.12
+				height 0.05
+
+				element TextArea(GroupScreen/GroupBioLabel) : GuiTemplate/CenteredText
+				{
+					caption View Bio
+				}
+        		}
+			container Panel(GroupScreen/GroupLeaveButton) : GuiTemplate/Button
+			{
+				left 0.065
+				top 0.35
+				width 0.12
+				height 0.05
+
+				element TextArea(GroupScreen/GroupLeaveLabel) : GuiTemplate/CenteredText
+				{
+					caption Leave
+				}
+        		}
+			element TextArea(GroupScreen/RequestLabel) : GuiTemplate/BasicText
+			{
+				left 0.25
+				top 0.14
+				caption Requests:
+			}
+			container Panel(GroupScreen/RequestHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.25
+				top 0.17
+				width 0.21
+				height 0.22
+        		}
+		}
+		container BorderPanel(GroupScreen/Page3Panel)
+		{
+			caption Search
+			element TextArea(GroupScreen/FilterGroupNameLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.11
+				caption Search Group:
+			}
+			container Panel(GroupScreen/FilterGroupNameTextField) : GuiTemplate/TextField
+			{
+				left 0.17
+				top 0.11
+				width 0.22
+				height 0.03
+       		 	}
+			container Panel(GroupScreen/GroupSearchButton) : GuiTemplate/Button
+			{
+				left 0.41
+				top 0.1
+				width 0.08
+				height 0.05
+
+				element TextArea(GroupScreen/GroupSearchLabel) : GuiTemplate/CenteredText
+				{
+					caption Search
+				}
+        		}
+			container Panel(GroupScreen/ViewGroupsHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.15
+				width 0.46
+				height 0.28
+        		}
+		}
+	}
+}
+GroupBioScreen
+{
+	container BorderPanel(GroupBioScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.3
+		top 0.15
+		width 0.5
+		height 0.42
+		container Panel(GroupBioScreen/GroupBioScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(GroupBioScreen/GroupBioScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption View Bio
+			}
+		}
+		container Panel(GroupBioScreen/GroupNameTextComponent) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.05
+			width 0.44
+			height 0.03
+       		}
+		container Panel(GroupBioScreen/BioTextArea) : GuiTemplate/TextArea
+		{
+			left 0.01
+			top 0.1
+			width 0.44
+			height 0.27
+		}
+	}
+}
+GroupViewScreen
+{
+	container BorderPanel(GroupViewScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.3
+		top 0.15
+		width 0.5
+		height 0.42
+		container Panel(GroupViewScreen/GroupViewScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(GroupViewScreen/GroupViewScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption View Members
+			}
+		}
+		container Panel(GroupViewScreen/GroupNameTextComponent) : GuiTemplate/TextField
+		{
+			left 0.01
+			top 0.05
+			width 0.44
+			height 0.03
+       		}
+		container Panel(GroupViewScreen/MembersHighlightList) : GuiTemplate/TextArea
+		{
+			left 0.01
+			top 0.1
+			width 0.46
+			height 0.31
+        	}
+	}
+}

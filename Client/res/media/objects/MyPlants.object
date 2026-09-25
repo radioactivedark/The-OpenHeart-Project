@@ -1,0 +1,18 @@
+[FlowerShrub]
+mesh0=shrub.mesh;0 0 0;1 1 1;1 0 0 0;
+[GrassShrub]
+mesh0=shrub2.mesh;0 0 0;1 1 1;1 0 0 0;
+[LargeShrub]
+mesh0=shrub3.mesh;0 -10 0;1 1 1;1 0 0 0;
+[FlowerBunch]
+mesh0=flower1.mesh;0 0 0;0.3 0.3 0.3;0.925375 0 -0.379053 0;FlowerMat/Flower1;FlowerMat/Leaf2;
+mesh1=flower2.mesh;2.65 0 -7.37799;0.3 0.3 0.3;0.27518 0.0158557 0.961251 -0.00453907;FlowerMat/Flower2;FlowerMat/Leaf2;
+mesh2=flower3.mesh;0 0 -9.65;0.3 0.3 0.3;0.563382 0 -0.826197 0;
+mesh3=flower1.mesh;-5.376 0 -4.7;0.3192 0.3274 0.315;0.925375 0 -0.379052 0;
+mesh4=flower3.mesh;-5.79199 0 -0.927975;0.31064 0.32212 0.31448;0.994217 0 -0.107392 0;
+mesh5=flower2.mesh;0 0 -5.8;0.3 0.415 0.3;0.507012 0 0.861939 0;
+mesh6=flower1.mesh;3.7 0 -2.2;0.29492 0.29576 0.29532;-0.389074 0.0656118 0.91563 0.0770568;FlowerMat/Flower1;FlowerMat/Leaf1;
+mesh7=flower3.mesh;2.692 0 -0.295997;0.3 0.3 0.3;0.886289 0.14895 -0.432463 -0.07268;FlowerMat/Flower3;FlowerMat/Leaf1;
+mesh8=flower1.mesh;-4.41401 0 -8.63398;0.29492 0.29576 0.29532;-0.99338 0.0947823 -0.0543536 -0.0354819;FlowerMat/Flower1;FlowerMat/Leaf2;
+mesh9=flower2.mesh;-2.882 0 1.954;0.3 0.297 0.3;-0.550299 -0.0385289 0.832041 0.058255;FlowerMat/Flower2;FlowerMat/Leaf2;
+mesh10=flower3.mesh;-1.56 0 -4.022;0.37528 0.39936 0.34956;0.771514 0 -0.636213 0;FlowerMat/Flower3;FlowerMat/Leaf1;

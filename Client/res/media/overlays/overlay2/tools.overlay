@@ -1,0 +1,82 @@
+ToolsScreen
+{
+	container BorderPanel(ToolsScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.1
+		top 0.5
+		width 0.45
+		height 0.47
+		container Panel(ToolsScreen/ObjectMakerButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.05
+			width 0.16
+			height 0.05
+
+			element TextArea(ToolsScreen/ObjectMakerLabel) : GuiTemplate/CenteredText
+			{
+				caption Object Maker
+			}
+        	}
+		container Panel(ToolsScreen/SkyMakerButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.11
+			width 0.16
+			height 0.05
+
+			element TextArea(ToolsScreen/SkyMakerLabel) : GuiTemplate/CenteredText
+			{
+				caption Sky Maker
+			}
+        	}
+		container Panel(ToolsScreen/MapMakerButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.17
+			width 0.16
+			height 0.05
+
+			element TextArea(ToolsScreen/MapMakerLabel) : GuiTemplate/CenteredText
+			{
+				caption Map Maker
+			}
+        	}
+		container Panel(ToolsScreen/CharEditButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.23
+			width 0.16
+			height 0.05
+
+			element TextArea(ToolsScreen/CharEditLabel) : GuiTemplate/CenteredText
+			{
+				caption Preset Maker
+			}
+        	}
+		container Panel(ToolsScreen/MovieMakerButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.29
+			width 0.16
+			height 0.05
+
+			element TextArea(ToolsScreen/MovieMakerLabel) : GuiTemplate/CenteredText
+			{
+				caption Movie Maker
+			}
+        	}
+		container Panel(ToolsScreen/BackButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.38
+			width 0.16
+			height 0.05
+
+			element TextArea(ToolsScreen/BackLabel) : GuiTemplate/CenteredText
+			{
+				caption Back
+			}
+        	}
+	}
+}

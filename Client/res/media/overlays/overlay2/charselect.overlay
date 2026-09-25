@@ -1,0 +1,77 @@
+CharSelectScreen
+{
+	container BorderPanel(CharSelectScreen/Panel)
+	{
+		left 0.1
+		top 0.6
+		width 0.8
+		height 0.4
+		material GuiMat/Blank
+
+		element TextArea(CharSelectScreen/Name) : GuiTemplate/VeryLargeText
+		{
+		}
+		container Panel(CharSelectScreen/Select0Button) : GuiTemplate/Button
+		{
+			left 0
+			top 0
+			width 0.2
+			height 0.2
+        	}
+		container Panel(CharSelectScreen/Select1Button) : GuiTemplate/Button
+		{
+			left 0.6
+			top 0
+			width 0.2
+			height 0.2
+        	}
+		container Panel(CharSelectScreen/BackButton) : GuiTemplate/Button
+		{
+			left 0.05
+			top 0.3
+			width 0.16
+			height 0.05
+
+			element TextArea(CharSelectScreen/BackLabel) : GuiTemplate/CenteredText
+			{
+				caption Back
+			}
+        	}
+		container Panel(CharSelectScreen/StartButton) : GuiTemplate/Button
+		{
+			left 0.32
+			top 0.25
+			width 0.16
+			height 0.05
+
+			element TextArea(CharSelectScreen/StartLabel) : GuiTemplate/CenteredText
+			{
+				caption Start
+			}
+        	}
+		container Panel(CharSelectScreen/EditButton) : GuiTemplate/Button
+		{
+			left 0.32
+			top 0.35
+			width 0.16
+			height 0.05
+
+			element TextArea(CharSelectScreen/EditLabel) : GuiTemplate/CenteredText
+			{
+				caption Edit
+			}
+        	}
+		container Panel(CharSelectScreen/CreateButton) : GuiTemplate/Button
+		{
+			left 0.59
+			top 0.3
+			width 0.16
+			height 0.05
+
+			element TextArea(CharSelectScreen/CreateLabel) : GuiTemplate/CenteredText
+			{
+				caption Create
+			}
+        	}
+	}
+}

@@ -1,0 +1,92 @@
+material FlowerMat/Leaf1
+{
+	transparency_casts_shadows off
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture flowerLeaf1.png
+			}
+		}
+	}
+}
+material FlowerMat/Leaf2
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture flowerLeaf2.png
+			}
+		}
+	}
+}
+material FlowerMat/Flower1
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture flower1.png
+			}
+		}
+	}
+}
+material FlowerMat/Flower2
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture flower2.png
+			}
+		}
+	}
+}
+material FlowerMat/Flower3
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture flower3.png
+			}
+		}
+	}
+}

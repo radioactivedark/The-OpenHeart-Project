@@ -1,0 +1,540 @@
+SkyMakerScreen
+{
+	container BorderPanel(SkyMakerScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.35
+		height 0.8
+
+		container BorderPanel(SkyMakerScreen/Page1Panel)
+		{
+			caption Sky
+			element TextArea(SkyMakerScreen/NameLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.06
+				caption File Name:
+			}
+			container Panel(SkyMakerScreen/NameTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.09
+				width 0.28
+				height 0.03
+       		 	}
+			container Panel(SkyMakerScreen/SaveButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.13
+				width 0.12
+				height 0.05
+
+				element TextArea(SkyMakerScreen/SaveLabel) : GuiTemplate/CenteredText
+				{
+					caption Save
+				}
+        		}
+			container Panel(SkyMakerScreen/ExportButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.13
+				width 0.12
+				height 0.05
+
+				element TextArea(SkyMakerScreen/ExportLabel) : GuiTemplate/CenteredText
+				{
+					caption Export
+				}
+        		}
+			container Panel(SkyMakerScreen/SkyTestButton) : GuiTemplate/Button
+			{
+				left 0.115
+				top 0.19
+				width 0.12
+				height 0.05
+
+				element TextArea(SkyMakerScreen/SkyTestLabel) : GuiTemplate/CenteredText
+				{
+					caption Start Test
+				}
+        		}
+			container Panel(SkyMakerScreen/SkiesHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.25
+				width 0.24
+				height 0.12
+        		}
+			container Panel(SkyMakerScreen/LoadButton) : GuiTemplate/Button
+			{
+				left 0.115
+				top 0.38
+				width 0.12
+				height 0.05
+
+				element TextArea(SkyMakerScreen/LoadLabel) : GuiTemplate/CenteredText
+				{
+					caption Load
+				}
+        		}
+			container Panel(SkyMakerScreen/Sky0Partition) : GuiTemplate/Partition
+			{
+				top 0.445
+				width 0.33
+			}
+			container Panel(SkyMakerScreen/SkySelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.46
+				width 0.24
+				height 0.12
+        		}
+			container Panel(SkyMakerScreen/CX0Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.6
+				width 0.24
+			}
+			container Panel(SkyMakerScreen/CT0TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.595
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/CX0Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.6
+				caption R:
+			}
+			container Panel(SkyMakerScreen/CX1Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.64
+				width 0.24
+			}
+			container Panel(SkyMakerScreen/CT1TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.635
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/CX1Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.64
+				caption G:
+			}
+			container Panel(SkyMakerScreen/CX2Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.68
+				width 0.24
+			}
+			container Panel(SkyMakerScreen/CT2TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.675
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/CX2Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.68
+				caption B:
+			}
+			element TextArea(SkyMakerScreen/SkyMatLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.72
+				caption Material:
+			}
+			container Panel(SkyMakerScreen/SkyMatTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.75
+				width 0.28
+				height 0.03
+       		 	}
+			
+		}
+		container BorderPanel(SkyMakerScreen/Page2Panel)
+		{
+			caption Weather
+			element TextArea(SkyMakerScreen/WeatherNameLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.06
+				caption File Name:
+			}
+			container Panel(SkyMakerScreen/WeatherNameTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.09
+				width 0.28
+				height 0.03
+       		 	}
+			container Panel(SkyMakerScreen/WeatherSaveButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.13
+				width 0.12
+				height 0.05
+
+				element TextArea(SkyMakerScreen/WeatherSaveLabel) : GuiTemplate/CenteredText
+				{
+					caption Save
+				}
+        		}
+			container Panel(SkyMakerScreen/WeatherResetButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.13
+				width 0.12
+				height 0.05
+
+				element TextArea(SkyMakerScreen/WeatherResetLabel) : GuiTemplate/CenteredText
+				{
+					caption Reset
+				}
+        		}
+			container Panel(SkyMakerScreen/WeathersHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.2
+				width 0.24
+				height 0.12
+        		}
+			container Panel(SkyMakerScreen/WeatherLoadButton) : GuiTemplate/Button
+			{
+				left 0.115
+				top 0.33
+				width 0.12
+				height 0.05
+
+				element TextArea(SkyMakerScreen/WeatherLoadLabel) : GuiTemplate/CenteredText
+				{
+					caption Load
+				}
+        		}
+			container Panel(SkyMakerScreen/Weather0Partition) : GuiTemplate/Partition
+			{
+				top 0.395
+				width 0.33
+			}
+			element TextArea(SkyMakerScreen/WeatherPSLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.41
+				caption Particle:
+			}
+			container Panel(SkyMakerScreen/WeatherPSTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.44
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/WeatherRateLabel) : GuiTemplate/BasicText
+			{
+				left 0.09
+				top 0.48
+				caption Rate:
+			}
+			container Panel(SkyMakerScreen/WeatherRateTextField) : GuiTemplate/TextField
+			{
+				left 0.14
+				top 0.48
+				width 0.08
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/WeatherPos0Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.52
+				caption X:
+			}
+			container Panel(SkyMakerScreen/WeatherPos0TextField) : GuiTemplate/TextField
+			{
+				left 0.03
+				top 0.52
+				width 0.08
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/WeatherPos1Label) : GuiTemplate/BasicText
+			{
+				left 0.12
+				top 0.52
+				caption Y:
+			}
+			container Panel(SkyMakerScreen/WeatherPos1TextField) : GuiTemplate/TextField
+			{
+				left 0.14
+				top 0.52
+				width 0.08
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/WeatherPos2Label) : GuiTemplate/BasicText
+			{
+				left 0.23
+				top 0.52
+				caption Z:
+			}
+			container Panel(SkyMakerScreen/WeatherPos2TextField) : GuiTemplate/TextField
+			{
+				left 0.25
+				top 0.52
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(SkyMakerScreen/WeatherSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.57
+				width 0.24
+				height 0.09
+        		}
+			container Panel(SkyMakerScreen/WCX0Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.67
+				width 0.24
+			}
+			container Panel(SkyMakerScreen/WCT0TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.665
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/WCX0Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.67
+				caption R:
+			}
+			container Panel(SkyMakerScreen/WCX1Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.71
+				width 0.24
+			}
+			container Panel(SkyMakerScreen/WCT1TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.705
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/WCX1Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.71
+				caption G:
+			}
+			container Panel(SkyMakerScreen/WCX2Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.75
+				width 0.24
+			}
+			container Panel(SkyMakerScreen/WCT2TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.745
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(SkyMakerScreen/WCX2Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.75
+				caption B:
+			}
+			
+		}
+		container BorderPanel(SkyMakerScreen/Page3Panel)
+		{
+			caption Cycle
+		}
+	}
+}
+WeatherMakerScreen
+{
+	container BorderPanel(WeatherMakerScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.05
+		top 0.6
+		width 0.9
+		height 0.35
+		container Panel(WeatherMakerScreen/TimeSlider) : GuiTemplate/Slider
+		{
+			left 0.03
+			top 0.07
+			width 0.84
+		}
+		element TextArea(WeatherMakerScreen/Time0Label) : GuiTemplate/BasicText
+		{
+			left 0.76
+			top 0.095
+			caption Time:
+		}
+		element TextArea(WeatherMakerScreen/TimeLabel) : GuiTemplate/BasicText
+		{
+			left 0.82
+			top 0.095
+			caption 0
+			alignment left
+		}
+		container Panel(WeatherMakerScreen/ClearButton) : GuiTemplate/Button
+		{
+			left 0.02
+			top 0.125
+			width 0.12
+			height 0.05
+
+			element TextArea(WeatherMakerScreen/ClearLabel) : GuiTemplate/CenteredText
+			{
+				caption Clear All
+			}
+        	}
+		container Panel(WeatherMakerScreen/RemoveButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.125
+			width 0.12
+			height 0.05
+
+			element TextArea(WeatherMakerScreen/RemoveLabel) : GuiTemplate/CenteredText
+			{
+				caption Remove
+			}
+        	}
+		container Panel(WeatherMakerScreen/NewButton) : GuiTemplate/Button
+		{
+			left 0.28
+			top 0.125
+			width 0.14
+			height 0.05
+
+			element TextArea(WeatherMakerScreen/NewLabel) : GuiTemplate/CenteredText
+			{
+				caption New Weather
+			}
+        	}
+		element TextArea(WeatherMakerScreen/FadeInLabel) : GuiTemplate/BasicText
+		{
+			left 0.44
+			top 0.14
+			caption Fade In:
+		}
+		container Panel(WeatherMakerScreen/FadeInCheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.52
+			top 0.14
+		}
+		element TextArea(WeatherMakerScreen/FadeOutLabel) : GuiTemplate/BasicText
+		{
+			left 0.56
+			top 0.14
+			caption Fade Out:
+		}
+		container Panel(WeatherMakerScreen/FadeOutCheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.655
+			top 0.14
+		}
+		element TextArea(WeatherMakerScreen/DurationLabel) : GuiTemplate/BasicText
+		{
+			left 0.7
+			top 0.14
+			caption Duration:
+		}
+		container Panel(WeatherMakerScreen/DurationTextField) : GuiTemplate/TextField
+		{
+			left 0.78
+			top 0.14
+			width 0.08
+			height 0.03
+        	}
+		element TextArea(WeatherMakerScreen/NameLabel) : GuiTemplate/BasicText
+		{
+			left 0.02
+			top 0.22
+			caption File Name:
+		}
+		container Panel(WeatherMakerScreen/NameTextField) : GuiTemplate/TextField
+		{
+			left 0.12
+			top 0.22
+			width 0.22
+			height 0.03
+        	}
+		container Panel(WeatherMakerScreen/BackButton) : GuiTemplate/Button
+		{
+			left 0.02
+			top 0.28
+			width 0.1
+			height 0.05
+
+			element TextArea(WeatherMakerScreen/BackLabel) : GuiTemplate/CenteredText
+			{
+				caption Back
+			}
+        	}
+		container Panel(WeatherMakerScreen/SaveButton) : GuiTemplate/Button
+		{
+			left 0.13
+			top 0.28
+			width 0.1
+			height 0.05
+
+			element TextArea(WeatherMakerScreen/SaveLabel) : GuiTemplate/CenteredText
+			{
+				caption Save
+			}
+        	}
+		container Panel(WeatherMakerScreen/LoadButton) : GuiTemplate/Button
+		{
+			left 0.24
+			top 0.28
+			width 0.1
+			height 0.05
+
+			element TextArea(WeatherMakerScreen/LoadLabel) : GuiTemplate/CenteredText
+			{
+				caption Load
+			}
+        	}
+		element TextArea(WeatherMakerScreen/CyclesLabel) : GuiTemplate/BasicText
+		{
+			left 0.36
+			top 0.19
+			caption Load:
+		}
+		container Panel(WeatherMakerScreen/CyclesHighlightList) : GuiTemplate/TextArea
+		{
+			left 0.36
+			top 0.22
+			width 0.24
+			height 0.12
+        	}
+		element TextArea(WeatherMakerScreen/WeathersLabel) : GuiTemplate/BasicText
+		{
+			left 0.62
+			top 0.19
+			caption Weather:
+		}
+		container Panel(WeatherMakerScreen/WeathersHighlightList) : GuiTemplate/TextArea
+		{
+			left 0.62
+			top 0.22
+			width 0.24
+			height 0.12
+        	}
+	}
+}

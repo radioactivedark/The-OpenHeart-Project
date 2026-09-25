@@ -1,0 +1,24 @@
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:118 > --------
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:119 > Operating System: Windows 10.0.19044
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:120 > Starting Inno Setup 6.2.0-5 (portapps 3.4.0)...
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:121 > Release date: 2022/03/06 22:08:55
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:122 > Publisher: CrazyMax (https://github.com/portapps/innosetup-portable)
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:123 > Root path: C:\Users\Cam\Downloads\innosetup-portable-win32-6.2.0-5
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:127 > Configuration:
+common:
+  disable_log: false
+  args: []
+  env: {}
+  app_path: ""
+
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:168 > Process: C:\Users\Cam\Downloads\innosetup-portable-win32-6.2.0-5\app\Compil32.exe
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:169 > Args (config file): 
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:170 > Args (cmd line): 
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:171 > Args (hardcoded): 
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:172 > Working dir: C:\Users\Cam\Downloads\innosetup-portable-win32-6.2.0-5\app
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:173 > App path: C:\Users\Cam\Downloads\innosetup-portable-win32-6.2.0-5\app
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:174 > Data path: C:\Users\Cam\Downloads\innosetup-portable-win32-6.2.0-5\data
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:175 > Previous path: 
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:181 > Launching Inno Setup
+Mon, 13 Jul 2026 18:58:12 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:191 > Exec C:\Users\Cam\Downloads\innosetup-portable-win32-6.2.0-5\app\Compil32.exe 
+Mon, 13 Jul 2026 18:58:15 EDT INF ..\..\..\runneradmin\go\pkg\mod\github.com\portapps\portapps\v3@v3.4.0\portapps.go:212 > Closing Inno Setup

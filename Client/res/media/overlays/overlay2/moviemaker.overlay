@@ -1,0 +1,259 @@
+MovieMakerScreen
+{
+	container BorderPanel(MovieMakerScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.35
+		height 0.64
+
+		container Panel(MovieMakerScreen/MovieMakerScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(MovieMakerScreen/MovieMakerScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Movie Maker
+			}
+		}
+		container BorderPanel(MovieMakerScreen/Page1Panel)
+		{
+			caption Movie
+			element TextArea(MovieMakerScreen/DurationLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.1
+				caption Duration:
+			}
+			container Panel(MovieMakerScreen/DurationSlider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.14
+				width 0.24
+			}
+			container Panel(MovieMakerScreen/DurationTFTextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.135
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(MovieMakerScreen/CamMovementLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.18
+				caption Camera Movement:
+			}
+			container Panel(MovieMakerScreen/CamMovementHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.21
+				width 0.22
+				height 0.12
+        		}
+			element TextArea(MovieMakerScreen/SpeechTimeLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.36
+				caption Speech Time:
+			}
+			container Panel(MovieMakerScreen/SpeechTimeSlider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.4
+				width 0.24
+			}
+			container Panel(MovieMakerScreen/SpeechTimeTFTextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.395
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(MovieMakerScreen/SpeechLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.43
+				caption Speech Dialogue:
+			}
+			container Panel(MovieMakerScreen/SpeechTextArea) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.47
+				width 0.31
+				height 0.1
+			}
+			container Panel(MovieMakerScreen/PublishButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.58
+				width 0.12
+				height 0.05
+
+				element TextArea(MovieMakerScreen/PublishLabel) : GuiTemplate/CenteredText
+				{
+					caption Publish
+				}
+        		}
+			container Panel(MovieMakerScreen/TestButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.58
+				width 0.12
+				height 0.05
+
+				element TextArea(MovieMakerScreen/TestLabel) : GuiTemplate/CenteredText
+				{
+					caption Test
+				}
+        		}
+		}
+		container BorderPanel(MovieMakerScreen/Page2Panel)
+		{
+			caption Actions
+			container Panel(MovieMakerScreen/ActionHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.1
+				width 0.22
+				height 0.12
+        		}
+			container Panel(MovieMakerScreen/ActionNewButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.23
+				width 0.12
+				height 0.05
+
+				element TextArea(MovieMakerScreen/ActionNewLabel) : GuiTemplate/CenteredText
+				{
+					caption New Action
+				}
+        		}
+			container Panel(MovieMakerScreen/ActionDeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.23
+				width 0.12
+				height 0.05
+
+				element TextArea(MovieMakerScreen/ActionDeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+			element TextArea(MovieMakerScreen/ActionSelectLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.29
+				caption Action:
+			}
+			container Panel(MovieMakerScreen/ActionSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.33
+				width 0.22
+				height 0.22
+        		}
+			element TextArea(MovieMakerScreen/ActionTimeLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.56
+				caption Action Time:
+			}
+			container Panel(MovieMakerScreen/ActionTimeSlider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.59
+				width 0.24
+			}
+			container Panel(MovieMakerScreen/ActionTimeTFTextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.585
+				width 0.045
+				height 0.03
+       		 	}
+		}
+		container BorderPanel(MovieMakerScreen/Page3Panel)
+		{
+			caption Emotes
+			container Panel(MovieMakerScreen/EmoteHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.1
+				width 0.22
+				height 0.12
+        		}
+			container Panel(MovieMakerScreen/EmoteNewButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.23
+				width 0.12
+				height 0.05
+
+				element TextArea(MovieMakerScreen/EmoteNewLabel) : GuiTemplate/CenteredText
+				{
+					caption New Emote
+				}
+        		}
+			container Panel(MovieMakerScreen/EmoteDeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.23
+				width 0.12
+				height 0.05
+
+				element TextArea(MovieMakerScreen/EmoteDeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+			element TextArea(MovieMakerScreen/EmoteSelectLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.29
+				caption Emote:
+			}
+			container Panel(MovieMakerScreen/EmoteSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.33
+				width 0.22
+				height 0.22
+        		}
+			element TextArea(MovieMakerScreen/EmoteTimeLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.56
+				caption Emote Time:
+			}
+			container Panel(MovieMakerScreen/EmoteTimeSlider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.59
+				width 0.24
+			}
+			container Panel(MovieMakerScreen/EmoteTimeTFTextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.585
+				width 0.045
+				height 0.03
+       		 	}
+		}
+
+	}
+}
+MovieScreen
+{
+	zorder 498
+	container Panel(MovieScreen)
+	{
+		top 0.35
+		element TextArea(MovieScreen/Speech) : GuiTemplate/VeryLargeText
+		{
+			width 0.95
+			char_height 0.06
+			caption Caption
+		}
+	}
+}

@@ -1,0 +1,640 @@
+material CbodyMatL
+{
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref Body_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+			}
+			texture_unit
+			{
+				texture fbodyMask1.png
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture fbodyMask2.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture cbodyShade.jpg
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture fbodyMask1.png
+				colour_op_ex blend_texture_alpha src_texture src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture fbodyMask2.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+			texture_unit
+			{
+				texture cbodyShade.jpg
+				colour_op modulate
+			}
+		}
+	}
+}
+material CbodyMatR
+{
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref Body_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+			}
+			texture_unit
+			{
+				texture fbodyMask1.png
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture fbodyMask2.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture cbodyShade.jpg
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture fbodyMask1.png
+				colour_op_ex blend_texture_alpha src_texture src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture fbodyMask2.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+			texture_unit
+			{
+				texture cbodyShade.jpg
+				colour_op modulate
+			}
+		}
+	}
+}
+material CheadMatL
+{
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref Head_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+				param_named_auto colorMod4 custom 4
+				param_named_auto colorMod5 custom 5
+			}
+			texture_unit
+			{
+				texture cheadMask1.png
+				tex_coord_set 0
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture cheadMask2.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture cheadMask3.png
+				tex_coord_set 2
+			}
+			texture_unit
+			{
+				texture cheadMask4.png
+				tex_coord_set 3
+			}
+			texture_unit
+			{
+				texture cheadMask5.png
+				tex_coord_set 4
+			}
+			texture_unit
+			{
+				texture cheadShade.jpg
+				tex_coord_set 5
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture cheadMask1.png
+				filtering trilinear
+				colour_op_ex blend_texture_alpha src_texture src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture cheadMask2.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend one_minus_src_alpha src_alpha
+			texture_unit
+			{
+				texture cheadMask3.png
+				colour_op_ex source1 src_manual src_manual 0 0 1 1
+			}
+			texture_unit
+			{
+				texture cheadMask4.png
+				colour_op_ex blend_texture_alpha src_current src_manual 1 1 0 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend one_minus_src_alpha src_alpha
+			texture_unit
+			{
+				texture cheadMask5.png
+				colour_op_ex source1 src_manual src_manual 0 1 1 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+			texture_unit
+			{
+				texture cheadShade.jpg
+				colour_op modulate
+			}
+		}
+	}
+}
+material CheadMatR
+{
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref Head_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+				param_named_auto colorMod4 custom 4
+				param_named_auto colorMod5 custom 5
+			}
+			texture_unit
+			{
+				texture cheadMask1.png
+				tex_coord_set 0
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture cheadMask2.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture cheadMask3.png
+				tex_coord_set 2
+			}
+			texture_unit
+			{
+				texture cheadMask4.png
+				tex_coord_set 3
+			}
+			texture_unit
+			{
+				texture cheadMask5.png
+				tex_coord_set 4
+			}
+			texture_unit
+			{
+				texture cheadShade.jpg
+				tex_coord_set 5
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture cheadMask1.png
+				filtering trilinear
+				colour_op_ex blend_texture_alpha src_texture src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture cheadMask2.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend one_minus_src_alpha src_alpha
+			texture_unit
+			{
+				texture cheadMask3.png
+				colour_op_ex source1 src_manual src_manual 0 0 1 1
+			}
+			texture_unit
+			{
+				texture cheadMask4.png
+				colour_op_ex blend_texture_alpha src_current src_manual 1 1 0 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend one_minus_src_alpha src_alpha
+			texture_unit
+			{
+				texture cheadMask5.png
+				colour_op_ex source1 src_manual src_manual 0 1 1 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+			texture_unit
+			{
+				texture cheadShade.jpg
+				colour_op modulate
+			}
+		}
+	}
+}
+material CeyeMatL
+{
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			fragment_program_ref Eye_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+			}
+			texture_unit
+			{
+				texture feyeMask1_0.png
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture feyeMask2.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture feyeShade.jpg
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture feyeMask1_0.png
+				colour_op_ex blend_texture_alpha src_texture src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture feyeMask2.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+			texture_unit
+			{
+				texture feyeShade.jpg
+				colour_op modulate
+			}
+		}
+	}
+}
+material CeyeMatR
+{
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			fragment_program_ref Eye_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+			}
+			texture_unit
+			{
+				texture feyeMask1_0.png
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture feyeMask2.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture feyeShade.jpg
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture feyeMask1_0.png
+				colour_op_ex blend_texture_alpha src_texture src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture feyeMask2.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+			texture_unit
+			{
+				texture feyeShade.jpg
+				colour_op modulate
+			}
+		}
+	}
+}
+material CtailMat
+{
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref Tail_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+			}
+			texture_unit
+			{
+				texture ctailMask1.png
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture ctailShade.jpg
+				tex_coord_set 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture ctailMask1.png
+				colour_op_ex blend_texture_alpha src_current src_manual 0 1 0 1
+			}
+		}
+		pass
+		{
+			depth_func equal
+         	   	scene_blend zero src_colour
+			texture_unit
+			{
+				texture ctailShade.jpg
+				colour_op modulate
+			}
+		}
+	}
+}
+material CmaneMat
+{
+	transparency_casts_shadows off
+	receive_shadows off
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			alpha_rejection greater_equal 128
+
+			fragment_program_ref Mane_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture fmaneMask.png
+				tex_coord_set 0
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture fmaneShade.jpg
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture fmaneLight.jpg
+				tex_coord_set 2
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			alpha_rejection greater_equal 128
+			lighting off
+
+			texture_unit
+			{
+				texture fmaneMask.png
+				tex_address_mode clamp
+				filtering trilinear
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+			texture_unit
+			{
+				texture fmaneShade.jpg
+				colour_op modulate
+			}
+		}
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			scene_blend add
+			depth_func equal
+			lighting off
+
+			texture_unit
+			{
+				texture fmaneLight.jpg
+			}
+		}
+	}
+}
+material CmaneMat2
+{
+	technique 1
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			depth_write off
+			fragment_program_ref Mane2_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture fmaneMask2.png
+				tex_coord_set 0
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			texture_unit
+			{
+				texture fmaneShade.jpg
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture fmaneLight.jpg
+				tex_coord_set 2
+			}
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			depth_write off
+			lighting off
+
+			texture_unit
+			{
+				texture fmaneMask2.png
+				tex_address_mode clamp
+				filtering trilinear
+				colour_op_ex source1 src_manual src_manual 1 0 0 1
+			}
+		}
+	}
+}

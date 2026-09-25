@@ -1,0 +1,29 @@
+void treeWave_VP(
+             float4 iPosition         : POSITION,
+             float2 texCoord0         : TEXCOORD0,
+
+             out float4 oPosition     : POSITION,
+             out float2 uv0           : TEXCOORD0,
+
+             uniform float    uTime,
+             uniform float4x4 uWorld,
+             uniform float4x4 uWorldViewProj)
+{
+   if(iPosition.y>2)
+   {
+      uTime += mul(uWorld, iPosition-float4(0,0,2,0)).x/100;
+      iPosition.xz += float2(sin(uTime), cos(uTime))*iPosition.y/100;
+   }
+
+   oPosition  = mul(uWorldViewProj, iPosition);
+   uv0 = texCoord0;
+}
+void treeWave_FP(
+        float2 uv0        : TEXCOORD0,
+
+        out float4 color    : COLOR,
+
+        uniform sampler2D texture)
+{
+    color = tex2D(texture, uv0);
+}

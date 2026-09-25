@@ -1,0 +1,1076 @@
+MapMakerScreen
+{
+	container BorderPanel(MapMakerScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.05
+		width 0.35
+		height 0.9
+
+		container BorderPanel(MapMakerScreen/Page1Panel)
+		{
+			caption Map
+			element TextArea(MapMakerScreen/NameLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.05
+				caption Map Name:
+			}
+			container Panel(MapMakerScreen/NameTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.08
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/DisplayNameLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.11
+				caption Map Display Name:
+			}
+			container Panel(MapMakerScreen/DisplayNameTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.15
+				width 0.28
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/SaveButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.18
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/SaveLabel) : GuiTemplate/CenteredText
+				{
+					caption Save
+				}
+        		}
+			container Panel(MapMakerScreen/ExportButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.18
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/ExportLabel) : GuiTemplate/CenteredText
+				{
+					caption Export
+				}
+        		}
+			container Panel(MapMakerScreen/TestButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.24
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/TestLabel) : GuiTemplate/CenteredText
+				{
+					caption Test
+				}
+        		}
+			element TextArea(MapMakerScreen/ShowCollLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.25
+				caption Show Collisions:
+			}
+			container Panel(MapMakerScreen/ShowCollCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.16
+				top 0.25
+			}
+			container Panel(MapMakerScreen/Map1Partition) : GuiTemplate/Partition
+			{
+				top 0.3
+				width 0.33
+			}
+			element TextArea(MapMakerScreen/HasPortalLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.32
+				caption Has Portal:
+			}
+			container Panel(MapMakerScreen/HasPortalCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.15
+				top 0.32
+			}
+			element TextArea(MapMakerScreen/PortalPosLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.365
+				caption Destination Position:
+			}
+			element TextArea(MapMakerScreen/PortalPos0Label) : GuiTemplate/BasicText
+			{
+				left 0.18
+				top 0.4
+				caption X:
+			}
+			container Panel(MapMakerScreen/PortalPos0TextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.4
+				width 0.1
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/PortalPos1Label) : GuiTemplate/BasicText
+			{
+				left 0.18
+				top 0.43
+				caption Y:
+			}
+			container Panel(MapMakerScreen/PortalPos1TextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.43
+				width 0.1
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/PortalPos2Label) : GuiTemplate/BasicText
+			{
+				left 0.18
+				top 0.46
+				caption Z:
+			}
+			container Panel(MapMakerScreen/PortalPos2TextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.46
+				width 0.1
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/PortalYawLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.5
+				caption Arrival Yaw:
+			}
+			container Panel(MapMakerScreen/PortalYawTextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.5
+				width 0.1
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/Map2Partition) : GuiTemplate/Partition
+			{
+				top 0.56
+				width 0.33
+			}
+			element TextArea(MapMakerScreen/NoFlyingLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.58
+				caption No Flying:
+			}
+			container Panel(MapMakerScreen/NoFlyingCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.15
+				top 0.58
+			}
+			element TextArea(MapMakerScreen/MusicLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.62
+				caption Music (Group or Filename):
+			}
+			container Panel(MapMakerScreen/MusicTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.65
+				width 0.28
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/Map3Partition) : GuiTemplate/Partition
+			{
+				top 0.69
+				width 0.33
+			}
+			container Panel(MapMakerScreen/MapsHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.71
+				width 0.24
+				height 0.12
+        		}
+			container Panel(MapMakerScreen/LoadButton) : GuiTemplate/Button
+			{
+				left 0.115
+				top 0.83
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/LoadLabel) : GuiTemplate/CenteredText
+				{
+					caption Load
+				}
+        		}
+			
+		}
+		container BorderPanel(MapMakerScreen/Page2Panel)
+		{
+			caption World
+			element TextArea(MapMakerScreen/TerrainMapLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.05
+				caption Terrain Height Map:
+			}
+			container Panel(MapMakerScreen/TerrainMapTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.08
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/TerrainAlphaLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.12
+				caption Terrain Alpha Map:
+			}
+			container Panel(MapMakerScreen/TerrainAlphaTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.15
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/TerrainTextureLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.19
+				caption Terrain Texture:
+			}
+			element TextArea(MapMakerScreen/TerrainTexPartLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.19
+				alignment center
+				caption 1
+			}
+			container Panel(MapMakerScreen/TerrainTexPartDnButton) : GuiTemplate/Button
+			{
+				left 0.21
+				top 0.19
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/TerrainTexPartDnLabel) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/TerrainTexPartUpButton) : GuiTemplate/Button
+			{
+				left 0.28
+				top 0.19
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/TerrainTexPartUpLabel) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/TerrainTextureHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.22
+				width 0.22
+				height 0.12
+        		}
+			element TextArea(MapMakerScreen/TerrainWidthLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.36
+				caption Width:
+			}
+			container Panel(MapMakerScreen/TerrainWidthTextField) : GuiTemplate/TextField
+			{
+				left 0.07
+				top 0.36
+				width 0.08
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/TerrainHeightLabel) : GuiTemplate/BasicText
+			{
+				left 0.18
+				top 0.36
+				caption Height:
+			}
+			container Panel(MapMakerScreen/TerrainHeightTextField) : GuiTemplate/TextField
+			{
+				left 0.24
+				top 0.36
+				width 0.08
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/TerrainBoundaryLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.4
+				caption Boundary:
+			}
+			container Panel(MapMakerScreen/TerrainBoundaryTextField) : GuiTemplate/TextField
+			{
+				left 0.1
+				top 0.4
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/World1Partition) : GuiTemplate/Partition
+			{
+				top 0.435
+				width 0.33
+			}
+			element TextArea(MapMakerScreen/SkyLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.455
+				caption Sky:
+			}
+			container Panel(MapMakerScreen/SkyEnableCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.12
+				top 0.455
+			}
+			element TextArea(MapMakerScreen/SkyFileLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.495
+				caption Sky File:
+			}
+			container Panel(MapMakerScreen/SkyFileTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.525
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/WeatherFileLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.57
+				caption Weather Cycle File:
+			}
+			container Panel(MapMakerScreen/WeatherFileTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.6
+				width 0.28
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/CeilingHeightLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.64
+				caption Ceiling Height:
+			}
+			container Panel(MapMakerScreen/CeilingHeightTextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.64
+				width 0.1
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/World2Partition) : GuiTemplate/Partition
+			{
+				top 0.68
+				width 0.33
+			}
+			element TextArea(MapMakerScreen/OceanLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.7
+				caption Ocean:
+			}
+			container Panel(MapMakerScreen/OceanEnableCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.12
+				top 0.7
+			}
+			element TextArea(MapMakerScreen/OceanHeightLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.74
+				caption Ocean Height:
+			}
+			container Panel(MapMakerScreen/OceanHeightTextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.74
+				width 0.08
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/OceanMatLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.78
+				caption Ocean Material:
+			}
+			container Panel(MapMakerScreen/OceanMatTextField) : GuiTemplate/TextField
+			{
+				left 0.02
+				top 0.82
+				width 0.28
+				height 0.03
+       		 	}
+		}
+		container BorderPanel(MapMakerScreen/Page3Panel)
+		{
+			caption Objects
+			element TextArea(MapMakerScreen/ObjectGroupLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.05
+				caption Object Group:
+			}
+			container Panel(MapMakerScreen/ObjectGroupHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.08
+				width 0.22
+				height 0.12
+        		}
+			element TextArea(MapMakerScreen/ObjectLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.21
+				caption Object:
+			}
+			container Panel(MapMakerScreen/ObjectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.24
+				width 0.22
+				height 0.12
+        		}
+			container Panel(MapMakerScreen/ObjectNewButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.195
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/ObjectNewLabel) : GuiTemplate/CenteredText
+				{
+					caption New Object
+				}
+        		}
+			container Panel(MapMakerScreen/ObjectPartition) : GuiTemplate/Partition
+			{
+				top 0.365
+				width 0.33
+			}
+			element TextArea(MapMakerScreen/GateMapLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.395
+				caption Gate Destination:
+			}
+			container Panel(MapMakerScreen/GateNewButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.38
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/GateNewLabel) : GuiTemplate/CenteredText
+				{
+					caption New Gate
+				}
+        		}
+			container Panel(MapMakerScreen/GateMapTextField) : GuiTemplate/TextField
+			{
+				left 0.05
+				top 0.435
+				width 0.25
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/GatePosLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.465
+				caption Destination Position:
+			}
+			element TextArea(MapMakerScreen/GatePos0Label) : GuiTemplate/BasicText
+			{
+				left 0.18
+				top 0.50
+				caption X:
+			}
+			container Panel(MapMakerScreen/GatePos0TextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.50
+				width 0.1
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/GatePos1Label) : GuiTemplate/BasicText
+			{
+				left 0.18
+				top 0.53
+				caption Y:
+			}
+			container Panel(MapMakerScreen/GatePos1TextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.53
+				width 0.1
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/GatePos2Label) : GuiTemplate/BasicText
+			{
+				left 0.18
+				top 0.56
+				caption Z:
+			}
+			container Panel(MapMakerScreen/GatePos2TextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.56
+				width 0.1
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/GateYawLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.6
+				caption Arrival Yaw:
+			}
+			container Panel(MapMakerScreen/GateYawTextField) : GuiTemplate/TextField
+			{
+				left 0.2
+				top 0.6
+				width 0.1
+				height 0.03
+       		 	}
+			element TextArea(MapMakerScreen/GateBlackMatLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.64
+				caption Black Material:
+			}
+			container Panel(MapMakerScreen/GateBlackMatCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.2
+				top 0.64
+			}
+			container Panel(MapMakerScreen/ObjectPartition2) : GuiTemplate/Partition
+			{
+				top 0.68
+				width 0.33
+			}
+			element TextArea(MapMakerScreen/WaterLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.71
+				caption Water Material:
+			}
+			container Panel(MapMakerScreen/WaterNewButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.695
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/WaterNewLabel) : GuiTemplate/CenteredText
+				{
+					caption New Water
+				}
+        		}
+			container Panel(MapMakerScreen/WaterMatTextField) : GuiTemplate/TextField
+			{
+				left 0.05
+				top 0.75
+				width 0.25
+				height 0.03
+       		 	}
+		}
+		container BorderPanel(MapMakerScreen/Page4Panel)
+		{
+			caption Controls
+			element TextArea(MapMakerScreen/SelectTypeLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.05
+				caption Select Type:
+			}
+			container Panel(MapMakerScreen/SelectTypeHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.2
+				top 0.05
+				width 0.12
+				height 0.09
+        		}
+			element TextArea(MapMakerScreen/IsLargeLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.1
+				caption Is Large:
+			}
+			container Panel(MapMakerScreen/IsLargeCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.13
+				top 0.1
+			}
+			container Panel(MapMakerScreen/MoveButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.15
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/MoveLabel) : GuiTemplate/CenteredText
+				{
+					caption Move
+				}
+        		}
+			element TextArea(MapMakerScreen/MoveHotkeyLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.165
+    				alignment center
+				caption Hotkey M
+			}
+			container Panel(MapMakerScreen/CloneButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.21
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/CloneLabel) : GuiTemplate/CenteredText
+				{
+					caption Clone
+				}
+        		}
+			element TextArea(MapMakerScreen/CloneHotkeyLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.225
+    				alignment center
+				caption Hotkey C
+			}
+			element TextArea(MapMakerScreen/PosLabel) : GuiTemplate/BasicText
+			{
+				left 0.1
+				top 0.27
+    				alignment center
+				caption Position
+			}
+			element TextArea(MapMakerScreen/ScaleLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.27
+				alignment center
+				caption Scale
+			}
+			element TextArea(MapMakerScreen/XLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.32
+				caption X:
+			}
+			element TextArea(MapMakerScreen/YLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.37
+				caption Y:
+			}
+			element TextArea(MapMakerScreen/ZLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.42
+				caption Z:
+			}
+			container Panel(MapMakerScreen/Pos0TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/PosDn0Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/PosDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/PosUp0Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/PosUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/Pos1TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/PosDn1Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/PosDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/PosUp1Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/PosUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/Pos2TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/PosDn2Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/PosDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/PosUp2Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/PosUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/Scale0TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/ScaleDn0Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/ScaleDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/ScaleUp0Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/ScaleUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/Scale1TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/ScaleDn1Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/ScaleDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/ScaleUp1Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/ScaleUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/Scale2TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(MapMakerScreen/ScaleDn2Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/ScaleDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/ScaleUp2Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/ScaleUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(MapMakerScreen/RotLabel) : GuiTemplate/BasicText
+			{
+				left 0.12
+				top 0.49
+				alignment center
+				caption Rotation
+			}
+			container Panel(MapMakerScreen/RotResetButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.48
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/RotResetLabel) : GuiTemplate/CenteredText
+				{
+					caption Reset
+				}
+        		}
+			element TextArea(MapMakerScreen/Rot0Label) : GuiTemplate/BasicText
+			{
+				left 0.06
+				top 0.545
+				alignment center
+				caption Pitch
+			}
+			container Panel(MapMakerScreen/RotDn0Button) : GuiTemplate/Button
+			{
+				left 0.005
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/RotDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/RotUp0Button) : GuiTemplate/Button
+			{
+				left 0.085
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/RotUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(MapMakerScreen/Rot1Label) : GuiTemplate/BasicText
+			{
+				left 0.175
+				top 0.545
+				alignment center
+				caption Yaw
+			}
+			container Panel(MapMakerScreen/RotDn1Button) : GuiTemplate/Button
+			{
+				left 0.12
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/RotDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/RotUp1Button) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/RotUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(MapMakerScreen/Rot2Label) : GuiTemplate/BasicText
+			{
+				left 0.29
+				top 0.545
+				alignment center
+				caption Roll
+			}
+			container Panel(MapMakerScreen/RotDn2Button) : GuiTemplate/Button
+			{
+				left 0.235
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/RotDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(MapMakerScreen/RotUp2Button) : GuiTemplate/Button
+			{
+				left 0.315
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(MapMakerScreen/RotUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(MapMakerScreen/PlaceOnMeshLabel) : GuiTemplate/BasicText
+			{
+				left 0.06
+				top 0.58
+				caption Place on Mesh:
+			}
+			container Panel(MapMakerScreen/PlaceOnMeshCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.23
+				top 0.58
+			}
+			element TextArea(MapMakerScreen/RandomizeCloneLabel) : GuiTemplate/BasicText
+			{
+				left 0.06
+				top 0.62
+				caption Randomize Clone:
+			}
+			container Panel(MapMakerScreen/RandomizeCloneCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.23
+				top 0.62
+			}
+			container Panel(MapMakerScreen/UpdateButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/UpdateLabel) : GuiTemplate/CenteredText
+				{
+					caption Update
+				}
+        		}
+			container Panel(MapMakerScreen/HideButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/HideLabel) : GuiTemplate/CenteredText
+				{
+					caption Hide
+				}
+        		}
+			container Panel(MapMakerScreen/DeleteButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/DeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+			container Panel(MapMakerScreen/ShowAllButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(MapMakerScreen/ShowAllLabel) : GuiTemplate/CenteredText
+				{
+					caption Show All
+				}
+        		}
+		}
+	}
+}
+MiniMapScreen
+{
+	container BorderPanel(MiniMapScreen/Panel)
+	{
+		left 0.01
+		top 0.01
+		width 0.17
+		height 0.21
+		container Panel(MiniMapScreen/MiniMap) : GuiTemplate/Map
+		{
+			left 0.01
+			top 0.01
+			height 0.2
+		}
+	}
+}
+MapMakerButtonsScreen
+{
+	container BorderPanel(MapMakerButtonsScreen/Panel)
+	{
+		left 0
+		top 0.92
+		width 0.06
+		height 0.08
+		container Panel(MapMakerButtonsScreen/MiniMapButton) : GuiTemplate/Button
+		{
+			left 0
+			top 0
+			width 0.06
+			height 0.08
+		}
+	}
+}

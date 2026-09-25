@@ -1,0 +1,489 @@
+CharCreateScreen
+{
+	container BorderPanel(CharCreateScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.35
+		height 0.8
+
+		container BorderPanel(CharCreateScreen/Page1Panel)
+		{
+			caption I
+			container Panel(CharCreateScreen/NameTextField) : GuiTemplate/TextField
+			{
+				left 0.07
+				top 0.08
+				width 0.27
+				height 0.03
+       		 	}
+			element TextArea(CharCreateScreen/NameLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.08
+				caption Name:
+			}
+			container Panel(CharCreateScreen/SpeciesHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.13
+				width 0.22
+				height 0.06
+        		}
+			element TextArea(CharCreateScreen/SpeciesLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.13
+				caption Species:
+			}
+			container Panel(CharCreateScreen/SX1Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.22
+				width 0.24
+			}
+			element TextArea(CharCreateScreen/SX1Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.22
+				caption Muzzle:
+			}
+			container Panel(CharCreateScreen/SX2Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.26
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX2Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.26
+				caption Chin:
+			}
+			container Panel(CharCreateScreen/SX3Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.3
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX3Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.3
+				caption Nose:
+			}
+			container Panel(CharCreateScreen/SX4Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.34
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX4Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.34
+				caption Forehead:
+			}
+			container Panel(CharCreateScreen/SX5Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.38
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX5Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.38
+				caption Ears:
+			}
+			container Panel(CharCreateScreen/SX6Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.42
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX6Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.42
+				caption Eyes:
+			}
+			container Panel(CharCreateScreen/SX7Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.46
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX7Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.46
+				caption Weight:
+			}
+			container Panel(CharCreateScreen/SX8Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.5
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX8Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.5
+				caption Width:
+			}
+			container Panel(CharCreateScreen/SX9Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.54
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX9Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.54
+				caption Height:
+			}
+			container Panel(CharCreateScreen/SX10Slider) : GuiTemplate/Slider
+			{
+				left 0.1
+				top 0.58
+				width 0.24
+        		}
+			element TextArea(CharCreateScreen/SX10Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.58
+				caption Length:
+			}
+			container Panel(CharCreateScreen/EmoteHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.63
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/EmoteLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.63
+				caption Emote:
+			}
+		}
+		container BorderPanel(CharCreateScreen/Page2Panel)
+		{
+			caption II
+			container Panel(CharCreateScreen/TailHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.07
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/TailLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.07
+				caption Tail:
+			}
+			container Panel(CharCreateScreen/ManeHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.24
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/ManeLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.24
+				caption Mane:
+			}
+			container Panel(CharCreateScreen/EarsHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.41
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/EarsLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.41
+				caption Ears:
+			}
+			container Panel(CharCreateScreen/TuftHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.58
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/TuftLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.58
+				caption Tufts:
+			}
+		}
+		container BorderPanel(CharCreateScreen/Page3Panel)
+		{
+			caption III
+			container Panel(CharCreateScreen/EyeHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.07
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/EyeLabel) : GuiTemplate/BasicText
+			{
+				left 0.04
+				top 0.07
+				caption Eyes:
+			}
+			container Panel(CharCreateScreen/MarkBodyHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.25
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/MarkBodyLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.22
+				caption Body Markings:
+			}
+			container Panel(CharCreateScreen/MarkHeadHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.43
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/MarkHeadLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.4
+				caption Head Markings:
+			}
+			container Panel(CharCreateScreen/MarkTailHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.61
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/MarkTailLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.58
+				caption Tail Markings:
+			}
+		}
+		container BorderPanel(CharCreateScreen/Page4Panel)
+		{
+			caption IV
+			container Panel(CharCreateScreen/EquipHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.1
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/EquipLabel) : GuiTemplate/BasicText
+			{
+				left 0.02
+				top 0.1
+				caption Equip:
+			}
+			container Panel(CharCreateScreen/ItemHighlightDoubleList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.35
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/ItemLabel) : GuiTemplate/BasicText
+			{
+				left 0.02
+				top 0.35
+				caption Items:
+			}
+			container Panel(CharCreateScreen/ItemAddButton) : GuiTemplate/Button
+			{
+				left 0.115
+				top 0.52
+				width 0.12
+				height 0.05
+
+				element TextArea(CharCreateScreen/ItemAddLabel) : GuiTemplate/CenteredText
+				{
+					caption Add
+				}
+        		}
+			container Panel(CharCreateScreen/ItemRemoveAllButton) : GuiTemplate/Button
+			{
+				left 0.115
+				top 0.67
+				width 0.12
+				height 0.05
+
+				element TextArea(CharCreateScreen/ItemRemoveAllLabel) : GuiTemplate/CenteredText
+				{
+					caption Remove All
+				}
+        		}
+		}
+		container BorderPanel(CharCreateScreen/Page5Panel)
+		{
+			caption V
+			container Panel(CharCreateScreen/ColourHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.07
+				width 0.22
+				height 0.15
+        		}
+			element TextArea(CharCreateScreen/ColourLabel) : GuiTemplate/BasicText
+			{
+				left 0.02
+				top 0.07
+				caption Colour:
+			}
+			container Panel(CharCreateScreen/ColourBox)
+			{
+				left 0.075
+				top 0.24
+				width 0.2
+				height 0.05
+				material GuiMat/ColourBox
+			}
+			container Panel(CharCreateScreen/CX1Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.32
+				width 0.24
+			}
+			container Panel(CharCreateScreen/CT1TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.315
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(CharCreateScreen/CX1Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.32
+				caption R:
+			}
+			container Panel(CharCreateScreen/CX2Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.36
+				width 0.24
+			}
+			container Panel(CharCreateScreen/CT2TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.355
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(CharCreateScreen/CX2Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.36
+				caption G:
+			}
+			container Panel(CharCreateScreen/CX3Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.4
+				width 0.24
+			}
+			container Panel(CharCreateScreen/CT3TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.395
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(CharCreateScreen/CX3Label) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.4
+				caption B:
+			}
+			container Panel(CharCreateScreen/PresetListHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.065
+				top 0.45
+				width 0.22
+				height 0.12
+        		}
+			container Panel(CharCreateScreen/PresetButton) : GuiTemplate/Button
+			{
+				left 0.05
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(CharCreateScreen/PresetLabel) : GuiTemplate/CenteredText
+				{
+					caption Use Preset
+				}
+        		}
+			container Panel(CharCreateScreen/ExportButton) : GuiTemplate/Button
+			{
+				left 0.18
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(CharCreateScreen/ExportLabel) : GuiTemplate/CenteredText
+				{
+					caption Export
+				}
+        		}
+			container Panel(CharCreateScreen/DeleteButton) : GuiTemplate/Button
+			{
+				left 0.105
+				top 0.66
+				width 0.14
+				height 0.05
+
+				element TextArea(CharCreateScreen/DeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+			container Panel(CharCreateScreen/FinishButton) : GuiTemplate/Button
+			{
+				left 0.05
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(CharCreateScreen/FinishLabel) : GuiTemplate/CenteredText
+				{
+					caption OK
+				}
+        		}
+			container Panel(CharCreateScreen/CancelButton) : GuiTemplate/Button
+			{
+				left 0.18
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(CharCreateScreen/CancelLabel) : GuiTemplate/CenteredText
+				{
+					caption Cancel
+				}
+        		}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+[Rock]
+mesh0=%rock.mesh;0 -3.25 0;1.901 1.773 1.728;1 0 0 0;
+[AcaciaTree]
+mesh0=acaciaTree.mesh;0 0 0;1 1 1;1 0 0 0;
+coll0=b;1.03003 -1.5 0.530029;17.75 44.9802 16;
+[AcaciaTreeStandable]
+mesh0=acaciaTree.mesh;0 0 0;1.5 1.5 1.5;1 0 0 0;
+coll0=b;-1.87012 -7.6 -0.959961;31.9 54 21.65;
+coll1=b;5.21997 44.31 -0.959961;16.59 21.5499 19.97;
+[StarAura]
+particle0=StarAura;0 0 0;1 1 1;1 0 0 0
+particle1=StarAura;0 0 0;1 1 1;1 0 0 0
+[GrassPatch]
+mesh0=grass.mesh;0 0 0;1.198 1.07 1.197;1 0 0 0;
+mesh1=grass.mesh;7.25 0 0;1 0.914 1;0.9754 0 0.220442 0;
+mesh2=grass.mesh;-7.25 0 0;1 0.939 1;0.416518 0 -0.909127 0;
+mesh3=grass.mesh;0 0 -6.2;1 0.931 1;0.445572 0 0.895246 0;
+mesh4=grass.mesh;0 0 7.55;1 0.936 1;-0.924779 0 -0.380506 0;
+[FluoriteCrystal]
+mesh0=crystal1.mesh;0 2 0;2 3 2;1 0 0 0;
+coll0=s;0 4 0;5;
+billboard0=crystalGlowMat;0 4.2 0;30 30
