@@ -1,7 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
+##################################################################################################
+##------------------------------------------FILE START------------------------------------------##
+##################################################################################################
 
+
+# Creating executable.
 add_executable(FHMapServer include/main.cpp)
 
+# Link directories to build.
 target_include_directories(FHMapServer PRIVATE
 	include
 	${DEP_SHARED}/Libraries/RakNet4/Source
@@ -9,8 +14,18 @@ target_include_directories(FHMapServer PRIVATE
 	${MYSQL_INCLUDE_DIR}
 )
 
+# Link libraries to build.
 target_link_libraries(FHMapServer PRIVATE
 	RakNetStatic
 	${MYSQLPP_LIBRARY}
 	${MYSQL_LIBRARY}
 )
+
+##################################################################################################
+##-------------------------------------------FILE END-------------------------------------------##
+##################################################################################################
+##-------------------------------------------MODIFIED-------------------------------------------##
+## DATE: 9/25/2026                                                                              ##
+## TIME: 2:27 PM (UTC-5:00)                                                                     ##
+## BY: radioactivedark                                                                          ##
+##################################################################################################

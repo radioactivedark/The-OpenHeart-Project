@@ -1,7 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
+##################################################################################################
+##------------------------------------------FILE START------------------------------------------##
+##################################################################################################
 
+
+# Build executable.
 add_executable(FHFrontServer include/main.cpp)
 
+# Link directories to build.
 target_include_directories(FHFrontServer PRIVATE
 	include
 	${DEP_SHARED}/Libraries/RakNet4/Source
@@ -9,8 +14,19 @@ target_include_directories(FHFrontServer PRIVATE
 	${MYSQL_INCLUDE_DIR}
 )
 
+# Link libraries to build.
 target_link_libraries(FHFrontServer PRIVATE
 	RakNetStatic
 	${MYSQLPP_LIBRARY}
 	${MYSQL_LIBRARY}
 )
+
+
+##################################################################################################
+##-------------------------------------------FILE END-------------------------------------------##
+##################################################################################################
+##-------------------------------------------MODIFIED-------------------------------------------##
+## DATE: 9/25/2026                                                                              ##
+## TIME: 3:18 PM (UTC-5:00)                                                                     ##
+## BY: radioactivedark                                                                          ##
+##################################################################################################
