@@ -1,4 +1,29 @@
-THE FOLLOWING LICENSE IS ONLY THE LICENSE GIVEN TO THE OPEN-HEART PROJECT BY KOVUWORKS/KOVULKD. ALL FORKS OF THIS REPOSITORY FALL UNDER THE PRIMARY LICENSE LABELED LICENSE.
+KOVUWORKS LICENSE | PROVENANCE RECORD
+
+This file records the license under which The Open-Heart Project received the
+FeralHeart source code from KovuWorks/KovuLKD. It is reproduced here for
+provenance and historical record.
+
+It is not the license under which this repository is distributed.
+
+The Open-Heart Project distributes this software publicly under the terms set
+out in the file named `LICENSE` (the FeralHeart Non-Commercial + Supporter
+Access License). Those terms govern all public use, distribution, and forks of
+this repository. The MIT grant recorded below includes the right to
+sublicense, and The Open-Heart Project exercises that right by distributing
+under `LICENSE`.
+
+MIT terms are granted by The Open-Heart Project to individual projects on a
+case-by-case basis, in writing. If you have not received such a written grant
+from The Open-Heart Project, your use of this repository is governed by
+`LICENSE`.
+
+This grant covers the FeralHeart source code. It does not convey rights to
+third-party assets, libraries, or creative works included in or alongside this
+repository, which remain the property of their respective creators. See
+`SPECIAL-THANKS` for attributions that must be retained with all copies.
+
+--------------------------------------------------------------------------------
 
 MIT License
 
