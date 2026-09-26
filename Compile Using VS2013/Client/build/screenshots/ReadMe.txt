@@ -1,0 +1,1 @@
+Press the PrintScreen (prt sc) button on your keyboard to save a screenshot anytime!

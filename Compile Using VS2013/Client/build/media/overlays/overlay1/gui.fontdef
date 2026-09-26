@@ -1,0 +1,35 @@
+Tahoma
+{
+	type 		truetype
+	source 		tahoma.ttf
+	size 		32
+	resolution 	55
+}
+TahomaBold
+{
+	type 		truetype
+	source 		tahomabd.ttf
+	size 		32
+	resolution 	55
+}
+TempusSans
+{
+	type 		truetype
+	source 		TempsITC.TTF
+	size 		64
+	resolution 	55
+}
+BlueHighway
+{
+	type 		truetype
+	source 		bluehigh.ttf
+	size 		32
+	resolution 	55
+}
+FadeFont
+{
+	type 		truetype
+	source 		TempsITC.TTF
+	size 		32
+	resolution 	55
+}

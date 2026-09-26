@@ -1,0 +1,10 @@
+[SmallRock]
+mesh0=rock1.mesh;0 0 0;1 1 1;0.663151 -0.559217 -0.32072 0.380328;rockMat2;
+mesh1=rock1.mesh;0 -10.276 0;1 1 1;0.690309 0.580265 0.330815 0.278079;rockMat3;
+coll0=b;0 0 0;44.5 29.2 51.65;
+[Mount]
+mesh0=%mount1.mesh;0 0 0;10 10 10;1 0 0 0;rockMat1;
+[Plateau]
+mesh0=%plateau1.mesh;0 0 0;5 5 5;1 0 0 0;
+[Cave]
+mesh0=%cave1.mesh;0 0 0;7 7 7;1 0 0 0;

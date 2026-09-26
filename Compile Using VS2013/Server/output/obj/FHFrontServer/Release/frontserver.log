@@ -1,0 +1,37 @@
+﻿Build started 6/29/2026 2:55:49 PM.
+     1>Project "C:\Users\akari\Downloads\wh-gaia-test1\Server\frontserver.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\src\frontserver" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\src\common" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql-connector-c-6.1.11-win32\include" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql++-3.2.4\lib" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\RakNet_PC-4.023\Source" /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\obj\FHFrontServer\Release\\" /Fd"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\obj\FHFrontServer\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\frontserver\main.cpp
+         main.cpp
+     1>c:\users\akari\downloads\wh-gaia-test1\server\deps\mysql++-3.2.4\lib\exceptions.h(49): warning C4003: not enough actual parameters for macro 'MAY_THROW'
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\frontserver\DatabaseManager.h(366): warning C4244: '=' : conversion from 'mysqlpp::ulonglong' to 'unsigned int', possible loss of data
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\frontserver\InputManager.h(63): warning C4101: 'oldf' : unreferenced local variable
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\frontserver\ServerManager.h(84): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\Release\FHFrontServer.exe" /NOLOGO /LIBPATH:"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\RakNet_PC-4.023\Lib" /LIBPATH:"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql++-3.2.4\vc2008\Win32\Release" RakNetLibStatic.lib mysqlpp.lib ws2_32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\Release\FHFrontServer.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\Release\FHFrontServer.lib" /MACHINE:X86 /SAFESEH "C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\obj\FHFrontServer\Release\main.obj"
+         Generating code
+         Finished generating code
+         frontserver.vcxproj -> C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\Release\FHFrontServer.exe
+       PostBuildEvent:
+         echo mkdir "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server"
+         mkdir "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server"
+         echo copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\Release\FHFrontServer.exe" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\FHFrontServer.exe"
+         copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\Release\FHFrontServer.exe" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\FHFrontServer.exe"
+         echo copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql-connector-c-6.1.11-win32\lib\libmysql.dll" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\"
+         copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql-connector-c-6.1.11-win32\lib\libmysql.dll" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\"
+         echo copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql++-3.2.4\vc2008\Win32\Release\mysqlpp.dll" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\"
+         copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql++-3.2.4\vc2008\Win32\Release\mysqlpp.dll" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\"
+         :VCEnd
+         mkdir "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server"
+         A subdirectory or file C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server already exists.
+         copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\Release\FHFrontServer.exe" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\FHFrontServer.exe"
+                 1 file(s) copied.
+         copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql-connector-c-6.1.11-win32\lib\libmysql.dll" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\"
+                 1 file(s) copied.
+         copy "C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql++-3.2.4\vc2008\Win32\Release\mysqlpp.dll" "C:\Users\akari\Downloads\wh-gaia-test1\Server\build\server\"
+                 1 file(s) copied.
+     1>Done Building Project "C:\Users\akari\Downloads\wh-gaia-test1\Server\frontserver.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.22

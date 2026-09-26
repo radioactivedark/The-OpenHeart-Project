@@ -1,0 +1,228 @@
+OptionsScreen
+{
+	container BorderPanel(OptionsScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.325
+		top 0.1
+		width 0.45
+		height 0.45
+
+		container BorderPanel(OptionsScreen/Page1Panel)
+		{
+			caption Interface
+			container Panel(OptionsScreen/InterfacesHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.03
+				top 0.1
+				width 0.38
+				height 0.12
+        		}
+			container Panel(OptionsScreen/InterfaceSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.03
+				top 0.24
+				width 0.38
+				height 0.12
+        		}
+			element TextArea(OptionsScreen/InterfaceCBLabel) : GuiTemplate/BasicText
+			{
+				left 0.25
+				top 0.26
+				caption Full Screen:
+				alignment right
+			}
+			container Panel(OptionsScreen/InterfaceCBCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.29
+				top 0.26
+			}
+			container Panel(OptionsScreen/InterfaceSlSlider) : GuiTemplate/Slider
+			{
+				left 0.08
+				top 0.32
+				width 0.24
+			}
+			element TextArea(OptionsScreen/InterfaceSlLabel) : GuiTemplate/BasicText
+			{
+				left 0.33
+				top 0.32
+				caption 0
+				alignment left
+			}
+			container Panel(OptionsScreen/InterfaceDefaultButton) : GuiTemplate/Button
+			{
+				left 0.17
+				top 0.38
+				width 0.12
+				height 0.05
+
+				element TextArea(OptionsScreen/InterfaceDefaultLabel) : GuiTemplate/CenteredText
+				{
+					caption Default
+				}
+        		}
+			
+		}
+		container BorderPanel(OptionsScreen/Page2Panel)
+		{
+			caption Video
+			container Panel(OptionsScreen/VideosHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.03
+				top 0.1
+				width 0.38
+				height 0.12
+        		}
+			container Panel(OptionsScreen/VideoSelectHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.03
+				top 0.24
+				width 0.38
+				height 0.12
+        		}
+			element TextArea(OptionsScreen/VideoCBLabel) : GuiTemplate/BasicText
+			{
+				left 0.25
+				top 0.26
+				caption Full Screen:
+				alignment right
+			}
+			container Panel(OptionsScreen/VideoCBCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.29
+				top 0.26
+			}
+			container Panel(OptionsScreen/VideoSlSlider) : GuiTemplate/Slider
+			{
+				left 0.08
+				top 0.32
+				width 0.24
+			}
+			element TextArea(OptionsScreen/VideoSlLabel) : GuiTemplate/BasicText
+			{
+				left 0.33
+				top 0.32
+				caption 0
+				alignment left
+			}
+			container Panel(OptionsScreen/VideoDefaultButton) : GuiTemplate/Button
+			{
+				left 0.17
+				top 0.38
+				width 0.12
+				height 0.05
+
+				element TextArea(OptionsScreen/VideoDefaultLabel) : GuiTemplate/CenteredText
+				{
+					caption Default
+				}
+        		}
+			
+		}
+		container BorderPanel(OptionsScreen/Page3Panel)
+		{
+			caption Sound
+			container Panel(OptionsScreen/SoundsHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.03
+				top 0.1
+				width 0.38
+				height 0.12
+        		}
+			container Panel(OptionsScreen/SetSoundSlider) : GuiTemplate/Slider
+			{
+				left 0.08
+				top 0.32
+				width 0.24
+			}
+			element TextArea(OptionsScreen/SoundValueLabel) : GuiTemplate/BasicText
+			{
+				left 0.33
+				top 0.32
+				caption 0
+				alignment left
+			}
+			container Panel(OptionsScreen/SoundDefaultButton) : GuiTemplate/Button
+			{
+				left 0.17
+				top 0.38
+				width 0.12
+				height 0.05
+
+				element TextArea(OptionsScreen/SoundDefaultLabel) : GuiTemplate/CenteredText
+				{
+					caption Default
+				}
+        		}
+		}
+		container BorderPanel(OptionsScreen/Page4Panel)
+		{
+			caption Controls
+			container Panel(OptionsScreen/ControlsHighlightDoubleList) : GuiTemplate/TextArea
+			{
+				left 0.03
+				top 0.1
+				width 0.38
+				height 0.25
+        		}
+			container Panel(OptionsScreen/ControlDefaultButton) : GuiTemplate/Button
+			{
+				left 0.08
+				top 0.38
+				width 0.12
+				height 0.05
+
+				element TextArea(OptionsScreen/ControlDefaultLabel) : GuiTemplate/CenteredText
+				{
+					caption Default
+				}
+        		}
+			container Panel(OptionsScreen/ControlChangeButton) : GuiTemplate/Button
+			{
+				left 0.26
+				top 0.38
+				width 0.12
+				height 0.05
+
+				element TextArea(OptionsScreen/ControlChangeLabel) : GuiTemplate/CenteredText
+				{
+					caption Change
+				}
+        		}
+		}
+	}
+}
+EscScreen
+{
+	container BorderPanel(EscScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.4
+		top 0.4
+		width 0.2
+		height 0.2
+		container Panel(EscScreen/OptionsButton) : GuiTemplate/Button
+		{
+			left 0.04
+			top 0.04
+			width 0.12
+			height 0.05
+
+			element TextArea(EscScreen/OptionsLabel) : GuiTemplate/CenteredText
+			{
+				caption Options
+			}
+        	}
+		container Panel(EscScreen/QuitButton) : GuiTemplate/Button
+		{
+			left 0.04
+			top 0.11
+			width 0.12
+			height 0.05
+
+			element TextArea(EscScreen/QuitLabel) : GuiTemplate/CenteredText
+			{
+				caption Quit
+			}
+        	}
+	}
+}

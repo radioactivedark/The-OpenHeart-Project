@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="XDebug|Win32">
+      <Configuration>XDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A65DDD92-FF20-4B1F-AE83-CD71FD4ECCC8}</ProjectGuid>
+    <RootNamespace>ogremagix</RootNamespace>
+    <ProjectName>FeralHeart</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\lc.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ShaderGraphContentTask.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ReferencePath)</ReferencePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'">$(ReferencePath)</ReferencePath>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\output\bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'">$(SolutionDir)\output\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\output\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'">$(SolutionDir)\output\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'">$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\common
+
+;$(SolutionDir)deps\ogre-paged-1.1.4\include
+;$(SolutionDir)deps\SkyX-0.4\Include
+;$(SolutionDir)deps\irrKlang-1.5.0\include
+;$(SolutionDir)deps\zziplib-0.13.57
+;$(SolutionDir)deps\RakNet_PC-4.023\Source
+;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\boost_1_57
+;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\include\OIS
+;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\include\OGRE
+;$(SolutionDir)src\client\include
+;$(SolutionDir)deps\SkyX-0.4\Include;$(SolutionDir)deps\SkyX-0.4\Source;$(SolutionDir)deps\ogre-paged-1.1.4\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;SKYX_LIB</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>zlib.lib;zziplib.lib;OIS.lib;RakNetLibStatic.lib;OgreMain.lib;irrKlang.lib;libboost_thread-vc120-mt-1_57.lib;libboost_date_time-vc120-mt-1_57.lib;libboost_system-vc120-mt-1_57.lib;ws2_32.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)deps\zziplib-0.13.57\lib\Release;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\boost_1_57\lib;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\lib\release;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\lib\release\opt;$(SolutionDir)deps\RakNet_PC-4.023\Lib;$(SolutionDir)deps\irrKlang-1.5.0\lib\Win32-visualStudio;$(SolutionDir)deps\SkyX-0.4\Release;$(SolutionDir)deps\ogre-paged-1.1.4\lib\Release</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>echo mkdir "$(SolutionDir)build\client\media"
+mkdir "$(SolutionDir)build\client\media"
+echo copy "$(TargetPath)" "$(SolutionDir)build\client\$(TargetFileName)"
+copy "$(TargetPath)" "$(SolutionDir)build\client\$(TargetFileName)"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\cg.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\cg.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\OgreMain.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\OgreMain.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\OIS.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\OIS.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_BSPSceneManager.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_BSPSceneManager.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_CgProgramManager.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_CgProgramManager.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_OctreeSceneManager.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_OctreeSceneManager.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_ParticleFX.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\Plugin_ParticleFX.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\RenderSystem_Direct3D9.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\RenderSystem_Direct3D9.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\RenderSystem_GL.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\release\RenderSystem_GL.dll" "$(SolutionDir)build\client\"
+
+echo copy "$(SolutionDir)deps\SkyX-0.4\Release\SkyX.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\SkyX-0.4\Release\SkyX.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\irrKlang-1.5.0\bin\win32-visualStudio\irrKlang.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\irrKlang-1.5.0\bin\win32-visualStudio\irrKlang.dll" "$(SolutionDir)build\client\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='XDebug|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir)config;$(SolutionDir)src\client\include;$(SolutionDir)deps\fmod-4.02\include;$(SolutionDir)deps\zziplib-0.13.57;$(SolutionDir)deps\ogre-paged-1.1.4\include;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)deps\RakNet_PC-4.023\Source;$(SolutionDir)deps\ogre-paged-1.1.4\build\include;$(SolutionDir)deps\irrKlang-1.5.0\include;$(SolutionDir)deps\SkyX-0.4\Include;$(SolutionDir)src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>zlibd.lib;zziplibd.lib;OIS_d.lib;RakNetLibStaticDebug.lib;PagedGeometry.lib;OgreMain_d.lib;irrKlang.lib;SkyX_d.lib;libboost_thread-vc120-mt-gd-1_57.lib;libboost_date_time-vc120-mt-gd-1_57.lib;libboost_system-vc120-mt-gd-1_57.lib;DbgHelp.lib;ws2_32.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)deps\zziplib-0.13.57\lib\Debug;$(SolutionDir)deps\fmod-4.02\lib;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\boost_1_57\lib;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\lib\debug;$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\lib\debug\opt;$(SolutionDir)deps\RakNet_PC-4.023\Lib;$(SolutionDir)deps\ogre-paged-1.1.4\lib\Debug;$(SolutionDir)deps\irrKlang-1.5.0\lib\Win32-visualStudio;$(SolutionDir)deps\SkyX-0.4\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>echo mkdir "$(SolutionDir)build\client\media"
+mkdir "$(SolutionDir)build\client\media"
+echo copy "$(TargetPath)" "$(SolutionDir)build\client\$(TargetFileName)"
+copy "$(TargetPath)" "$(SolutionDir)build\client\$(TargetFileName)"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\cg.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\cg.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\OgreMain_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\OgreMain_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\OIS_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\OIS_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_BSPSceneManager_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_BSPSceneManager_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_CgProgramManager_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_CgProgramManager_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_OctreeSceneManager_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_OctreeSceneManager_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_ParticleFX_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\Plugin_ParticleFX_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\RenderSystem_Direct3D9_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\RenderSystem_Direct3D9_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\RenderSystem_GL_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\OgreSDK_vs12_v1-7-4\bin\debug\RenderSystem_GL_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\fmod-4.02\lib\fmodex.dll"  "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\fmod-4.02\lib\fmodex.dll"  "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)static\client\*.cfg" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)static\client\*.cfg" "$(SolutionDir)build\client\"
+
+echo copy "$(SolutionDir)deps\SkyX-0.4\Debug\SkyX_d.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\SkyX-0.4\Debug\SkyX_d.dll" "$(SolutionDir)build\client\"
+echo copy "$(SolutionDir)deps\irrKlang-1.5.0\bin\win32-visualStudio\irrKlang.dll" "$(SolutionDir)build\client\"
+copy "$(SolutionDir)deps\irrKlang-1.5.0\bin\win32-visualStudio\irrKlang.dll" "$(SolutionDir)build\client\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\client\include\ActionsManager.h" />
+    <ClInclude Include="src\client\include\Application.h" />
+    <ClInclude Include="src\client\include\ButtonListener.h" />
+    <ClInclude Include="src\client\include\ByteArray.h" />
+    <ClInclude Include="src\client\include\CameraManager.h" />
+    <ClInclude Include="src\client\include\CapabilitiesManager.h" />
+    <ClInclude Include="src\client\include\ChangeListener.h" />
+    <ClInclude Include="src\client\include\CharCreateManager.h" />
+    <ClInclude Include="src\client\include\CharCreateState.h" />
+    <ClInclude Include="src\client\include\CharSelectState.h" />
+    <ClInclude Include="src\client\include\ChatManager.h" />
+    <ClInclude Include="src\client\include\Collision.h" />
+    <ClInclude Include="src\client\include\CollisionManager.h" />
+    <ClInclude Include="src\client\include\Controllable.h" />
+    <ClInclude Include="src\client\include\ControlManager.h" />
+    <ClInclude Include="src\client\include\CRC32.h" />
+    <ClInclude Include="src\client\include\Deflater.h" />
+    <ClInclude Include="src\client\include\EmoteManager.h" />
+    <ClInclude Include="src\client\include\FriendsManager.h" />
+    <ClInclude Include="src\client\include\GamePanelListener.h" />
+    <ClInclude Include="src\client\include\GamePanelManager.h" />
+    <ClInclude Include="src\client\include\GameState.h" />
+    <ClInclude Include="src\client\include\Grid.h" />
+    <ClInclude Include="src\client\include\GridManager.h" />
+    <ClInclude Include="src\client\include\GroupManager.h" />
+    <ClInclude Include="src\client\include\Gui.h" />
+    <ClInclude Include="src\client\include\GuiButton.h" />
+    <ClInclude Include="src\client\include\GuiComponent.h" />
+    <ClInclude Include="src\client\include\GuiHandler.h" />
+    <ClInclude Include="src\client\include\GuiList.h" />
+    <ClInclude Include="src\client\include\GuiMap.h" />
+    <ClInclude Include="src\client\include\GuiMaskedTextField.h" />
+    <ClInclude Include="src\client\include\GuiMover.h" />
+    <ClInclude Include="src\client\include\GuiMultiPanel.h" />
+    <ClInclude Include="src\client\include\GuiPanel.h" />
+    <ClInclude Include="src\client\include\GuiSizer.h" />
+    <ClInclude Include="src\client\include\GuiSlider.h" />
+    <ClInclude Include="src\client\include\GuiSliderList.h" />
+    <ClInclude Include="src\client\include\GuiTab.h" />
+    <ClInclude Include="src\client\include\GuiTextArea.h" />
+    <ClInclude Include="src\client\include\GuiTextField.h" />
+    <ClInclude Include="src\client\include\GuiTextHandler.h" />
+    <ClInclude Include="src\client\include\InfoCaller.h" />
+    <ClInclude Include="src\client\include\InfoManager.h" />
+    <ClInclude Include="src\client\include\InGameState.h" />
+    <ClInclude Include="src\client\include\ItemsManager.h" />
+    <ClInclude Include="src\client\include\KeyboardManager.h" />
+    <ClInclude Include="src\client\include\LightManager.h" />
+    <ClInclude Include="src\client\include\LipSyncManager.h" />
+    <ClInclude Include="src\client\include\LoadingBarManager.h" />
+    <ClInclude Include="src\client\include\LoggerManager.h" />
+    <ClInclude Include="src\client\include\LoginState.h" />
+    <ClInclude Include="src\client\include\LogoState.h" />
+    <ClInclude Include="src\client\include\MacAddress.h" />
+    <ClInclude Include="src\client\include\MapMaker.h" />
+    <ClInclude Include="src\client\include\MapMakerState.h" />
+    <ClInclude Include="src\client\include\MapManager.h" />
+    <ClInclude Include="src\client\include\MapTestState.h" />
+    <ClInclude Include="src\client\include\MarkingManager.h" />
+    <ClInclude Include="src\client\include\md5.h" />
+    <ClInclude Include="src\client\include\MiniMapManager.h" />
+    <ClInclude Include="src\client\include\MovieMaker.h" />
+    <ClInclude Include="src\client\include\MovieMakerPanelManager.h" />
+    <ClInclude Include="src\client\include\MovieMakerState.h" />
+    <ClInclude Include="src\client\include\MovieSceneManager.h" />
+    <ClInclude Include="src\client\include\NameTagManager.h" />
+    <ClInclude Include="src\client\include\NetworkManager.h" />
+    <ClInclude Include="src\client\include\Object.h" />
+    <ClInclude Include="src\client\include\ObjectListener.h" />
+    <ClInclude Include="src\client\include\ObjectMaker.h" />
+    <ClInclude Include="src\client\include\ObjectMakerState.h" />
+    <ClInclude Include="src\client\include\OptionsManager.h" />
+    <ClInclude Include="src\client\include\PartyManager.h" />
+    <ClInclude Include="src\client\include\SaveFile.h" />
+    <ClInclude Include="src\client\include\ScreenEffectsManager.h" />
+    <ClInclude Include="src\client\include\SkillsManager.h" />
+    <ClInclude Include="src\client\include\SkyDefines.h" />
+    <ClInclude Include="src\client\include\SkyMaker.h" />
+    <ClInclude Include="src\client\include\SkyMakerState.h" />
+    <ClInclude Include="src\client\include\SkyManager.h" />
+    <ClInclude Include="src\client\include\SoundManager.h" />
+    <ClInclude Include="src\client\include\SplashScreenManager.h" />
+    <ClInclude Include="src\client\include\Unit.h" />
+    <ClInclude Include="src\client\include\UnitManager.h" />
+    <ClInclude Include="src\client\include\WaterManager.h" />
+    <ClInclude Include="src\client\include\WeatherManager.h" />
+    <ClInclude Include="src\client\include\WorldObjectManager.h" />
+    <ClInclude Include="src\client\include\ZipConstants.h" />
+    <ClInclude Include="src\client\include\ZipEntry.h" />
+    <ClInclude Include="src\client\include\ZipManager.h" />
+    <ClInclude Include="src\client\include\ZipOutput.h" />
+    <ClInclude Include="src\common\Chat.h" />
+    <ClInclude Include="src\common\DataTypes.h" />
+    <ClInclude Include="src\common\NetworkDefines.h" />
+    <ClInclude Include="src\common\PacketReader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\BatchedGeometry.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\BatchPage.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\GrassLoader.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\ImpostorPage.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\PagedGeometry.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\PropertyMaps.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\StaticBillboardSet.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\TreeLoader2D.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\TreeLoader3D.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\WindBatchedGeometry.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\WindBatchPage.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\AtmosphereManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\BasicController.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\CloudsManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\ColorGradient.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\GPUManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\MeshManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\MoonManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\Prerequisites.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\SkyX.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VCloudsManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\DataManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\Ellipsoid.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\FastFakeRandom.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\GeometryBlock.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\GeometryManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\Lightning.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\LightningManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\VClouds.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="src\client\include\md5.cpp" />
+    <ClCompile Include="src\client\src\main.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\src\client\include;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OGRE;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\include\OIS;$(SolutionDir)\deps\OgreSDK_vs12_v1-7-4\boost_1_57;$(SolutionDir)\deps\RakNet_PC-4.023\Source;$(SolutionDir)\deps\zziplib-0.13.57;$(SolutionDir)\deps\irrKlang-1.5.0\include;$(SolutionDir)\deps\ogre-paged-1.1.4\include;$(SolutionDir)\deps\SkyX-0.4\SkyX\Include;$(SolutionDir)\src\common</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\client\include\resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="deps\ogre-paged-1.1.4\source\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\lc.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ShaderGraphContentTask.targets" />
+  </ImportGroup>
+</Project>

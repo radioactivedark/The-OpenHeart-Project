@@ -1,0 +1,21 @@
+material GrassMat
+{
+	transparency_casts_shadows off
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			diffuse 0.05 0.05 0.05 1
+			cull_hardware none
+			cull_software none
+
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture grass.png
+			}
+		}
+	}
+}

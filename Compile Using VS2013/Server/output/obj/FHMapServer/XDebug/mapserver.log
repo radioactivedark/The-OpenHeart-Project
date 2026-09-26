@@ -1,0 +1,24 @@
+﻿Build started 6/29/2026 2:56:03 PM.
+     1>Project "C:\Users\akari\Downloads\wh-gaia-test1\Server\mapserver.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\config" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\src\common" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql-connector-c-6.1.11-win32\include" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql++-3.2.4\lib" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\RakNet_PC-4.023\Source" /I"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\OgreSDK_vs12_v1-7-4\boost_1_57" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _DEBUG /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MDd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\obj\FHMapServer\XDebug\\" /Fd"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\obj\FHMapServer\XDebug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\mapserver\main.cpp
+         main.cpp
+     1>c:\users\akari\downloads\wh-gaia-test1\server\deps\mysql++-3.2.4\lib\exceptions.h(49): warning C4003: not enough actual parameters for macro 'MAY_THROW'
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver\DatabaseManager.h(638): warning C4244: 'return' : conversion from 'mysqlpp::ulonglong' to 'const unsigned int', possible loss of data
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver\ServerManager.h(243): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver\ServerManager.h(244): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver\ServerManager.h(245): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver\ServerManager.h(345): warning C4244: 'argument' : conversion from 'int' to 'const float', possible loss of data
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver\ServerManager.h(1341): warning C4244: 'argument' : conversion from 'const float' to 'const int', possible loss of data
+     1>C:\Users\akari\Downloads\wh-gaia-test1\Server\src\mapserver\ServerManager.h(1350): warning C4244: 'argument' : conversion from 'const float' to 'const int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\XDebug\FHMapServer_d.exe" /NOLOGO /LIBPATH:"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\RakNet_PC-4.023\Lib" /LIBPATH:"C:\Users\akari\Downloads\wh-gaia-test1\Server\deps\mysql++-3.2.4\vc2008\Win32\Debug" RakNetLibStaticDebug.lib mysqlpp_d.lib ws2_32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\XDebug\FHMapServer_d.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\XDebug\FHMapServer_d.lib" /MACHINE:X86 /SAFESEH "C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\obj\FHMapServer\XDebug\main.obj"
+     1>RakNetLibStaticDebug.lib(RakSleep.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+         Generating code
+         Finished generating code
+         mapserver.vcxproj -> C:\Users\akari\Downloads\wh-gaia-test1\Server\\output\bin\XDebug\FHMapServer_d.exe
+     1>Done Building Project "C:\Users\akari\Downloads\wh-gaia-test1\Server\mapserver.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.77

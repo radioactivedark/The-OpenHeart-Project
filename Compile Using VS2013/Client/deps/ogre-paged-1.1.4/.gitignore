@@ -1,0 +1,8 @@
+syntax: glob
+_build/
+build/
+lib/
+
+include/PagedGeometryConfig\.h
+
+CMakeUserPresets.json

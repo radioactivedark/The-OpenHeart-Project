@@ -1,0 +1,237 @@
+template container BorderPanel(GuiTemplate/BorderPanel)
+{
+    left 0
+    top 0
+    width 1
+    height 1
+
+    material GuiMat/PanelCenter
+    border_size 0.02 0.02 0.02 0.02
+    border_material GuiMat/PanelBorder
+    border_topleft_uv 0 0 0.043 0.043
+    border_top_uv 0.043 0 0.957 0.043
+    border_topright_uv 0.957 0 1 0.043
+    border_left_uv 0 0.043 0.043 0.957
+    border_right_uv 0.957 0.043 1 0.957
+    border_bottomleft_uv 0 0.957 0.043 1
+    border_bottom_uv 0.043 0.957 0.957 1
+    border_bottomright_uv 0.957 0.957 1 1
+}
+template element TextArea(GuiTemplate/BasicText)
+{
+    font_name Tahoma
+    char_height 0.03
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    left 0.005
+    top 0.005
+}
+template element TextArea(GuiTemplate/BasicText2)
+{
+    font_name Tahoma
+    char_height 0.03
+    colour_top 1 0.8 1
+    colour_bottom 0.8 0.6 1
+    left -0.01
+    top 0.005
+    alignment right
+    horz_align right
+}
+template element TextArea(GuiTemplate/LargeText)
+{
+    font_name TempusSans
+    char_height 0.05
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    left 0.005
+    top 0.005
+}
+template element TextArea(GuiTemplate/VeryLargeText)
+{
+    font_name TempusSans
+    char_height 0.075
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    left 0
+    top -0.036
+    alignment center
+    horz_align center
+    vert_align center
+}
+template element TextArea(GuiTemplate/CenteredText)
+{
+    font_name BlueHighway
+    char_height 0.03
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    left 0
+    top -0.0125
+    alignment center
+    horz_align center
+    vert_align center
+}
+template element TextArea(GuiTemplate/TextFieldText)
+{
+    font_name Tahoma
+    metrics_mode pixels
+    //char_height 0.03
+    char_height 24
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    //left 0.01
+    //top 0.005
+    left 6
+    top 2
+}
+template element TextArea(GuiTemplate/SmallCenteredText)
+{
+    font_name BlueHighway
+    char_height 0.025
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    left 0
+    top -0.01
+    alignment center
+    horz_align center
+    vert_align center
+}
+template container Panel(GuiTemplate/Button)
+{
+    material GuiMat/ButtonUp
+}
+template container Panel(GuiTemplate/TextField)
+{
+    material GuiMat/TextField
+}
+template container Panel(GuiTemplate/TextArea)
+{
+    material GuiMat/TextArea
+}
+template container Panel(GuiTemplate/TextComponent)
+{
+}
+template container Panel(GuiTemplate/Slider)
+{
+    width 0.02
+    height 0.02
+    material GuiMat/Slider
+}
+template container Panel(GuiTemplate/Sizer)
+{
+    material GuiMat/Sizer
+}
+template container Panel(GuiTemplate/SliderMarker)
+{
+    material GuiMat/SliderMarkerUp
+}
+template container Panel(GuiTemplate/Mover)
+{
+    height 0.04
+    material GuiMat/Mover
+}
+template container Panel(GuiTemplate/ArrowLeftButton)
+{
+    left 0.05
+    top 0
+    width 0.05
+    height 0.05
+    material GuiMat/ButtonUp
+}
+template container Panel(GuiTemplate/ArrowRightButton)
+{
+    left 0.4
+    top 0
+    width 0.05
+    height 0.05
+    material GuiMat/ButtonUp
+}
+template element TextArea(GuiTemplate/ArrowLeftButtonText)
+{
+    font_name BlueHighway
+    char_height 0.1
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    left 0
+    top -0.03
+    width 0.12
+    height 0.09
+    alignment center
+    horz_align center
+    vert_align center
+    caption <
+}
+template element TextArea(GuiTemplate/ArrowRightButtonText)
+{
+    font_name BlueHighway
+    char_height 0.1
+    colour_top 0.8 1 1
+    colour_bottom 0.6 0.8 1
+    left 0.005
+    top -0.03
+    width 0.12
+    height 0.09
+    alignment center
+    horz_align center
+    vert_align center
+    caption >
+}
+template container Panel(GuiTemplate/CheckBox)
+{
+    left 0
+    top 0
+    width 0.025
+    height 0.03
+    material GuiMat/CheckBoxUpFalse
+}
+template container Panel(GuiTemplate/ScrollerMarker)
+{
+    material GuiMat/ButtonUp
+}
+template container Panel(GuiTemplate/Highlight)
+{
+    left 0
+    top 0
+    material GuiMat/Highlight
+}
+template container Panel(GuiTemplate/Tab)
+{
+    material GuiMat/TabDown
+}
+template element TextArea(GuiTemplate/ArrowLText)
+{
+	font_name BlueHighway
+	char_height 0.06
+	colour 0.5 0.75 1
+	top -0.02
+	alignment center
+	horz_align center
+	vert_align center
+	caption <
+}
+template element TextArea(GuiTemplate/ArrowRText)
+{
+	font_name BlueHighway
+	char_height 0.06
+	colour 0.5 0.75 1
+	top -0.02
+	alignment center
+	horz_align center
+	vert_align center
+	caption >
+}
+template container Panel(GuiTemplate/Partition)
+{
+	left 0.01
+	height 0.01
+	material GuiMat/Partition
+}
+template container Panel(GuiTemplate/Map)
+{
+    material GuiMat/Slider
+}
+template container Panel(GuiTemplate/MapMarker)
+{
+    width 0.02
+    height 0.02
+    material GuiMat/ButtonUp
+}

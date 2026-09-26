@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="src\client\include\ActionsManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Application.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ButtonListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ByteArray.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\CameraManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\CapabilitiesManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ChangeListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\CharCreateManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\CharCreateState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\CharSelectState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ChatManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Collision.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\CollisionManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Controllable.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ControlManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\CRC32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Deflater.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\EmoteManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\FriendsManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GamePanelListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GamePanelManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GameState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Grid.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GridManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GroupManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Gui.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiButton.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiComponent.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiHandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiList.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiMap.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiMaskedTextField.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiMover.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiMultiPanel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiPanel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiSizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiSlider.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiSliderList.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiTab.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiTextArea.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiTextField.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\GuiTextHandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\InfoCaller.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\InfoManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\InGameState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ItemsManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\KeyboardManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\LightManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\LipSyncManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\LoadingBarManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\LoggerManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\LoginState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\LogoState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MacAddress.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MapMaker.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MapMakerState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MapManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MapTestState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MarkingManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\md5.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MiniMapManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MovieMaker.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MovieMakerPanelManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MovieMakerState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\MovieSceneManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\NameTagManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\NetworkManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Object.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ObjectListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ObjectMaker.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ObjectMakerState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\OptionsManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\PartyManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SaveFile.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ScreenEffectsManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SkillsManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SkyDefines.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SkyMaker.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SkyMakerState.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SkyManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SoundManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\SplashScreenManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\Unit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\UnitManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\WaterManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\WeatherManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\WorldObjectManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ZipConstants.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ZipEntry.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ZipManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\include\ZipOutput.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Chat.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\DataTypes.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\NetworkDefines.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\PacketReader.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{3d6dc330-82f3-46aa-9b4d-fe46070687ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{41a6cc7c-dc7f-411d-ad22-920ed19b8a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{0d5a0d38-7769-4983-9532-ddeac525aa22}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\client\include\md5.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\AtmosphereManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\BasicController.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\CloudsManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\ColorGradient.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\GPUManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\MeshManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\MoonManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\Prerequisites.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\SkyX.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VCloudsManager.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\BatchedGeometry.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\BatchPage.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\GrassLoader.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\ImpostorPage.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\PagedGeometry.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\PropertyMaps.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\StaticBillboardSet.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\TreeLoader2D.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\TreeLoader3D.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\WindBatchedGeometry.cpp" />
+    <ClCompile Include="deps\ogre-paged-1.1.4\source\WindBatchPage.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\DataManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\Ellipsoid.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\FastFakeRandom.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\GeometryBlock.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\GeometryManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\Lightning.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\LightningManager.cpp" />
+    <ClCompile Include="deps\SkyX-0.4\SkyX\Source\VClouds\VClouds.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\client\include\resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="deps\ogre-paged-1.1.4\source\CMakeLists.txt" />
+  </ItemGroup>
+</Project>

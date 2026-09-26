@@ -1,0 +1,3 @@
++ boost: Boost (general) <http://boost.org>
++ OGRE: 3D library needed for the OgreGraphics plugin <http://>
++ OIS: Input library needed for the OISInput plugin <http://sourceforge.net/projects/wgois>

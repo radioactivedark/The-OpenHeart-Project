@@ -1,0 +1,134 @@
+FriendsScreen
+{
+	container BorderPanel(FriendsScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.3
+		height 0.7
+
+		
+		container Panel(FriendsScreen/FriendsScreenMover) : GuiTemplate/Mover
+		{
+			element TextArea(FriendsScreen/FriendsScreenLabel) : GuiTemplate/SmallCenteredText
+			{
+				caption Friends
+			}
+		}
+		container BorderPanel(FriendsScreen/Page1Panel)
+		{
+			caption Friends
+			element TextArea(FriendsScreen/OnlineLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.1
+				caption Online:
+			}
+			container Panel(FriendsScreen/FriendOnlineHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.13
+				width 0.26
+				height 0.22
+        		}
+			element TextArea(FriendsScreen/OfflineLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.36
+				caption Offline:
+			}
+			container Panel(FriendsScreen/FriendOfflineHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.39
+				width 0.26
+				height 0.22
+        		}
+			container Panel(FriendsScreen/FriendNameTextField) : GuiTemplate/TextField
+			{
+				left 0.01
+				top 0.63
+				width 0.2
+				height 0.03
+       		 	}
+			container Panel(FriendsScreen/FriendAddButton) : GuiTemplate/Button
+			{
+				left 0.22
+				top 0.62
+				width 0.06
+				height 0.05
+
+				element TextArea(FriendsScreen/FriendAddLabel) : GuiTemplate/CenteredText
+				{
+					caption Add
+				}
+        		}
+			
+		}
+		container BorderPanel(FriendsScreen/Page2Panel)
+		{
+			caption Requests
+			container Panel(FriendsScreen/FriendRequestHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.13
+				width 0.26
+				height 0.22
+        		}
+			container Panel(FriendsScreen/RequestYesButton) : GuiTemplate/Button
+			{
+				left 0.02
+				top 0.36
+				width 0.12
+				height 0.05
+
+				element TextArea(FriendsScreen/RequestYesLabel) : GuiTemplate/CenteredText
+				{
+					caption Yes
+				}
+        		}
+			container Panel(FriendsScreen/RequestNoButton) : GuiTemplate/Button
+			{
+				left 0.16
+				top 0.36
+				width 0.12
+				height 0.05
+
+				element TextArea(FriendsScreen/RequestNoLabel) : GuiTemplate/CenteredText
+				{
+					caption No
+				}
+        		}
+		}
+		container BorderPanel(FriendsScreen/Page3Panel)
+		{
+			caption Block
+			container Panel(FriendsScreen/BlockHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.13
+				width 0.26
+				height 0.22
+        		}
+			container Panel(FriendsScreen/BlockNameTextField) : GuiTemplate/TextField
+			{
+				left 0.01
+				top 0.37
+				width 0.2
+				height 0.03
+       		 	}
+			container Panel(FriendsScreen/BlockAddButton) : GuiTemplate/Button
+			{
+				left 0.22
+				top 0.36
+				width 0.06
+				height 0.05
+
+				element TextArea(FriendsScreen/BlockAddLabel) : GuiTemplate/CenteredText
+				{
+					caption Add
+				}
+        		}
+		}
+	}
+}

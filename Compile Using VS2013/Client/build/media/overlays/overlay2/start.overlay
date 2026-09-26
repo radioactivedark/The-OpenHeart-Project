@@ -1,0 +1,108 @@
+StartScreen
+{
+	container BorderPanel(StartScreen/Panel) : GuiTemplate/BorderPanel
+	{
+		left 0.1
+		top 0.5
+		width 0.45
+		height 0.47
+		element TextArea(StartScreen/UsernameLabel) : GuiTemplate/BasicText
+		{
+			left 0.02
+			top 0.05
+			caption Username:
+		}
+		container Panel(StartScreen/UsernameTextField) : GuiTemplate/TextField
+		{
+			left 0.12
+			top 0.05
+			width 0.25
+			height 0.03
+        	}
+		container Panel(StartScreen/UsernameRemCheckBox) : GuiTemplate/CheckBox
+		{
+			left 0.39
+			top 0.05
+		}
+		element TextArea(StartScreen/PasswordLabel) : GuiTemplate/BasicText
+		{
+			left 0.02
+			top 0.09
+			caption Password:
+		}
+		container Panel(StartScreen/PasswordTextFieldMask) : GuiTemplate/TextField
+		{
+			left 0.12
+			top 0.09
+			width 0.25
+			height 0.03
+        	}
+		container Panel(StartScreen/LoginButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.15
+			width 0.16
+			height 0.05
+
+			element TextArea(StartScreen/LoginLabel) : GuiTemplate/CenteredText
+			{
+				caption Log In
+			}
+        	}
+		container Panel(StartScreen/ToolsButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.21
+			width 0.16
+			height 0.05
+
+			element TextArea(StartScreen/ToolsLabel) : GuiTemplate/CenteredText
+			{
+				caption Tools
+			}
+        	}
+		container Panel(StartScreen/HomepageButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.27
+			width 0.16
+			height 0.05
+
+			element TextArea(StartScreen/HomepageLabel) : GuiTemplate/CenteredText
+			{
+				caption Homepage
+			}
+        	}
+		container Panel(StartScreen/OptionsButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.33
+			width 0.16
+			height 0.05
+
+			element TextArea(StartScreen/OptionsLabel) : GuiTemplate/CenteredText
+			{
+				caption Options
+			}
+        	}
+		container Panel(StartScreen/QuitButton) : GuiTemplate/Button
+		{
+			left 0.15
+			top 0.39
+			width 0.16
+			height 0.05
+
+			element TextArea(StartScreen/QuitLabel) : GuiTemplate/CenteredText
+			{
+				caption Quit
+			}
+        	}
+		container Panel(StartScreen/DiscordButton) : GuiTemplate/Button
+		{
+			left 0.4
+			top 0.4
+			width 0.02
+			height 0.03
+        	}
+	}
+}

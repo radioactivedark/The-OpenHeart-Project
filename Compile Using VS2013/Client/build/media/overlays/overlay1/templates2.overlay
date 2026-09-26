@@ -1,0 +1,27 @@
+template container Panel(GuiTemplate/WeatherCycleIndicator)
+{
+	top 0.02
+	height 0.048
+	material GuiMat/WeatherCycleIndicator
+}
+template container Panel(GuiTemplate/NameTag)
+{
+	material GuiMat/NameTag
+}
+template element TextArea(GuiTemplate/NameTagText)
+{
+	font_name BlueHighway
+	metrics_mode pixels
+	char_height 14
+	colour_top 0.6 0.8 1
+	colour_bottom 1 1 1
+	left 0
+	top -6
+	alignment center
+	horz_align center
+	vert_align center
+}
+template container Panel(GuiTemplate/Reminder)
+{
+    material GuiMat/Reminder
+}

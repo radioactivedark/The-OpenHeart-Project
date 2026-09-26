@@ -1,0 +1,16 @@
+material Terrain/Default
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture african_grass.jpg
+				scale 0.05 0.05
+			}
+		}
+	}
+}

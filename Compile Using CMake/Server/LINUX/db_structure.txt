@@ -1,0 +1,161 @@
+CREATE TABLE jos_users(
+id UNSIGNED INT AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(32) UNIQUE,
+password VARCHAR(64),
+block BOOL
+);
+
+CREATE TABLE fh_users(
+id UNSIGNED INT PRIMARY KEY,
+modgroup UNSIGNED INT DEFAULT NULL,
+ban_start DATETIME,
+uid UNSIGNED INT,
+ban_end DATETIME
+);
+
+CREATE TABLE fh_BanIP(
+ip VARCHAR(32),
+uid UNSIGNED INT,
+ban_start DATETIME,
+ref UNSIGNED INT,
+ban_end DATETIME
+);
+
+CREATE TABLE fh_BanMAC(
+mac VARCHAR(32),
+uid UNSIGNED INT,
+ban_start DATETIME,
+id UNSIGNED INT,
+ban_end DATETIME
+);
+
+CREATE TABLE fh_characters(
+id UNSIGNED INT AUTO_INCREMENT PRIMARY KEY,
+user_id UNSIGNED INT,
+name VARCHAR(32),
+map VARCHAR(64) DEFAULT NULL,
+pos_x INT,
+pos_y INT,
+pos_z INT,
+home_map VARCHAR(64) DEFAULT NULL,
+home_x INT,
+home_y INT,
+home_z INT,
+group_id UNSIGNED INT DEFAULT 0,
+group_title VARCHAR(32) DEFAULT NULL,
+group_rank UNSIGNED CHAR,
+bio VARCHAR(1024) DEFAULT NULL,
+token VARCHAR(32),
+token_time DATETIME,
+is_online BOOL,
+party_id UNSIGNED INT DEFAULT 0
+);
+
+CREATE TABLE fh_appearance(
+id UNSIGNED INT PRIMARY KEY,
+species CHAR,
+mesh_0 UNSIGNED CHAR,
+mesh_1 UNSIGNED CHAR,
+mesh_2 UNSIGNED CHAR,
+mesh_3 UNSIGNED CHAR,
+mesh_4 UNSIGNED CHAR,
+mat_0 UNSIGNED CHAR,
+mat_1 UNSIGNED CHAR,
+mat_2 UNSIGNED CHAR,
+mat_3 UNSIGNED CHAR,
+scale_0 CHAR,
+scale_1 CHAR,
+scale_2 CHAR,
+scale_3 CHAR,
+scale_4 CHAR,
+scale_5 CHAR,
+scale_6 CHAR,
+scale_7 CHAR,
+scale_8 CHAR,
+scale_9 CHAR,
+colour_0_0 UNSIGNED CHAR,
+colour_0_1 UNSIGNED CHAR,
+colour_0_2 UNSIGNED CHAR,
+colour_1_0 UNSIGNED CHAR,
+colour_1_1 UNSIGNED CHAR,
+colour_1_2 UNSIGNED CHAR,
+colour_2_0 UNSIGNED CHAR,
+colour_2_1 UNSIGNED CHAR,
+colour_2_2 UNSIGNED CHAR,
+colour_3_0 UNSIGNED CHAR,
+colour_3_1 UNSIGNED CHAR,
+colour_3_2 UNSIGNED CHAR,
+colour_4_0 UNSIGNED CHAR,
+colour_4_1 UNSIGNED CHAR,
+colour_4_2 UNSIGNED CHAR,
+colour_5_0 UNSIGNED CHAR,
+colour_5_1 UNSIGNED CHAR,
+colour_5_2 UNSIGNED CHAR,
+colour_6_0 UNSIGNED CHAR,
+colour_6_1 UNSIGNED CHAR,
+colour_6_2 UNSIGNED CHAR,
+colour_7_0 UNSIGNED CHAR,
+colour_7_1 UNSIGNED CHAR,
+colour_7_2 UNSIGNED CHAR,
+colour_8_0 UNSIGNED CHAR,
+colour_8_1 UNSIGNED CHAR,
+colour_8_2 UNSIGNED CHAR,
+emote UNSIGNED CHAR,
+preset UNSIGNED CHAR
+);
+
+CREATE TABLE fh_log(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+DateTime DATETIME,
+uid UNSIGNED INT,
+sf BOOL,
+IP VARCHAR(32),
+MAC VARCHAR(32)
+);
+
+CREATE TABLE fh_friend(
+sender_id UNSIGNED INT,
+target_it UNSIGNED INT
+);
+
+CREATE TABLE fh_friend_request(
+sender_id UNSIGNED INT,
+target_it UNSIGNED INT
+);
+
+CREATE TABLE fh_block(
+sender_id UNSIGNED INT,
+target_it UNSIGNED INT
+);
+
+CREATE TABLE fh_modgroup(
+id UNSIGNED INT PRIMARY KEY,
+type UNSIGNED INT
+);
+
+CREATE TABLE fh_groups(
+id UNSIGNED INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(64),
+leader_id UNSIGNED INT,
+bio VARCHAR(1024),
+private BOOL
+);
+
+CREATE TABLE fh_group_request(
+char_id UNSIGNED INT,
+group_id UNSIGNED INT
+);
+
+CREATE TABLE fh_group_invite(
+group_id UNSIGNED INT,
+char_id UNSIGNED INT
+);
+
+CREATE TABLE fh_reports(
+id UNSIGNED INT AUTO_INCREMENT PRIMARY KEY,
+reporter_id UNSIGNED INT,
+target_id UNSIGNED INT,
+message VARCHAR(1024),
+report_time DATETIME,
+acknowledged BOOL
+);

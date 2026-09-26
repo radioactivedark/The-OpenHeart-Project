@@ -1,0 +1,1837 @@
+ObjectMakerScreen
+{
+	container BorderPanel(ObjectMakerScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.35
+		height 0.8
+
+		container BorderPanel(ObjectMakerScreen/Page1Panel)
+		{
+			caption Object
+			container Panel(ObjectMakerScreen/NameTextField) : GuiTemplate/TextField
+			{
+				left 0.07
+				top 0.06
+				width 0.25
+				height 0.03
+       		 	}
+			element TextArea(ObjectMakerScreen/NameLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.06
+				caption Name:
+			}
+			container Panel(ObjectMakerScreen/GroupTextField) : GuiTemplate/TextField
+			{
+				left 0.07
+				top 0.10
+				width 0.25
+				height 0.03
+       		 	}
+			element TextArea(ObjectMakerScreen/GroupLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.10
+				caption Group:
+			}
+			container Panel(ObjectMakerScreen/SaveButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.14
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/SaveLabel) : GuiTemplate/CenteredText
+				{
+					caption Save
+				}
+        		}
+			container Panel(ObjectMakerScreen/ExportButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.14
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/ExportLabel) : GuiTemplate/CenteredText
+				{
+					caption Export
+				}
+        		}
+			container Panel(ObjectMakerScreen/ClearButton) : GuiTemplate/Button
+			{
+				left 0.115
+				top 0.19
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/ClearLabel) : GuiTemplate/CenteredText
+				{
+					caption Clear
+				}
+        		}
+			container Panel(ObjectMakerScreen/TestButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.24
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/TestLabel) : GuiTemplate/CenteredText
+				{
+					caption Test
+				}
+        		}
+			element TextArea(ObjectMakerScreen/ShowCollLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.25
+				caption Show Collisions:
+			}
+			container Panel(ObjectMakerScreen/ShowCollCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.16
+				top 0.25
+			}
+			container Panel(ObjectMakerScreen/Object1Partition) : GuiTemplate/Partition
+			{
+				top 0.3
+				width 0.33
+			}
+			container Panel(ObjectMakerScreen/GroupSelHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.32
+				width 0.22
+				height 0.12
+        		}
+			element TextArea(ObjectMakerScreen/GroupSelLabel) : GuiTemplate/BasicText
+			{
+				left 0.02
+				top 0.32
+				caption Group:
+			}
+			container Panel(ObjectMakerScreen/NameSelHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.1
+				top 0.45
+				width 0.22
+				height 0.12
+        		}
+			element TextArea(ObjectMakerScreen/NameSelLabel) : GuiTemplate/BasicText
+			{
+				left 0.02
+				top 0.45
+				caption Object:
+			}
+			container Panel(ObjectMakerScreen/LoadButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.59
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/LoadLabel) : GuiTemplate/CenteredText
+				{
+					caption Load
+				}
+        		}
+			container Panel(ObjectMakerScreen/DeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.59
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/DeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+			container Panel(ObjectMakerScreen/Object2Partition) : GuiTemplate/Partition
+			{
+				top 0.65
+				width 0.33
+			}
+			container Panel(ObjectMakerScreen/SoundTextField) : GuiTemplate/TextField
+			{
+				left 0.07
+				top 0.67
+				width 0.25
+				height 0.03
+       		 	}
+			element TextArea(ObjectMakerScreen/SoundLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.67
+				caption Sound:
+			}
+			container Panel(ObjectMakerScreen/EffectMakerButton) : GuiTemplate/Button
+			{
+				left 0.12
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/EffectMakerLabel) : GuiTemplate/CenteredText
+				{
+					caption EffectMaker
+				}
+        		}
+			
+		}
+		container BorderPanel(ObjectMakerScreen/Page2Panel)
+		{
+			caption Mesh
+			element TextArea(ObjectMakerScreen/MeshLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.07
+				caption Mesh:
+			}
+			container Panel(ObjectMakerScreen/MeshTextField) : GuiTemplate/TextField
+			{
+				left 0.03
+				top 0.11
+				width 0.3
+				height 0.03
+       		 	}
+			element TextArea(ObjectMakerScreen/OwnCollLabel) : GuiTemplate/BasicText
+			{
+				left 0.17
+				top 0.07
+				caption Own Collision
+			}
+			container Panel(ObjectMakerScreen/OwnCollCheckBox) : GuiTemplate/CheckBox
+			{
+				left 0.3
+				top 0.07
+			}
+			element TextArea(ObjectMakerScreen/MaterialLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.16
+				caption Material:
+			}
+			element TextArea(ObjectMakerScreen/MatPartLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.16
+				alignment center
+				caption 1
+			}
+			container Panel(ObjectMakerScreen/MatPartDnButton) : GuiTemplate/Button
+			{
+				left 0.21
+				top 0.16
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MatPartDnLabel) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MatPartUpButton) : GuiTemplate/Button
+			{
+				left 0.28
+				top 0.16
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MatPartUpLabel) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MaterialTextField) : GuiTemplate/TextField
+			{
+				left 0.03
+				top 0.2
+				width 0.3
+				height 0.03
+       		 	}
+			element TextArea(ObjectMakerScreen/MeshPosLabel) : GuiTemplate/BasicText
+			{
+				left 0.1
+				top 0.27
+    				alignment center
+				caption Position
+			}
+			element TextArea(ObjectMakerScreen/MeshScaleLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.27
+				alignment center
+				caption Scale
+			}
+			element TextArea(ObjectMakerScreen/MeshXLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.32
+				caption X:
+			}
+			element TextArea(ObjectMakerScreen/MeshYLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.37
+				caption Y:
+			}
+			element TextArea(ObjectMakerScreen/MeshZLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.42
+				caption Z:
+			}
+			container Panel(ObjectMakerScreen/MeshPos0TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/MeshPosDn0Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshPosDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshPosUp0Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshPosUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshPos1TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/MeshPosDn1Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshPosDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshPosUp1Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshPosUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshPos2TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/MeshPosDn2Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshPosDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshPosUp2Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshPosUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshScale0TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/MeshScaleDn0Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshScaleDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshScaleUp0Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshScaleUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshScale1TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/MeshScaleDn1Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshScaleDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshScaleUp1Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshScaleUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshScale2TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/MeshScaleDn2Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshScaleDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshScaleUp2Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshScaleUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(ObjectMakerScreen/MeshRotLabel) : GuiTemplate/BasicText
+			{
+				left 0.12
+				top 0.49
+				alignment center
+				caption Rotation
+			}
+			container Panel(ObjectMakerScreen/MeshRotResetButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.48
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/MeshRotResetLabel) : GuiTemplate/CenteredText
+				{
+					caption Reset
+				}
+        		}
+			element TextArea(ObjectMakerScreen/MeshRot0Label) : GuiTemplate/BasicText
+			{
+				left 0.06
+				top 0.545
+				alignment center
+				caption Pitch
+			}
+			container Panel(ObjectMakerScreen/MeshRotDn0Button) : GuiTemplate/Button
+			{
+				left 0.005
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshRotDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshRotUp0Button) : GuiTemplate/Button
+			{
+				left 0.085
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshRotUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(ObjectMakerScreen/MeshRot1Label) : GuiTemplate/BasicText
+			{
+				left 0.175
+				top 0.545
+				alignment center
+				caption Yaw
+			}
+			container Panel(ObjectMakerScreen/MeshRotDn1Button) : GuiTemplate/Button
+			{
+				left 0.12
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshRotDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshRotUp1Button) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshRotUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(ObjectMakerScreen/MeshRot2Label) : GuiTemplate/BasicText
+			{
+				left 0.29
+				top 0.545
+				alignment center
+				caption Roll
+			}
+			container Panel(ObjectMakerScreen/MeshRotDn2Button) : GuiTemplate/Button
+			{
+				left 0.235
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshRotDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshRotUp2Button) : GuiTemplate/Button
+			{
+				left 0.315
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/MeshRotUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshCloneButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/MeshCloneLabel) : GuiTemplate/CenteredText
+				{
+					caption Clone
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshHideButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/MeshHideLabel) : GuiTemplate/CenteredText
+				{
+					caption Hide
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshUpdateButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/MeshUpdateLabel) : GuiTemplate/CenteredText
+				{
+					caption Update
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshShowAllButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/MeshShowAllLabel) : GuiTemplate/CenteredText
+				{
+					caption Show All
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshNewButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/MeshNewLabel) : GuiTemplate/CenteredText
+				{
+					caption Add New
+				}
+        		}
+			container Panel(ObjectMakerScreen/MeshDeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/MeshDeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+		}
+		container BorderPanel(ObjectMakerScreen/Page3Panel)
+		{
+			caption Collision
+			element TextArea(ObjectMakerScreen/CollLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.07
+				caption Collision Type:
+			}
+			container Panel(ObjectMakerScreen/CollHighlightList) : GuiTemplate/TextArea
+			{
+				left 0.01
+				top 0.12
+				width 0.22
+				height 0.12
+        		}
+			element TextArea(ObjectMakerScreen/CollPosLabel) : GuiTemplate/BasicText
+			{
+				left 0.1
+				top 0.27
+    				alignment center
+				caption Position
+			}
+			element TextArea(ObjectMakerScreen/CollScaleLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.27
+				alignment center
+				caption Scale
+			}
+			element TextArea(ObjectMakerScreen/CollXLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.32
+				caption X:
+			}
+			element TextArea(ObjectMakerScreen/CollYLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.37
+				caption Y:
+			}
+			element TextArea(ObjectMakerScreen/CollZLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.42
+				caption Z:
+			}
+			container Panel(ObjectMakerScreen/CollPos0TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/CollPosDn0Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollPosDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollPosUp0Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollPosUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollPos1TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/CollPosDn1Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollPosDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollPosUp1Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollPosUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollPos2TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/CollPosDn2Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollPosDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollPosUp2Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollPosUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollScale0TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/CollScaleDn0Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollScaleDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollScaleUp0Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollScaleUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollScale1TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/CollScaleDn1Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollScaleDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollScaleUp1Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollScaleUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollScale2TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(ObjectMakerScreen/CollScaleDn2Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollScaleDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollScaleUp2Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(ObjectMakerScreen/CollScaleUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollCloneButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/CollCloneLabel) : GuiTemplate/CenteredText
+				{
+					caption Clone
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollHideButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/CollHideLabel) : GuiTemplate/CenteredText
+				{
+					caption Hide
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollUpdateButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/CollUpdateLabel) : GuiTemplate/CenteredText
+				{
+					caption Update
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollShowAllButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/CollShowAllLabel) : GuiTemplate/CenteredText
+				{
+					caption Show All
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollNewButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/CollNewLabel) : GuiTemplate/CenteredText
+				{
+					caption Add New
+				}
+        		}
+			container Panel(ObjectMakerScreen/CollDeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/CollDeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+		}
+	}
+}
+EffectMakerScreen
+{
+	container BorderPanel(EffectMakerScreen/MultiPanel) : GuiTemplate/BorderPanel
+	{
+		left 0.6
+		top 0.1
+		width 0.35
+		height 0.8
+
+		container BorderPanel(EffectMakerScreen/Page1Panel)
+		{
+			caption Billboard
+			element TextArea(EffectMakerScreen/BillboardLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.07
+				caption Billboard Material:
+			}
+			container Panel(EffectMakerScreen/BillboardTextField) : GuiTemplate/TextField
+			{
+				left 0.03
+				top 0.11
+				width 0.3
+				height 0.03
+       		 	}
+			element TextArea(EffectMakerScreen/BBPosLabel) : GuiTemplate/BasicText
+			{
+				left 0.1
+				top 0.27
+    				alignment center
+				caption Position
+			}
+			element TextArea(EffectMakerScreen/BBScaleLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.27
+				alignment center
+				caption Scale
+			}
+			element TextArea(EffectMakerScreen/BBXLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.32
+				caption X:
+			}
+			element TextArea(EffectMakerScreen/BBYLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.37
+				caption Y:
+			}
+			element TextArea(EffectMakerScreen/BBZLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.42
+				caption Z:
+			}
+			container Panel(EffectMakerScreen/BBPos0TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/BBPosDn0Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBPosDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBPosUp0Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBPosUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBPos1TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/BBPosDn1Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBPosDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBPosUp1Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBPosUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBPos2TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/BBPosDn2Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBPosDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBPosUp2Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBPosUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBScale0TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/BBScaleDn0Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBScaleDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBScaleUp0Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBScaleUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBScale1TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/BBScaleDn1Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBScaleDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBScaleUp1Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/BBScaleUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/BBCloneButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.5
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/BBCloneLabel) : GuiTemplate/CenteredText
+				{
+					caption Clone
+				}
+        		}
+			container Panel(EffectMakerScreen/BBHideButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.5
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/BBHideLabel) : GuiTemplate/CenteredText
+				{
+					caption Hide
+				}
+        		}
+			container Panel(EffectMakerScreen/BBUpdateButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.56
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/BBUpdateLabel) : GuiTemplate/CenteredText
+				{
+					caption Update
+				}
+        		}
+			container Panel(EffectMakerScreen/BBShowAllButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.56
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/BBShowAllLabel) : GuiTemplate/CenteredText
+				{
+					caption Show All
+				}
+        		}
+			container Panel(EffectMakerScreen/BBNewButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.62
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/BBNewLabel) : GuiTemplate/CenteredText
+				{
+					caption Add New
+				}
+        		}
+			container Panel(EffectMakerScreen/BBDeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.62
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/BBDeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+			container Panel(EffectMakerScreen/ObjectMakerButton) : GuiTemplate/Button
+			{
+				left 0.12
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/ObjectMakerLabel) : GuiTemplate/CenteredText
+				{
+					caption ObjectMaker
+				}
+        		}
+		}
+		container BorderPanel(EffectMakerScreen/Page2Panel)
+		{
+			caption Particle
+			element TextArea(EffectMakerScreen/ParticleLabel) : GuiTemplate/BasicText
+			{
+				left 0.03
+				top 0.07
+				caption Particle Template:
+			}
+			container Panel(EffectMakerScreen/ParticleTextField) : GuiTemplate/TextField
+			{
+				left 0.03
+				top 0.11
+				width 0.3
+				height 0.03
+       		 	}
+			element TextArea(EffectMakerScreen/PSPosLabel) : GuiTemplate/BasicText
+			{
+				left 0.1
+				top 0.27
+    				alignment center
+				caption Position
+			}
+			element TextArea(EffectMakerScreen/PSScaleLabel) : GuiTemplate/BasicText
+			{
+				left 0.26
+				top 0.27
+				alignment center
+				caption Scale
+			}
+			element TextArea(EffectMakerScreen/PSXLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.32
+				caption X:
+			}
+			element TextArea(EffectMakerScreen/PSYLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.37
+				caption Y:
+			}
+			element TextArea(EffectMakerScreen/PSZLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.42
+				caption Z:
+			}
+			container Panel(EffectMakerScreen/PSPos0TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/PSPosDn0Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSPosDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSPosUp0Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSPosUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSPos1TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/PSPosDn1Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSPosDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSPosUp1Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSPosUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSPos2TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/PSPosDn2Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSPosDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSPosUp2Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSPosUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSScale0TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.32
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/PSScaleDn0Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSScaleDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSScaleUp0Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.32
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSScaleUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSScale1TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.37
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/PSScaleDn1Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSScaleDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSScaleUp1Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.37
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSScaleUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSScale2TextField) : GuiTemplate/TextField
+			{
+				left 0.218
+				top 0.42
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/PSScaleDn2Button) : GuiTemplate/Button
+			{
+				left 0.185
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSScaleDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSScaleUp2Button) : GuiTemplate/Button
+			{
+				left 0.305
+				top 0.42
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSScaleUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(EffectMakerScreen/PSRotLabel) : GuiTemplate/BasicText
+			{
+				left 0.12
+				top 0.49
+				alignment center
+				caption Rotation
+			}
+			container Panel(EffectMakerScreen/PSRotResetButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.48
+				width 0.12
+				height 0.05
+
+				element TextArea(ObjectMakerScreen/PSRotResetLabel) : GuiTemplate/CenteredText
+				{
+					caption Reset
+				}
+        		}
+			element TextArea(EffectMakerScreen/PSRot0Label) : GuiTemplate/BasicText
+			{
+				left 0.06
+				top 0.545
+				alignment center
+				caption Pitch
+			}
+			container Panel(EffectMakerScreen/PSRotDn0Button) : GuiTemplate/Button
+			{
+				left 0.005
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSRotDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSRotUp0Button) : GuiTemplate/Button
+			{
+				left 0.085
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSRotUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(EffectMakerScreen/PSRot1Label) : GuiTemplate/BasicText
+			{
+				left 0.175
+				top 0.545
+				alignment center
+				caption Yaw
+			}
+			container Panel(EffectMakerScreen/PSRotDn1Button) : GuiTemplate/Button
+			{
+				left 0.12
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSRotDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSRotUp1Button) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSRotUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			element TextArea(EffectMakerScreen/PSRot2Label) : GuiTemplate/BasicText
+			{
+				left 0.29
+				top 0.545
+				alignment center
+				caption Roll
+			}
+			container Panel(EffectMakerScreen/PSRotDn2Button) : GuiTemplate/Button
+			{
+				left 0.235
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSRotDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSRotUp2Button) : GuiTemplate/Button
+			{
+				left 0.315
+				top 0.542
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/PSRotUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/PSCloneButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/PSCloneLabel) : GuiTemplate/CenteredText
+				{
+					caption Clone
+				}
+        		}
+			container Panel(EffectMakerScreen/PSHideButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.6
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/PSHideLabel) : GuiTemplate/CenteredText
+				{
+					caption Hide
+				}
+        		}
+			container Panel(EffectMakerScreen/PSUpdateButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/PSUpdateLabel) : GuiTemplate/CenteredText
+				{
+					caption Update
+				}
+        		}
+			container Panel(EffectMakerScreen/PSShowAllButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.66
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/PSShowAllLabel) : GuiTemplate/CenteredText
+				{
+					caption Show All
+				}
+        		}
+			container Panel(EffectMakerScreen/PSNewButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/PSNewLabel) : GuiTemplate/CenteredText
+				{
+					caption Add New
+				}
+        		}
+			container Panel(EffectMakerScreen/PSDeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/PSDeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+		}
+		container BorderPanel(EffectMakerScreen/Page3Panel)
+		{
+			caption Light
+			element TextArea(EffectMakerScreen/LTColourLabel) : GuiTemplate/BasicText
+			{
+				left 0.1
+				top 0.07
+				alignment center
+				caption Colour
+			}
+			container Panel(EffectMakerScreen/LTColourBox)
+			{
+				left 0.075
+				top 0.11
+				width 0.2
+				height 0.05
+				material GuiMat/ColourBox
+			}
+			element TextArea(EffectMakerScreen/LTRLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.18
+				caption R:
+			}
+			element TextArea(EffectMakerScreen/LTGLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.23
+				caption G:
+			}
+			element TextArea(EffectMakerScreen/LTBLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.28
+				caption B:
+			}
+			container Panel(EffectMakerScreen/LTColour0Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.18
+				width 0.24
+			}
+			container Panel(EffectMakerScreen/LTColourF0TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.18
+				width 0.045
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/LTColour1Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.23
+				width 0.24
+			}
+			container Panel(EffectMakerScreen/LTColourF1TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.23
+				width 0.045
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/LTColour2Slider) : GuiTemplate/Slider
+			{
+				left 0.03
+				top 0.28
+				width 0.24
+			}
+			container Panel(EffectMakerScreen/LTColourF2TextField) : GuiTemplate/TextField
+			{
+				left 0.28
+				top 0.28
+				width 0.045
+				height 0.03
+       		 	}
+			element TextArea(EffectMakerScreen/LTPosLabel) : GuiTemplate/BasicText
+			{
+				left 0.1
+				top 0.34
+    				alignment center
+				caption Position
+			}
+			element TextArea(EffectMakerScreen/LTXLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.39
+				caption X:
+			}
+			element TextArea(EffectMakerScreen/LTYLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.44
+				caption Y:
+			}
+			element TextArea(EffectMakerScreen/LTZLabel) : GuiTemplate/BasicText
+			{
+				left 0.01
+				top 0.49
+				caption Z:
+			}
+			container Panel(EffectMakerScreen/LTPos0TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.39
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/LTPosDn0Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.39
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/LTPosDn0Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/LTPosUp0Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.39
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/LTPosUp0Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/LTPos1TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.44
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/LTPosDn1Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.44
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/LTPosDn1Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/LTPosUp1Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.44
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/LTPosUp1Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/LTPos2TextField) : GuiTemplate/TextField
+			{
+				left 0.063
+				top 0.49
+				width 0.08
+				height 0.03
+       		 	}
+			container Panel(EffectMakerScreen/LTPosDn2Button) : GuiTemplate/Button
+			{
+				left 0.03
+				top 0.49
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/LTPosDn2Label) : GuiTemplate/ArrowLText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/LTPosUp2Button) : GuiTemplate/Button
+			{
+				left 0.15
+				top 0.49
+				width 0.03
+				height 0.03
+
+				element TextArea(EffectMakerScreen/LTPosUp2Label) : GuiTemplate/ArrowRText
+				{
+				}
+        		}
+			container Panel(EffectMakerScreen/LTNewButton) : GuiTemplate/Button
+			{
+				left 0.04
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/LTNewLabel) : GuiTemplate/CenteredText
+				{
+					caption Add New
+				}
+        		}
+			container Panel(EffectMakerScreen/LTDeleteButton) : GuiTemplate/Button
+			{
+				left 0.2
+				top 0.72
+				width 0.12
+				height 0.05
+
+				element TextArea(EffectMakerScreen/LTDeleteLabel) : GuiTemplate/CenteredText
+				{
+					caption Delete
+				}
+        		}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+material preset_3_bodyMatL
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture preset_3body.jpg
+			}
+		}
+	}
+}
+material preset_3_bodyMatR
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture preset_3body.jpg
+			}
+		}
+	}
+}
+material preset_3_headMatL
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture preset_3head.jpg
+			}
+		}
+	}
+}
+material preset_3_headMatR
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture preset_3head.jpg
+			}
+		}
+	}
+}
+material preset_3_eyeMatL
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture preset_3eye.jpg
+			}
+		}
+	}
+}
+material preset_3_eyeMatR
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			texture_unit
+			{
+				texture preset_3eye.jpg
+			}
+		}
+	}
+}
+material preset_3_tailMat
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture preset_3tail.jpg
+			}
+		}
+	}
+}
+material preset_3_maneMat
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture preset_3mane.png
+			}
+		}
+	}
+}
